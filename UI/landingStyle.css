@@ -242,20 +242,26 @@ color: white;
     font-size: 2rem;
     position: relative;
     width: fit-content;
-    color: transparent;
+    color: white;
     text-align: center;
-    animation: text_reveal .5s ease forwards;
+    animation: white .5s ease forwards;
     animation-delay: 1s;
 }
 #home .text h1:nth-child(1){
     animation-delay :1s;
+    
 }
-#home .text h1:nth-child(2){
+#home .text h1:nth-child(2).proffesion{
     animation-delay :2s;
+    color: crimson;
 }
-#home .text h1:nth-child(3){
+#home .text h1:nth-child(3) element{
     animation-delay :3s;
+    color: cyan;
 }
+/* #home .text .side h1{
+    
+} */
 #home .text h1 span{
     position:absolute;
     top:0;
@@ -309,8 +315,12 @@ border: 3px solid white;
 
 @keyframes text_reveal {
     100% {
-        color:white
+        color:white;
+        color:crimson
     }
-}
+    /* 50%{
+        color:crimson
+    }*/
+} 
 /* end of home section */
 
