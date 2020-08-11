@@ -184,16 +184,105 @@ color: white;
         margin-left: -330px;
     }
 }
-
-@media (max-width:375px){
-    #home .text .side h1{
+@media (max-width:430px){
+    #home .hero .text .side h1{
         
-        font-size: 0.8rem;
+        font-size: 1.8rem;
+        /* margin-right: 29px; */
         
     }
-    #home .text .side .cta{
-        height: 2rem;
-        font-size: 0.6rem;
+    #home .hero .text .side a.cta{
+       max-height: 2rem;
+       width: 10rem;
+       font-size: 1rem;
+        
+    }
+    .brand h1 a{
+        font-size: 1rem;
+    }
+    #header .hamburger .bar{
+        
+        width: 19px;
+
+    }
+}
+@media (max-width:378px){
+    #home .hero .text .side h1{
+        
+        font-size: 1.6rem;
+        /* margin-right: 20px; */
+        
+    }
+    #home .hero .text .side a.cta{
+       max-height: 2rem;
+       width: 10rem;
+       font-size: 1rem;
+        
+    }
+    .brand h1 a{
+        font-size: 1rem;
+    }
+    #header .hamburger .bar{
+        
+        width: 19px;
+
+    }
+}
+@media (max-width:342px){
+    #home .hero .text .side h1{
+        
+        font-size: 1.2rem;
+        /* margin-right: 20px; */
+        
+    }
+    #home .hero .text .side a.cta{
+       max-height: 2rem;
+       width: 8rem;
+       font-size: 0.8rem;
+        
+    }
+    .brand h1 a{
+        font-size: 1rem;
+    }
+    #header .hamburger .bar{
+        
+        width: 19px;
+
+    }
+}
+@media (max-width:252px){
+    #home .hero .text .side h1{
+        
+        font-size: 0.9rem;
+        
+    }
+    #home .hero .text .side a.cta{
+       max-height: 1.5rem;
+       padding: 4px;
+       width: 6rem;
+       font-size: 0.6rem;
+        
+    }
+    .brand h1 a{
+        font-size: 1.1rem;
+    }
+    #header .hamburger .bar{
+        
+        width: 19px;
+
+    }
+}
+@media (max-width:210px){
+    #home .hero .text .side h1{
+        
+        font-size: 0.7rem;
+        
+    }
+    #home .hero .text .side a.cta{
+       max-height: 1.5rem;
+       padding: 4px;
+       width: 4rem;
+       font-size: 0.4rem;
         
     }
     .brand h1 a{
@@ -220,12 +309,6 @@ color: white;
     }
 }
 @media (max-width:471px){
-    /* #home .text .side h1{
-        
-        font-size: 1.2rem;
-        margin-right: 6px;
-        
-    } */
     #home .text .side .cta{
         padding: 10px;
         height: 2.8rem;
