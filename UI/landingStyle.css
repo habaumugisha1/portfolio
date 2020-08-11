@@ -181,7 +181,7 @@ color: white;
     }
     #home .hero .text .side .cta{
         margin-top: 100px;
-        margin-left: -350px;
+        margin-left: -330px;
     }
 }
 
@@ -208,12 +208,29 @@ color: white;
 @media (max-width:425px){
     #home .text .side h1{
         
-        font-size: 1.5rem;
+        font-size: 1.2rem;
+        margin-right: 6px;
         
     }
     #home .text .side .cta{
+        padding: 5px;
         height: 2rem;
-        font-size: 0.9rem;
+        font-size: 0.7rem;
+        
+    }
+}
+@media (max-width:471px){
+    /* #home .text .side h1{
+        
+        font-size: 1.2rem;
+        margin-right: 6px;
+        
+    } */
+    #home .text .side .cta{
+        padding: 10px;
+        height: 2.8rem;
+        font-size: 1.1rem;
+        width: 12rem;
         
     }
 }
