@@ -458,6 +458,7 @@ border: 3px solid white;
 
 /* about section */
 #about .about {
+    display: flex;
     flex-direction:column;
     text-align: center;
     max-width:1500px;
@@ -465,9 +466,13 @@ border: 3px solid white;
     padding: 100px 0;
 }
 #about .about .about-title{
-    font-size:2rem;
+    margin-top: 40px;
+}
+#about .about .about-title h1{
+    font-size:3rem;
     font-weight:100;
-    margin-top:-140px;
+    margin-top: 40px;
+    /* border-bottom: 2px solid cyan; */
     margin-bottom:12px;
     text-align: center;
 }
@@ -494,24 +499,75 @@ border: 3px solid white;
     color: crimson;
 }
 
-#about .about .btn{
+#about .about a.btn{
     display: inline-block;
-    padding: 10px 30px;
+    padding: 10px;
     color: black;
     background-color: transparent;
     border: 3px solid crimson;
     font-size: 20px;
     border-radius: 10px;
     margin-top: 50px;
-    margin-left: 7%;
+    margin-left: 5%;
     text-transform: uppercase;
     transition: .3s ease background-color;
 }
-#about .about .btn:hover {
+#about .about a.btn:hover {
 background-color: crimson;
 color: white;
 }
-@media (min-width:1000px){
+@media only screen and (max-width:1024px){
+    .about{
+        min-height: 600px;
+        margin-top: -60px;
+        /* background-color: grey; */
+        margin-bottom: -200px;
+        /* margin-top: -300px; */
+    }
+
+    #about .about .about-title{
+        /* height: 60px; */
+        margin-top: -50px; 
+    }
+    
+    #about .about a.btn{
+        width: 400px;
+        margin-left: 7%;
+        /* margin-right: -200px; */
+        font-size: 2rem;
+        margin-bottom: -250px;
+    }
+    #about .about .pragra h2{
+        font-size: 2.5rem;
+    }
+    #about .about .about-title h1{
+        margin-top: 10px;
+    }
+    #about .about .pragra p{
+        font-size:1.6rem;
+        margin:30px;
+    }
+
+    #about .about .pragra p span{
+        font-size:1.8rem;
+    }
+}
+@media only screen and (max-width:1000px){
+    #about .about {
+        height: 100%;
+        /* margin-top: -800px;      */
+    }
+    #about .about .about-title{
+        margin-top: -890px;
+         
+    }
+    
+    #about .about .btn{
+        width: 400px;
+        margin-left: -50px;
+        font-size: 2rem;
+        margin-bottom: -250px;
+    }
     #about .about .pragra h2{
         font-size: 2.5rem;
     }
@@ -526,6 +582,84 @@ color: white;
     #about .about .pragra p span{
         font-size:1.8rem;
     }
+}
+@media (max-width:1440px){
+    #about .about{
+        margin-top: -170px;
+        height: 650px;
+        margin-bottom: 90px;
+    }
+    #about .about .pragra p{
+        font-size:2.2rem;
+    }
+    #about .about .pragra p span{
+        font-size:2.4rem;
+    }
+    #about .about .pragra h2{
+        font-size: 2.7rem;
+    }
+    #about .about a.btn{
+        width: 600px;
+        margin-left: -50px;
+        margin-bottom: 20px;
+        font-size: 2.5rem;
+        margin-bottom: -220px;
+    }
+}
+@media (max-width:768px){
+    #about .about{
+        height: 700px;
+        /* margin-top: 720px; */
+        /* margin-bottom: 50px; */
+        /* background-color: gray; */
+    }
+    #about .about .about-title{
+        margin-top: -100px;
+    }
+    .about .about-title h1{
+        /* margin-top: -170px; */
+        font-size: 3rem;
+    }
+    #about .about a.btn{
+        margin-top: 70px;
+        margin-left: -80px;
+    }
+}
+@media(max-width:425px){
+    #about .about{
+        margin-top: 30px;
+    }
+    #about .about a.btn{
+        /* margin-top: 70px; */
+        margin-left: 30px;
+        width: 230px;
+        font-size: 1.1rem;
+    }
+}
+@media (max-width:375px){
+    /* #about .about{
+        background-color: gray;
+     } */
+    #about .about .about-title{
+        margin-top: -450px;
+    }
+   .about .about-title h1{
+        margin-top: -170px;
+        font-size: 1.5rem;
+    }
+
+    /* #about .about{ */
+        /* margin-top: -60px; */
+        /* margin-bottom: 60px; */
+    /* } */
+    #about .about a.btn{
+        width: 250px;
+        margin-left: 18px;
+        font-size: 1.2rem;
+        /* margin-bottom: -70px; */
+        /* margin-right: -150px; */
+    }
+    
 }
 @media (max-width:406px){
     #about .about .about-title h1{
@@ -700,7 +834,10 @@ color: white;
 }
 
 #skills .flexbox .flex-my-experience{
-    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap:1rem;
+    width: 90%;
     padding: 20px;
     margin-left: -25px;
     border-radius: 10px;
@@ -713,19 +850,35 @@ color: white;
     
 }
 
-#skills .flexbox .flex-my-experience .exper-title{
+#skills .flexbox .exper-title{
     text-align: center;
     font-size: 2rem;
     color: blue;
     position: relative;
     margin-bottom: 30px;
+    border-bottom: 2px solid cyan;
 
 }
+/* #skills .flexbox .flex-my-experience{
+    
+} */
 #skills .flexbox .flex-my-experience p{
     font-size: 1.2rem;
     
     margin-left: 30px;
 
+}
+#skills .flexbox .flex-my-experience .flex-exper-item{
+    width: 27vw;
+    height: 300px;
+}
+#skills .flexbox .flex-my-experience .flex-exper-item img{
+    width:350px;
+    height:180px
+}
+#skills .flexbox .flex-my-experience .flex-exper-item p{
+   font-size: 1.3rem;
+   margin-left: -3px;
 }
 #skills .flexbox .flex-my-experience span{
     text-align: center;
@@ -737,11 +890,127 @@ color: white;
     border: 2px solid cyan
 
 }
-
+@media (max-width:768px){
+    #skills .flexbox .flex-my-experience .flex-exper-item{
+       margin-left: 10vw;
+    }
+    #skills .flexbox .flex-my-experience .flex-exper-item img{
+        margin-top: 30px;
+        width: 400px;
+        height: 200px;
+     }
+     #skills .flexbox .flex-my-experience .flex-exper-item p{
+        font-size: 1.3rem;
+        margin-bottom: 30px;
+        width: 400px;
+     }
+}
+@media (max-width:425px){
+    #skills .flexbox .flex-my-experience{
+        width: 95vw;
+        margin-left: 4px;
+    }
+    #skills .flexbox .flex-my-experience .flex-exper-item img{
+        width: 280px;
+        height: 150px;
+        /* margin-top: 20px; */
+        
+    }
+    #skills .flexbox .flex-my-experience .flex-exper-item p{
+        font-size: 1.3rem;
+        margin-top: 10px;
+        /* margin-bottom: 30px; */
+        width: 300px;
+        /* background-color: gray; */
+     }
+}
+@media only screen and (min-width:1000px){
+    #skills .flexbox .flex-my-experience {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 10px;
+        width: 95vw;
+        
+        
+    }
+    #skills .flexbox .flex-my-experience .flex-exper-item{
+        width: 250px;
+    }
+    #skills .flexbox .flex-my-experience .flex-exper-item img{
+        width: 300px;
+    }
+    #skills .flexbox .flex-my-experience .flex-exper-item p{
+        width: 300px;
+    }
+}
+@media(max-width:390px){
+    #skills .flexbox .flex-my-experience .flex-exper-item{
+        width: 250px;
+    }
+    #skills .flexbox .flex-my-experience .flex-exper-item img{
+        width:250px;
+        height: 160px;
+    }
+}
+@media(max-width:360){
+    #skills .flexbox .skill-title {
+        margin-top: 30px;
+    }
+}
+@media (max-width:375px){
+    #skills .flexbox .flex-skills{
+        width: 90%;
+        display: grid;
+        grid-template-columns: 1fr;
+        }
+        #skills .flexbox .skill-title{
+            margin-top: -100px;
+        }
+    #skills .flexbox .flex-my-experience{
+        width: 100%
+    
+    }
+    #skills .flexbox .flex-my-experience p{
+        margin-left: 10px
+    
+    }
+    #skills .flexbox .flex-my-experience .exper-title{
+        text-align: center;
+        font-size: 1.2rem;
+        color: blue;
+        position: relative;
+        margin-bottom: 30px;
+    
+    }
+    #skills .flexbox .flex-skills .flex-skill-item{
+     width: 190px;
+     height: 180px;
+     /* margin-left: 5%; */
+     
+    
+}
+#skills .flexbox .flex-skills .flex-skill-item img{
+    width: 140px;
+    height: 120px;
+    margin-left: 20px;
+}
+#skills .flexbox .flex-skills .flex-skill-item p{
+    font-size: 1.1rem;
+}
+}
+@media (max-width: 768px){
+    #skills .flexbox .flex-skills{
+        width: 90%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        }
+}
 @media (max-width: 390px){
     #skills .flexbox .flex-skills{
     display: grid;
-    grid-template-columns: 17rem;
+    grid-template-columns: 1fr;
+    /*grid-row: auto;
+    grid-column-gap: 10px;*/
     
 }
 #skills .flexbox .skill-title{
@@ -777,7 +1046,7 @@ color: white;
 
 }
 #skills .flexbox .flex-skills .flex-skill-item{
- width: 130px;
+ width: 220px;
  margin-left: 5%;
  
 }
@@ -802,16 +1071,16 @@ color: white;
  #skills .flexbox .flex-skills{
      margin-left: -90px;
     margin-top: 10px;
-    width: 80vw;
+    width: 95vw;
     display: grid;
-    grid-template-columns: 17rem 17rem 17rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     position: relative;
     grid-column-gap: 10px;
     
 }
 #skills .flexbox .flex-skills .flex-skill-item{
- width: 250px;
- margin-left: 10vw;
+ width: 180px;
+ margin-left: 4vw;
  height: 200px;
  position: relative;
 }
@@ -830,10 +1099,10 @@ color: white;
     margin-bottom: 40px;
 
 }
-#skills .flexbox .flex-my-experience p{
+/* #skills .flexbox .flex-my-experience p{
     font-size: 1.5rem;
 
-}
+} */
 
 }
 
