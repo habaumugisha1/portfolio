@@ -624,11 +624,11 @@ color: white;
 
 @media only screen and (min-width: 320px) and (max-width:480px){
     #about{
-        max-height: 80vh;
+        max-height: 85vh;
         margin-top: 30vh;
     }
     #about .about{
-        margin-top: -60vh;
+        margin-top: -40vh;
         height:40vh;
     }
     #about .about a.btn{
