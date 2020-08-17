@@ -554,22 +554,27 @@ color: white;
     }
 }
 @media only screen and (min-width:769px) and (max-width:1024px){
+    #about{
+        max-height: 60vh;
+    }
     #about .about{
+        max-height: 60vh;
         min-height: 600px;
-        margin-top: -100px;
-        margin-bottom: 60px;
+        /* margin-top: -100px; */
+        /* margin-bottom: 60px; */
         
     }
 
     #about .about .about-title{
-        margin-top: -50px; 
+        margin-top: -200px; 
     }
     
     #about .about a.btn{
+        margin-top: 90px;
         width: 400px;
-        margin-left: 7%;
+        margin-left: 5%;
         font-size: 2rem;
-        margin-bottom: -200px;
+        margin-bottom: -250px;
     }
     #about .about .pragra h2{
         font-size: 2.5rem;
@@ -588,23 +593,28 @@ color: white;
 }
 
 @media only screen and (min-width:481px) and (max-width:768px){
-    #about .about{
-        margin-top: -20%;
-        height: 100%;
-        margin-top: -10%;
+    #about{
+        max-height: 70vh;
         background-color: #eeeeee;
     }
+    #about .about{
+        height: 100%;
+        /* margin-top: -10%; */
+        max-height: 80vh;
+        
+    }
     #about .about .about-title h1{
-        margin-top: -250px;
+        margin-top: -300px;
     }
     .about .about-title h1{
         font-size: 3rem;
     }
     #about .about .pragra{
+        margin-top: -3vh;
         height: 30vh;
     }
     #about .about .pragra h2{
-        margin-top: -100px;
+        margin-top: -150px;
         font-size: 2.7rem;
     }
     #about .about .pragra p{
@@ -615,10 +625,11 @@ color: white;
         font-size:2.4rem;
     }
     #about .about a.btn{
-        margin-top: 3vh;
-        margin-bottom: -100px;
+        margin-top: -7vh;
+        /* margin-bottom: -100px; */
         width:300px;
         font-size:1.4rem;
+        margin-left: 5vw;
     }
 }
 
@@ -632,7 +643,7 @@ color: white;
         height:40vh;
     }
     #about .about a.btn{
-        /* margin-top: 70px; */
+        margin-bottom: 70px;
         margin-left: 30px;
         width: 230px;
         font-size: 1.1rem;
@@ -641,6 +652,13 @@ color: white;
         font-size:2rem;
         font-weight: 500;
         /* margin-top: 100px;    */
+    }
+}
+@media only screen and (max-width: 320px){
+    #about .about a.btn{
+        margin-bottom: 70px;
+        margin-left: 5vw;
+        
     }
 }
 /* end of about secction */
@@ -680,6 +698,7 @@ color: white;
     position: relative;
 }
 #skills .flexbox .flex-skills{
+    align-items:center;
     margin: 10px;
 }
 
@@ -764,6 +783,11 @@ color: white;
     border: 2px solid cyan
 
 }
+@media only screen and (max-width:360px){
+    #skills .flexbox .flex-skills{
+        margin-left: -200px;
+        }
+}
 @media only screen and (min-width:481px) and (max-width:768px){
     #skills{
         min-height: 100vh;
@@ -774,7 +798,7 @@ color: white;
         width: 90%;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        margin-left: -90px;
+        margin-left: -125px;
         margin-top: 10px;
         width: 95vw;
         position: relative;
@@ -836,33 +860,40 @@ color: white;
         width: 70vw;
      }
 }
-
-
-@media only screen and (min-width: 320px) and (max-width:480px){
+@media only screen and (max-width: 320px){
     #skills{
+        margin-left: -90px;
+    }
+    #skills .flexbox{
         min-height: 100vh;
+        width: 80vw;
         margin-bottom: 250px;
-        
+        /* background-color: cyan; */
+        /* margin-left: -140px; */
     }
     #skills .flexbox .flex-skills{
     display: grid;
+    /* background-color: crimson; */
     grid-template-columns: 1fr;
     width: 95vw;
-    margin-left: 2vw;
+    margin-left: -7vw;
+    /* overflow: hidden; */
     align-items: center;
     justify-content: center;
     
 }
 #skills .flexbox .flex-skills .flex-skill-item{
-    width: 80vw;
-    margin-left: 5vw;
+    width: 70vw;
+    margin-left: -8vw;
     margin-right: 2vw;
+    justify-content: center;
+    align-items: center;
 }
 #skills .flexbox .flex-skills .flex-skill-item img{
     width:30vw;
     height: 120px;
-    margin-top:8px;
-    margin-left: 2rem;
+    margin-top:8px; 
+    margin-left: 100px;
 }
 #skills .flexbox .flex-skills .flex-skill-item p{
     font-size: 1.5rem;
@@ -881,8 +912,92 @@ color: white;
 
 }
 #skills .flexbox .flex-my-experience{
-    width: 80vw;
+    width: 85vw;
+    margin-left: 50px;
+    border: none;
+
+}
+#skills .flexbox .flex-my-experience .flex-exper-item{
+    width: 85vw;
     margin-left: 2vw;
+
+}
+#skills .flexbox .flex-my-experience .flex-exper-item img{
+    width: 85vw;
+    
+
+}
+#skills .flexbox .flex-my-experience p{
+    width: 85vw;
+    margin-left: 10px
+
+}
+#skills .flexbox .flex-my-experience .exper-title{
+    text-align: center;
+    font-size: 1.2rem;
+    color: blue;
+    position: relative;
+    margin-bottom: 30px;
+
+}
+
+/* #skills .flexbox .flex-skills .flex-skill-item{
+ width: 220px;
+ margin-left: 5vw;
+} */
+
+
+}
+ @media only screen and (max-width: 360px){
+    #skills{
+        min-height: 100vh;
+        margin-bottom: 250px;
+    }
+    #skills .flexbox{
+        margin-left: -20px;
+    }
+    #skills .flexbox .flex-skills{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 95vw;
+    margin-left: -3vw;
+    align-items: center;
+    justify-content: center;
+    
+}
+#skills .flexbox .flex-skills .flex-skill-item{
+    width: 80vw;
+    margin-left: 5vw;
+    margin-right: 2vw;
+    justify-content: center;
+    align-items: center;
+}
+#skills .flexbox .flex-skills .flex-skill-item img{
+    width:30vw;
+    height: 120px;
+    margin-top:8px; 
+    margin-left: 14vw;
+}
+#skills .flexbox .flex-skills .flex-skill-item p{
+    font-size: 1.5rem;
+    margin-bottom:10px
+
+}
+#skills .flexbox .skill-title{
+    text-align: center;
+    color: blue;
+    margin-top:1rem;
+    width: 80%;
+    margin-left: 10%;
+    font-size: 1.6rem;
+    position: relative;
+   
+
+}
+#skills .flexbox .flex-my-experience{
+    width: 80vw;
+    border: none;
+    margin-left: 80px;
 
 }
 #skills .flexbox .flex-my-experience .flex-exper-item{
@@ -909,7 +1024,428 @@ color: white;
 }
 #skills .flexbox .flex-skills{
     width: 90%;
-    /*margin-right: 3px;*/
+
+
+}
+#skills .flexbox .flex-skills .flex-skill-item{
+ width: 220px;
+ margin-left: 5%;
+}
+ }
+
+ @media only screen and (max-width: 375px){
+    #skills{
+        min-height: 100vh;
+        margin-bottom: 250px;
+        margin-left: -30px;
+    }
+    #skills .flexbox {
+        width: 80vw;
+        margin-left: -20px;
+    }
+    #skills .flexbox .flex-skills{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 95vw;
+    margin-left: -4vw;
+    align-items: center;
+    justify-content: center;
+    
+}
+#skills .flexbox .flex-skills .flex-skill-item{
+    width: 80vw;
+    margin-left: 5vw;
+    margin-right: 2vw;
+    justify-content: center;
+    align-items: center;
+}
+#skills .flexbox .flex-skills .flex-skill-item img{
+    width:30vw;
+    height: 120px;
+    margin-top:8px; 
+    margin-left: 22vw;
+}
+#skills .flexbox .flex-skills .flex-skill-item p{
+    font-size: 1.5rem;
+    margin-bottom:10px
+
+}
+#skills .flexbox .skill-title{
+    text-align: center;
+    color: blue;
+    margin-top:1rem;
+    width: 80%;
+    margin-left: 10%;
+    font-size: 1.6rem;
+    position: relative;
+   
+
+}
+#skills .flexbox .flex-my-experience{
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    margin-left: 10vw;
+    border: none;
+
+}
+#skills .flexbox .flex-my-experience .flex-exper-item{
+    width: 75vw;
+    margin-left: 2vw;
+
+}
+#skills .flexbox .flex-my-experience .flex-exper-item img{
+    width: 70vw;
+    
+
+}
+#skills .flexbox .flex-my-experience p{
+    width: 75vw;
+    /* margin-left: 10px */
+
+}
+#skills .flexbox .flex-my-experience .exper-title{
+    text-align: center;
+    font-size: 1.2rem;
+    color: blue;
+    position: relative;
+    margin-bottom: 30px;
+
+}
+#skills .flexbox .flex-skills{
+    width: 90%;
+
+
+}
+#skills .flexbox .flex-skills .flex-skill-item{
+ width: 220px;
+ margin-left: 5%;
+}
+ }
+
+ @media only screen and (max-width: 411px){
+    #skills{
+        min-height: 100vh;
+        margin-bottom: 250px;
+        margin-left: 7%;
+    }
+    #skills .flexbox .flex-skills{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 95vw;
+    margin-left: -3vw;
+    align-items: center;
+    justify-content: center;
+    
+}
+#skills .flexbox .flex-skills .flex-skill-item{
+    width: 80vw;
+    margin-left: 5vw;
+    margin-right: 2vw;
+    justify-content: center;
+    align-items: center;
+}
+#skills .flexbox .flex-skills .flex-skill-item img{
+    width:30vw;
+    height: 120px;
+    margin-top:8px; 
+    margin-left: 16vw;
+}
+#skills .flexbox .flex-skills .flex-skill-item p{
+    font-size: 1.5rem;
+    margin-bottom:10px
+
+}
+#skills .flexbox .skill-title{
+    text-align: center;
+    color: blue;
+    margin-top:1rem;
+    width: 80%;
+    margin-left: 10%;
+    font-size: 1.6rem;
+    position: relative;
+   
+
+}
+#skills .flexbox .flex-my-experience{
+    width: 80vw;
+    border: none;
+
+}
+#skills .flexbox .flex-my-experience .flex-exper-item{
+    width: 75vw;
+    margin-left: 2vw;
+
+}
+#skills .flexbox .flex-my-experience .flex-exper-item img{
+    width: 70vw;
+    
+
+}
+#skills .flexbox .flex-my-experience p{
+    margin-left: 10px
+
+}
+#skills .flexbox .flex-my-experience .exper-title{
+    text-align: center;
+    font-size: 1.2rem;
+    color: blue;
+    position: relative;
+    margin-bottom: 30px;
+
+}
+#skills .flexbox .flex-skills{
+    width: 90%;
+
+
+}
+#skills .flexbox .flex-skills .flex-skill-item{
+ width: 220px;
+ margin-left: 5%;
+}
+
+ }
+
+ @media only screen and (max-width: 414px){
+    #skills{
+        min-height: 100vh;
+        margin-bottom: 250px;
+        margin-left: 7%;
+    }
+    #skills .flexbox .flex-skills{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 95vw;
+    margin-left: -5vw;
+    align-items: center;
+    justify-content: center;
+    
+}
+#skills .flexbox .flex-skills .flex-skill-item{
+    width: 80vw;
+    margin-left: 5vw;
+    margin-right: 2vw;
+    justify-content: center;
+    align-items: center;
+}
+#skills .flexbox .flex-skills .flex-skill-item img{
+    width:30vw;
+    height: 120px;
+    margin-top:8px; 
+    margin-left: 16vw;
+}
+#skills .flexbox .flex-skills .flex-skill-item p{
+    font-size: 1.5rem;
+    margin-bottom:10px
+
+}
+#skills .flexbox .skill-title{
+    text-align: center;
+    color: blue;
+    margin-top:1rem;
+    width: 80%;
+    margin-left: 10%;
+    font-size: 1.6rem;
+    position: relative;
+   
+
+}
+#skills .flexbox .flex-my-experience{
+    width: 80vw;
+    border: none;
+
+}
+#skills .flexbox .flex-my-experience .flex-exper-item{
+    width: 75vw;
+    margin-left: 2vw;
+
+}
+#skills .flexbox .flex-my-experience .flex-exper-item img{
+    width: 70vw;
+    
+
+}
+#skills .flexbox .flex-my-experience p{
+    margin-left: 10px
+
+}
+#skills .flexbox .flex-my-experience .exper-title{
+    text-align: center;
+    font-size: 1.2rem;
+    color: blue;
+    position: relative;
+    margin-bottom: 30px;
+
+}
+#skills .flexbox .flex-skills{
+    width: 90%;
+
+
+}
+#skills .flexbox .flex-skills .flex-skill-item{
+ width: 220px;
+ margin-left: 5%;
+}
+ }
+/* @media only screen and (min-width: 320px) and (max-width:480px){
+    #skills{
+        min-height: 100vh;
+        margin-bottom: 250px;
+        margin-left: 7%;
+    }
+    #skills .flexbox .flex-skills{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 95vw;
+    margin-left: -3vw;
+    align-items: center;
+    justify-content: center;
+    
+}
+#skills .flexbox .flex-skills .flex-skill-item{
+    width: 80vw;
+    margin-left: 5vw;
+    margin-right: 2vw;
+    justify-content: center;
+    align-items: center;
+}
+#skills .flexbox .flex-skills .flex-skill-item img{
+    width:30vw;
+    height: 120px;
+    margin-top:8px; 
+    margin-left: 16vw;
+}
+#skills .flexbox .flex-skills .flex-skill-item p{
+    font-size: 1.5rem;
+    margin-bottom:10px
+
+}
+#skills .flexbox .skill-title{
+    text-align: center;
+    color: blue;
+    margin-top:1rem;
+    width: 80%;
+    margin-left: 10%;
+    font-size: 1.6rem;
+    position: relative;
+   
+
+}
+#skills .flexbox .flex-my-experience{
+    width: 80vw;
+    border: none;
+
+}
+#skills .flexbox .flex-my-experience .flex-exper-item{
+    width: 75vw;
+    margin-left: 2vw;
+
+}
+#skills .flexbox .flex-my-experience .flex-exper-item img{
+    width: 70vw;
+    
+
+}
+#skills .flexbox .flex-my-experience p{
+    margin-left: 10px
+
+}
+#skills .flexbox .flex-my-experience .exper-title{
+    text-align: center;
+    font-size: 1.2rem;
+    color: blue;
+    position: relative;
+    margin-bottom: 30px;
+
+}
+#skills .flexbox .flex-skills{
+    width: 90%;
+
+
+}
+#skills .flexbox .flex-skills .flex-skill-item{
+ width: 220px;
+ margin-left: 5%;
+}
+
+} */
+@media only screen and (max-width:450px){
+    #skills{
+        min-height: 100vh;
+        margin-bottom: 250px;
+        margin-left: 7%;
+    }
+    #skills .flexbox {
+        margin-left: 30px;
+    }
+    #skills .flexbox .flex-skills{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 95vw;
+    margin-left: -3vw;
+    align-items: center;
+    justify-content: center;
+    
+}
+#skills .flexbox .flex-skills .flex-skill-item{
+    width: 80vw;
+    margin-left: 5vw;
+    margin-right: 2vw;
+    justify-content: center;
+    align-items: center;
+}
+#skills .flexbox .flex-skills .flex-skill-item img{
+    width:30vw;
+    height: 120px;
+    margin-top:8px; 
+    margin-left: 11vw;
+}
+#skills .flexbox .flex-skills .flex-skill-item p{
+    font-size: 1.5rem;
+    margin-bottom:10px
+
+}
+#skills .flexbox .skill-title{
+    text-align: center;
+    color: blue;
+    margin-top:1rem;
+    width: 80%;
+    margin-left: 10%;
+    font-size: 1.6rem;
+    position: relative;
+   
+
+}
+#skills .flexbox .flex-my-experience{
+    width: 85vw;
+    border: none;
+    margin-left: -75px;
+
+}
+#skills .flexbox .flex-my-experience .flex-exper-item{
+    width: 75vw;
+    /* margin-left: 2vw; */
+
+}
+#skills .flexbox .flex-my-experience .flex-exper-item img{
+    width: 70vw;
+    
+
+}
+#skills .flexbox .flex-my-experience p{
+    margin-left: 10px
+
+}
+#skills .flexbox .flex-my-experience .exper-title{
+    text-align: center;
+    font-size: 1.2rem;
+    color: blue;
+    position: relative;
+    margin-bottom: 30px;
+
+}
+#skills .flexbox .flex-skills{
+    width: 90%;
 
 
 }
@@ -920,6 +1456,91 @@ color: white;
 
 }
 
+@media only screen and (mxa-width:280px){
+    #skills{
+        min-height: 100vh;
+        margin-bottom: 250px;
+        margin-left: 7%;
+    }
+    #skills .flexbox {
+        margin-left: 30px;
+    }
+    #skills .flexbox .flex-skills{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 90vw;
+    margin-left: -3vw;
+    align-items: center;
+    justify-content: center;
+    
+}
+#skills .flexbox .flex-skills .flex-skill-item{
+    width: 60vw;
+    /* margin-left: 5vw; */
+    /* margin-right: 2vw; */
+    justify-content: center;
+    align-items: center;
+}
+#skills .flexbox .flex-skills .flex-skill-item img{
+    width:20vw;
+    height: 100px;
+    margin-top:8px; 
+    margin-left: 11vw;
+}
+#skills .flexbox .flex-skills .flex-skill-item p{
+    font-size: 1.1rem;
+    margin-bottom:10px
+
+}
+#skills .flexbox .skill-title{
+    text-align: center;
+    color: blue;
+    margin-top:1rem;
+    width: 80%;
+    margin-left: 10%;
+    font-size: 1.6rem;
+    position: relative;
+   
+
+}
+#skills .flexbox .flex-my-experience{
+    width: 85vw;
+    border: none;
+    margin-left: -75px;
+
+}
+#skills .flexbox .flex-my-experience .flex-exper-item{
+    width: 75vw;
+    /* margin-left: 2vw; */
+
+}
+#skills .flexbox .flex-my-experience .flex-exper-item img{
+    width: 70vw;
+    
+
+}
+#skills .flexbox .flex-my-experience p{
+    margin-left: 10px
+
+}
+#skills .flexbox .flex-my-experience .exper-title{
+    text-align: center;
+    font-size: 1.2rem;
+    color: blue;
+    position: relative;
+    margin-bottom: 30px;
+
+}
+#skills .flexbox .flex-skills{
+    width: 90%;
+
+
+}
+#skills .flexbox .flex-skills .flex-skill-item{
+ width: 220px;
+ margin-left: 5%;
+}
+}
 @media only screen and (min-width:769px) and (max-width: 1024px){
     #skills{
         min-height: 100vh;
@@ -966,8 +1587,9 @@ color: white;
  text-align: center;
 }
 #skills .flexbox .flex-my-experience{
-    width: 90vw;
+    width: 89vw;
     margin-left: 1.8vw;
+    margin-right: 2vw;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 
