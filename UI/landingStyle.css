@@ -783,11 +783,11 @@ color: white;
     border: 2px solid cyan
 
 }
-@media only screen and (max-width:360px){
+/* @media only screen and (max-width:360px){
     #skills .flexbox .flex-skills{
         margin-left: -200px;
         }
-}
+} */
 @media only screen and (min-width:481px) and (max-width:768px){
     #skills{
         min-height: 100vh;
@@ -862,21 +862,22 @@ color: white;
 }
 @media only screen and (max-width: 320px){
     #skills{
-        margin-left: -90px;
+        margin-left: -10vw;
     }
     #skills .flexbox{
         min-height: 100vh;
-        width: 80vw;
+        /* width: 77vw; */
+        margin-right:17vw;
         margin-bottom: 250px;
-        /* background-color: cyan; */
-        /* margin-left: -140px; */
+        margin-left: -12vw;
     }
     #skills .flexbox .flex-skills{
     display: grid;
     /* background-color: crimson; */
     grid-template-columns: 1fr;
     width: 95vw;
-    margin-left: -7vw;
+    margin-left: -10vw;
+    margin-right: 15vw;
     /* overflow: hidden; */
     align-items: center;
     justify-content: center;
@@ -885,7 +886,7 @@ color: white;
 #skills .flexbox .flex-skills .flex-skill-item{
     width: 70vw;
     margin-left: -8vw;
-    margin-right: 2vw;
+    margin-right: 5vw;
     justify-content: center;
     align-items: center;
 }
@@ -912,14 +913,15 @@ color: white;
 
 }
 #skills .flexbox .flex-my-experience{
-    width: 85vw;
-    margin-left: 50px;
+    width: 90vw;
+    margin-right: 10vw;
+    /* margin-left: 50px; */
     border: none;
 
 }
 #skills .flexbox .flex-my-experience .flex-exper-item{
     width: 85vw;
-    margin-left: 2vw;
+    margin-left: -2vw;
 
 }
 #skills .flexbox .flex-my-experience .flex-exper-item img{
@@ -929,7 +931,7 @@ color: white;
 }
 #skills .flexbox .flex-my-experience p{
     width: 85vw;
-    margin-left: 10px
+    /* margin-left: 10px */
 
 }
 #skills .flexbox .flex-my-experience .exper-title{
@@ -954,21 +956,21 @@ color: white;
         margin-bottom: 250px;
     }
     #skills .flexbox{
-        margin-left: -20px;
+        margin-left: -40px;
     }
     #skills .flexbox .flex-skills{
     display: grid;
     grid-template-columns: 1fr;
     width: 95vw;
-    margin-left: -3vw;
+    margin-left: -10vw;
     align-items: center;
     justify-content: center;
     
 }
 #skills .flexbox .flex-skills .flex-skill-item{
     width: 80vw;
-    margin-left: 5vw;
-    margin-right: 2vw;
+    margin-left: -3vw;
+    margin-right: 3vw;
     justify-content: center;
     align-items: center;
 }
@@ -995,23 +997,26 @@ color: white;
 
 }
 #skills .flexbox .flex-my-experience{
-    width: 80vw;
+    width: 90vw;
     border: none;
-    margin-left: 80px;
-
-}
-#skills .flexbox .flex-my-experience .flex-exper-item{
-    width: 75vw;
-    margin-left: 2vw;
-
-}
-#skills .flexbox .flex-my-experience .flex-exper-item img{
-    width: 70vw;
+    margin-left: 0px;
     
 
 }
-#skills .flexbox .flex-my-experience p{
-    margin-left: 10px
+#skills .flexbox .flex-my-experience .flex-exper-item{
+    width: 90vw;
+    margin-left: 80px;
+    /* margin-left: 2vw; */
+
+}
+#skills .flexbox .flex-my-experience .flex-exper-item img{
+    width: 90vw;
+    margin-left: 18px;
+    
+
+}
+#skills .flexbox .flex-my-experience .flex-exper-item p{
+    margin-left: 18px
 
 }
 #skills .flexbox .flex-my-experience .exper-title{
@@ -1048,6 +1053,7 @@ color: white;
     grid-template-columns: 1fr;
     width: 95vw;
     margin-left: -4vw;
+    margin-right: 8vw;
     align-items: center;
     justify-content: center;
     
@@ -1081,17 +1087,21 @@ color: white;
    
 
 }
+#skills .flexbox span{
+    margin-right: 18vw;
+}
 #skills .flexbox .flex-my-experience{
     justify-content: center;
     align-items: center;
     width: 80vw;
     margin-left: 10vw;
+    margin-right: -4vw;
     border: none;
 
 }
 #skills .flexbox .flex-my-experience .flex-exper-item{
     width: 75vw;
-    margin-left: 2vw;
+    margin-left: 7vw;
 
 }
 #skills .flexbox .flex-my-experience .flex-exper-item img{
@@ -1129,6 +1139,12 @@ color: white;
         margin-bottom: 250px;
         margin-left: 7%;
     }
+    /* #skills .flexbox{
+        width: 90vw;
+        margin-right: 10vw;
+        margin-left: -10vw;
+        background-color: cyan;
+    } */
     #skills .flexbox .flex-skills{
     display: grid;
     grid-template-columns: 1fr;
@@ -1137,6 +1153,9 @@ color: white;
     align-items: center;
     justify-content: center;
     
+}
+#skills .flexbox span{
+    margin-right: 18vw;
 }
 #skills .flexbox .flex-skills .flex-skill-item{
     width: 80vw;
@@ -1156,12 +1175,13 @@ color: white;
     margin-bottom:10px
 
 }
-#skills .flexbox .skill-title{
+#skills .flexbox h1.skill-title{
     text-align: center;
     color: blue;
     margin-top:1rem;
     width: 80%;
-    margin-left: 10%;
+    margin-left: -10vw;
+    margin-right: 10vw;
     font-size: 1.6rem;
     position: relative;
    
@@ -1212,6 +1232,9 @@ color: white;
         margin-bottom: 250px;
         margin-left: 7%;
     }
+    #skills .flexbox{
+        width: 85vw;
+    }
     #skills .flexbox .flex-skills{
     display: grid;
     grid-template-columns: 1fr;
@@ -1245,6 +1268,7 @@ color: white;
     margin-top:1rem;
     width: 80%;
     margin-left: 10%;
+    margin-right: 12vw;
     font-size: 1.6rem;
     position: relative;
    
@@ -1252,12 +1276,13 @@ color: white;
 }
 #skills .flexbox .flex-my-experience{
     width: 80vw;
+    /* margin-left:6vw; */
     border: none;
 
 }
 #skills .flexbox .flex-my-experience .flex-exper-item{
     width: 75vw;
-    margin-left: 2vw;
+    margin-left: 8vw;
 
 }
 #skills .flexbox .flex-my-experience .flex-exper-item img{
