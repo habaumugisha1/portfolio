@@ -1343,7 +1343,6 @@ color: white;
 #skills .flexbox .flex-skills .flex-skill-item p{
     font-size: 1.5rem;
     margin-bottom:10px
-
 }
 #skills .flexbox .skill-title{
     text-align: center;
@@ -1354,26 +1353,21 @@ color: white;
     font-size: 1.6rem;
     position: relative;
    
-
 }
 #skills .flexbox .flex-my-experience{
     width: 80vw;
     border: none;
-
 }
 #skills .flexbox .flex-my-experience .flex-exper-item{
     width: 75vw;
     margin-left: 2vw;
-
 }
 #skills .flexbox .flex-my-experience .flex-exper-item img{
     width: 70vw;
     
-
 }
 #skills .flexbox .flex-my-experience p{
     margin-left: 10px
-
 }
 #skills .flexbox .flex-my-experience .exper-title{
     text-align: center;
@@ -1381,18 +1375,14 @@ color: white;
     color: blue;
     position: relative;
     margin-bottom: 30px;
-
 }
 #skills .flexbox .flex-skills{
     width: 90%;
-
-
 }
 #skills .flexbox .flex-skills .flex-skill-item{
  width: 220px;
  margin-left: 5%;
 }
-
 } */
 @media only screen and (max-width:450px){
     #skills{
