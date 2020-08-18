@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 
 a {
     text-decoration: none;
@@ -455,6 +458,7 @@ border: 3px solid white;
     }*/
 } 
 /* end of home section */
+/* ----------------------------------------------------------------------------------- */
 
 /* about section */
 #about .about {
@@ -516,24 +520,59 @@ border: 3px solid white;
 background-color: crimson;
 color: white;
 }
-@media only screen and (max-width:1024px){
-    .about{
+@media only screen and (min-width:1025px) and (max-width:1500px){
+    #about .about{
         min-height: 600px;
-        margin-top: -60px;
-        /* background-color: grey; */
-        margin-bottom: -200px;
-        /* margin-top: -300px; */
+        margin-top: -100px;
+        margin-bottom: 60px;
+        
     }
 
     #about .about .about-title{
-        /* height: 60px; */
         margin-top: -50px; 
     }
     
     #about .about a.btn{
         width: 400px;
-        margin-left: 7%;
-        /* margin-right: -200px; */
+        margin-left: 3.5%;
+        font-size: 2rem;
+        margin-bottom: -200px;
+    }
+    #about .about .pragra h2{
+        font-size: 2.5rem;
+    }
+    #about .about .about-title h1{
+        margin-top: 10px;
+    }
+    #about .about .pragra p{
+        font-size:1.6rem;
+        margin:30px;
+    }
+
+    #about .about .pragra p span{
+        font-size:1.8rem;
+    }
+}
+@media only screen and (min-width:769px) and (max-width:1024px){
+    #about{
+        max-height: 60vh;
+    }
+    #about .about{
+        max-height: 60vh;
+        min-height: 600px;
+        /* margin-top: -100px; */
+        /* margin-bottom: 60px; */
+        
+    }
+
+    #about .about .about-title{
+        margin-top: -200px; 
+    }
+    
+    #about .about a.btn{
+        margin-top: 90px;
+        width: 400px;
+        margin-left: 5%;
         font-size: 2rem;
         margin-bottom: -250px;
     }
@@ -552,223 +591,78 @@ color: white;
         font-size:1.8rem;
     }
 }
-@media only screen and (max-width:1000px){
-    #about .about {
+
+@media only screen and (min-width:481px) and (max-width:768px){
+    #about{
+        max-height: 70vh;
+        background-color: #eeeeee;
+    }
+    #about .about{
         height: 100%;
-        /* margin-top: -800px;      */
-    }
-    #about .about .about-title{
-        margin-top: -890px;
-         
-    }
-    
-    #about .about .btn{
-        width: 400px;
-        margin-left: -50px;
-        font-size: 2rem;
-        margin-bottom: -250px;
-    }
-    #about .about .pragra h2{
-        font-size: 2.5rem;
+        /* margin-top: -10%; */
+        max-height: 80vh;
+        
     }
     #about .about .about-title h1{
-        margin-top: 90px;
+        margin-top: -300px;
+    }
+    .about .about-title h1{
+        font-size: 3rem;
+    }
+    #about .about .pragra{
+        margin-top: -3vh;
+        height: 30vh;
+    }
+    #about .about .pragra h2{
+        margin-top: -150px;
+        font-size: 2.7rem;
     }
     #about .about .pragra p{
-        font-size:1.6rem;
+        font-size:1.9rem;
         margin:30px;
-    }
-
-    #about .about .pragra p span{
-        font-size:1.8rem;
-    }
-}
-@media (max-width:1440px){
-    #about .about{
-        margin-top: -170px;
-        height: 650px;
-        margin-bottom: 90px;
-    }
-    #about .about .pragra p{
-        font-size:2.2rem;
     }
     #about .about .pragra p span{
         font-size:2.4rem;
     }
-    #about .about .pragra h2{
-        font-size: 2.7rem;
-    }
     #about .about a.btn{
-        width: 600px;
-        margin-left: -50px;
-        margin-bottom: 20px;
-        font-size: 2.5rem;
-        margin-bottom: -220px;
+        margin-top: -7vh;
+        /* margin-bottom: -100px; */
+        width:300px;
+        font-size:1.4rem;
+        margin-left: 5vw;
     }
 }
-@media (max-width:768px){
+
+@media only screen and (min-width: 320px) and (max-width:480px){
+    #about{
+        max-height: 85vh;
+        margin-top: 30vh;
+    }
     #about .about{
-        height: 700px;
-        /* margin-top: 720px; */
-        /* margin-bottom: 50px; */
-        /* background-color: gray; */
-    }
-    #about .about .about-title{
-        margin-top: -100px;
-    }
-    .about .about-title h1{
-        /* margin-top: -170px; */
-        font-size: 3rem;
+        margin-top: -40vh;
+        height:40vh;
     }
     #about .about a.btn{
-        margin-top: 70px;
-        margin-left: -80px;
-    }
-}
-@media(max-width:425px){
-    #about .about{
-        margin-top: 30px;
-    }
-    #about .about a.btn{
-        /* margin-top: 70px; */
+        margin-bottom: 70px;
         margin-left: 30px;
         width: 230px;
         font-size: 1.1rem;
     }
+    #about .about .about-title h1{
+        font-size:2rem;
+        font-weight: 500;
+        /* margin-top: 100px;    */
+    }
 }
-@media (max-width:375px){
-    /* #about .about{
-        background-color: gray;
-     } */
-    #about .about .about-title{
-        margin-top: -450px;
-    }
-   .about .about-title h1{
-        margin-top: -170px;
-        font-size: 1.5rem;
-    }
-
-    /* #about .about{ */
-        /* margin-top: -60px; */
-        /* margin-bottom: 60px; */
-    /* } */
+@media only screen and (max-width: 320px){
     #about .about a.btn{
-        width: 250px;
-        margin-left: 18px;
-        font-size: 1.2rem;
-        /* margin-bottom: -70px; */
-        /* margin-right: -150px; */
-    }
-    
-}
-@media (max-width:406px){
-    #about .about .about-title h1{
-        font-size:2rem;
-        margin-top: 100px;
-        
+        margin-bottom: 70px;
+        margin-left: 5vw;
         
     }
 }
-@media (max-width:310px){
-    #about .about .about-title h1{
-        font-size:2rem;
-        margin-top: 100px;
-        
-        
-    }
-    #about .about .btn{
-        /* padding: 5px 20px; */
-        background-color: transparent;
-        border: 2px solid crimson;
-        font-size: 13px;
-        border-radius: 10px;
-        height: 30px;
-        margin-top: 50px;
-        margin-left: 5%;
-        
-    }
-}
-@media (max-width:250px){
-    #about .about .btn{
-        padding: 10px 25px;
-        border: 2px solid crimson;
-        font-size: 14px;
-        border-radius: 10px;
-        margin-top: 50px;
-        margin-left: 5%;
-        
-    }
-}
-@media (max-width:218px){
-    #about .about .btn{
-        padding: 10px 20px;
-        background-color: transparent;
-        border: 2px solid crimson;
-        font-size: 12px;
-        border-radius: 10px;
-        margin-top: 50px;
-        margin-left: 4%;
-        
-    }
-}
-@media (max-width:202px){
-    #about .about .btn{
-        padding: 10px 20px;
-        background-color: transparent;
-        border: 2px solid crimson;
-        font-size: 11px;
-        border-radius: 10px;
-        margin-top: 50px;
-        margin-left: 4%;
-        
-    }
-}
-@media (max-width:200px){
-    #about .about .btn{
-        padding: 10px 30px;
-        border: 2px solid crimson;
-        font-size: 11px;
-        border-radius: 10px;
-        margin-top: 50px;
-        margin-left: 4%;
-        
-    }
-}
-@media (max-width:188px){
-    #about .about .btn{
-        padding: 10px 20px;
-        border: 2px solid crimson;
-        font-size: 10px;
-        border-radius: 10px;
-        margin-top: 50px;
-        margin-left: 4%;
-        
-    }
-}
-@media (max-width:165px){
-    #about .about .about-title h1{
-        font-size:1rem;
-        font-weight:100;
-        margin-top: 3rem;
-    }
-    #about .about .btn{
-        padding: 5px 5px 5px 5px;
-        height: 20px;
-        border: 1px solid crimson;
-        font-size: 10px;
-        border-radius: 10px;
-        margin-top: 50px;
-        margin-left: 2%;
-        
-    }
-    #about .about .pragra p{
-        font-size:1.2rem;
-        margin:10px;
-    }
-}
-
 /* end of about secction */
-
+/* ----------------------------------------------------------------------------------- */
 /* skills section */
 #skills .flexbox{
     flex-direction: column;
@@ -791,11 +685,12 @@ color: white;
 }
 #skills .flexbox .flex-skills{
     display: grid;
-    grid-template-columns: 12rem 12rem;
+    grid-template-columns: 1fr;
     grid-row: auto;
     grid-column-gap: 10px;
     
 }
+/* #skills .flexbox .flex-skills */
 #skills .flexbox .skill-title{
     text-align: center;
     color: blue;
@@ -803,16 +698,17 @@ color: white;
     position: relative;
 }
 #skills .flexbox .flex-skills{
+    align-items:center;
     margin: 10px;
 }
 
 #skills .flexbox .flex-skills .flex-skill-item{
- width: 110px;
+ width: 200px;
  border: 1px solid #cccccc;
  transition: all 1s;
  min-height: 130px;
  border-radius: 10px;
- box-shadow: 3px #cccccc; 
+ box-shadow: 3px #ccc; 
  overflow: hidden;
  margin-left: 10px;
  margin-top: 20px;
@@ -859,9 +755,6 @@ color: white;
     border-bottom: 2px solid cyan;
 
 }
-/* #skills .flexbox .flex-my-experience{
-    
-} */
 #skills .flexbox .flex-my-experience p{
     font-size: 1.2rem;
     
@@ -890,141 +783,423 @@ color: white;
     border: 2px solid cyan
 
 }
-@media (max-width:768px){
+/* @media only screen and (max-width:360px){
+    #skills .flexbox .flex-skills{
+        margin-left: -200px;
+        }
+} */
+@media only screen and (min-width:481px) and (max-width:768px){
+    #skills{
+        min-height: 100vh;
+        margin-bottom: 500px;
+        
+    }
+    #skills .flexbox .flex-skills{
+        width: 90%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-left: -125px;
+        margin-top: 10px;
+        width: 95vw;
+        position: relative;
+        grid-column-gap: 10px;
+        }
+
+        #skills .flexbox .flex-skills .flex-skill-item{
+         width: 22vw;
+         margin-left: 11vw;
+         height: 170px;
+        }
+
+        #skills .flexbox span{
+            text-align: center;
+            margin-top: 10px;
+            width: 10%;
+            background-color: cyan;
+            margin-left: 8px;
+            border: 2px solid cyan
+        }
+        #skills .flexbox .skill-title{
+            text-align: center;
+            font-size: 4rem;
+            position: relative;
+        
+        }
+        #skills .flexbox .flex-skills .flex-skill-item img{
+         width: 13vw;
+         margin-left: 3vw;
+         height: 13vw;
+        }
+        #skills .flexbox .flex-skills .flex-skill-item p{
+         font-size: 1.4rem;
+         text-align: center;
+        }
+        #skills .flexbox .flex-my-experience .exper-title{
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 40px;
+        
+        }
+        #skills .flexbox .flex-my-experience{
+            width:92vw;
+            margin-left:0.1vw;
+            padding-bottom: 20px;
+        }
     #skills .flexbox .flex-my-experience .flex-exper-item{
-       margin-left: 10vw;
+       margin-left: 7vw;
+       margin-bottom:10px
     }
     #skills .flexbox .flex-my-experience .flex-exper-item img{
         margin-top: 30px;
-        width: 400px;
-        height: 200px;
+        width: 70vw;
+        height: 32vw;
      }
      #skills .flexbox .flex-my-experience .flex-exper-item p{
         font-size: 1.3rem;
         margin-bottom: 30px;
-        width: 400px;
+        width: 70vw;
      }
 }
-@media (max-width:425px){
-    #skills .flexbox .flex-my-experience{
-        width: 95vw;
-        margin-left: 4px;
+@media only screen and (max-width: 320px){
+    #skills{
+        margin-left: -10vw;
     }
-    #skills .flexbox .flex-my-experience .flex-exper-item img{
-        width: 280px;
-        height: 150px;
-        /* margin-top: 20px; */
-        
+    #skills .flexbox{
+        min-height: 100vh;
+        /* width: 77vw; */
+        margin-right:17vw;
+        margin-bottom: 250px;
+        margin-left: -12vw;
     }
-    #skills .flexbox .flex-my-experience .flex-exper-item p{
-        font-size: 1.3rem;
-        margin-top: 10px;
-        /* margin-bottom: 30px; */
-        width: 300px;
-        /* background-color: gray; */
-     }
-}
-@media only screen and (min-width:1000px){
-    #skills .flexbox .flex-my-experience {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-column-gap: 10px;
-        width: 95vw;
-        
-        
-    }
-    #skills .flexbox .flex-my-experience .flex-exper-item{
-        width: 250px;
-    }
-    #skills .flexbox .flex-my-experience .flex-exper-item img{
-        width: 300px;
-    }
-    #skills .flexbox .flex-my-experience .flex-exper-item p{
-        width: 300px;
-    }
-}
-@media(max-width:390px){
-    #skills .flexbox .flex-my-experience .flex-exper-item{
-        width: 250px;
-    }
-    #skills .flexbox .flex-my-experience .flex-exper-item img{
-        width:250px;
-        height: 160px;
-    }
-}
-@media(max-width:360){
-    #skills .flexbox .skill-title {
-        margin-top: 30px;
-    }
-}
-@media (max-width:375px){
-    #skills .flexbox .flex-skills{
-        width: 90%;
-        display: grid;
-        grid-template-columns: 1fr;
-        }
-        #skills .flexbox .skill-title{
-            margin-top: -100px;
-        }
-    #skills .flexbox .flex-my-experience{
-        width: 100%
-    
-    }
-    #skills .flexbox .flex-my-experience p{
-        margin-left: 10px
-    
-    }
-    #skills .flexbox .flex-my-experience .exper-title{
-        text-align: center;
-        font-size: 1.2rem;
-        color: blue;
-        position: relative;
-        margin-bottom: 30px;
-    
-    }
-    #skills .flexbox .flex-skills .flex-skill-item{
-     width: 190px;
-     height: 180px;
-     /* margin-left: 5%; */
-     
-    
-}
-#skills .flexbox .flex-skills .flex-skill-item img{
-    width: 140px;
-    height: 120px;
-    margin-left: 20px;
-}
-#skills .flexbox .flex-skills .flex-skill-item p{
-    font-size: 1.1rem;
-}
-}
-@media (max-width: 768px){
-    #skills .flexbox .flex-skills{
-        width: 90%;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        }
-}
-@media (max-width: 390px){
     #skills .flexbox .flex-skills{
     display: grid;
+    /* background-color: crimson; */
     grid-template-columns: 1fr;
-    /*grid-row: auto;
-    grid-column-gap: 10px;*/
+    width: 95vw;
+    margin-left: -10vw;
+    margin-right: 15vw;
+    /* overflow: hidden; */
+    align-items: center;
+    justify-content: center;
     
+}
+#skills .flexbox .flex-skills .flex-skill-item{
+    width: 70vw;
+    margin-left: -8vw;
+    margin-right: 5vw;
+    justify-content: center;
+    align-items: center;
+}
+#skills .flexbox .flex-skills .flex-skill-item img{
+    width:30vw;
+    height: 120px;
+    margin-top:8px; 
+    margin-left: 100px;
+}
+#skills .flexbox .flex-skills .flex-skill-item p{
+    font-size: 1.5rem;
+    margin-bottom:10px
+
 }
 #skills .flexbox .skill-title{
     text-align: center;
     color: blue;
+    margin-top:1rem;
     width: 80%;
     margin-left: 10%;
-    font-size: 2rem;
+    font-size: 1.6rem;
     position: relative;
     /*margin-top: -130px;*/
 
 }
 #skills .flexbox .flex-my-experience{
-    width: 100%
+    width: 90vw;
+    margin-right: 10vw;
+    /* margin-left: 50px; */
+    border: none;
+
+}
+#skills .flexbox .flex-my-experience .flex-exper-item{
+    width: 85vw;
+    margin-left: -2vw;
+
+}
+#skills .flexbox .flex-my-experience .flex-exper-item img{
+    width: 85vw;
+    
+
+}
+#skills .flexbox .flex-my-experience p{
+    width: 85vw;
+    /* margin-left: 10px */
+
+}
+#skills .flexbox .flex-my-experience .exper-title{
+    text-align: center;
+    font-size: 1.2rem;
+    color: blue;
+    position: relative;
+    margin-bottom: 30px;
+
+}
+
+/* #skills .flexbox .flex-skills .flex-skill-item{
+ width: 220px;
+ margin-left: 5vw;
+} */
+
+
+}
+ @media only screen and (max-width: 360px){
+    #skills{
+        min-height: 100vh;
+        margin-bottom: 250px;
+    }
+    #skills .flexbox{
+        margin-left: -40px;
+    }
+    #skills .flexbox .flex-skills{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 95vw;
+    margin-left: -10vw;
+    align-items: center;
+    justify-content: center;
+    
+}
+#skills .flexbox .flex-skills .flex-skill-item{
+    width: 80vw;
+    margin-left: -3vw;
+    margin-right: 3vw;
+    justify-content: center;
+    align-items: center;
+}
+#skills .flexbox .flex-skills .flex-skill-item img{
+    width:30vw;
+    height: 120px;
+    margin-top:8px; 
+    margin-left: 14vw;
+}
+#skills .flexbox .flex-skills .flex-skill-item p{
+    font-size: 1.5rem;
+    margin-bottom:10px
+
+}
+#skills .flexbox .skill-title{
+    text-align: center;
+    color: blue;
+    margin-top:1rem;
+    width: 80%;
+    margin-left: 10%;
+    font-size: 1.6rem;
+    position: relative;
+   
+
+}
+#skills .flexbox .flex-my-experience{
+    width: 90vw;
+    border: none;
+    margin-left: 0px;
+    
+
+}
+#skills .flexbox .flex-my-experience .flex-exper-item{
+    width: 90vw;
+    margin-left: 80px;
+    /* margin-left: 2vw; */
+
+}
+#skills .flexbox .flex-my-experience .flex-exper-item img{
+    width: 90vw;
+    margin-left: 18px;
+    
+
+}
+#skills .flexbox .flex-my-experience .flex-exper-item p{
+    margin-left: 18px
+
+}
+#skills .flexbox .flex-my-experience .exper-title{
+    text-align: center;
+    font-size: 1.2rem;
+    color: blue;
+    position: relative;
+    margin-bottom: 30px;
+
+}
+#skills .flexbox .flex-skills{
+    width: 90%;
+
+
+}
+#skills .flexbox .flex-skills .flex-skill-item{
+ width: 220px;
+ margin-left: 5%;
+}
+ }
+
+ @media only screen and (max-width: 375px){
+    #skills{
+        min-height: 100vh;
+        margin-bottom: 250px;
+        margin-left: -30px;
+    }
+    #skills .flexbox {
+        width: 80vw;
+        margin-left: -20px;
+    }
+    #skills .flexbox .flex-skills{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 95vw;
+    margin-left: -4vw;
+    margin-right: 8vw;
+    align-items: center;
+    justify-content: center;
+    
+}
+#skills .flexbox .flex-skills .flex-skill-item{
+    width: 80vw;
+    margin-left: 5vw;
+    margin-right: 2vw;
+    justify-content: center;
+    align-items: center;
+}
+#skills .flexbox .flex-skills .flex-skill-item img{
+    width:30vw;
+    height: 120px;
+    margin-top:8px; 
+    margin-left: 22vw;
+}
+#skills .flexbox .flex-skills .flex-skill-item p{
+    font-size: 1.5rem;
+    margin-bottom:10px
+
+}
+#skills .flexbox .skill-title{
+    text-align: center;
+    color: blue;
+    margin-top:1rem;
+    width: 80%;
+    margin-left: 10%;
+    font-size: 1.6rem;
+    position: relative;
+   
+
+}
+#skills .flexbox span{
+    margin-right: 18vw;
+}
+#skills .flexbox .flex-my-experience{
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    margin-left: 10vw;
+    margin-right: -4vw;
+    border: none;
+
+}
+#skills .flexbox .flex-my-experience .flex-exper-item{
+    width: 75vw;
+    margin-left: 7vw;
+
+}
+#skills .flexbox .flex-my-experience .flex-exper-item img{
+    width: 70vw;
+    
+
+}
+#skills .flexbox .flex-my-experience p{
+    width: 75vw;
+    /* margin-left: 10px */
+
+}
+#skills .flexbox .flex-my-experience .exper-title{
+    text-align: center;
+    font-size: 1.2rem;
+    color: blue;
+    position: relative;
+    margin-bottom: 30px;
+
+}
+#skills .flexbox .flex-skills{
+    width: 90%;
+
+
+}
+#skills .flexbox .flex-skills .flex-skill-item{
+ width: 220px;
+ margin-left: 5%;
+}
+ }
+
+ @media only screen and (max-width: 411px){
+    #skills{
+        min-height: 100vh;
+        margin-bottom: 250px;
+        margin-left: 7%;
+    }
+    /* #skills .flexbox{
+        width: 90vw;
+        margin-right: 10vw;
+        margin-left: -10vw;
+        background-color: cyan;
+    } */
+    #skills .flexbox .flex-skills{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 95vw;
+    margin-left: -3vw;
+    align-items: center;
+    justify-content: center;
+    
+}
+#skills .flexbox span{
+    margin-right: 18vw;
+}
+#skills .flexbox .flex-skills .flex-skill-item{
+    width: 80vw;
+    margin-left: 5vw;
+    margin-right: 2vw;
+    justify-content: center;
+    align-items: center;
+}
+#skills .flexbox .flex-skills .flex-skill-item img{
+    width:30vw;
+    height: 120px;
+    margin-top:8px; 
+    margin-left: 16vw;
+}
+#skills .flexbox .flex-skills .flex-skill-item p{
+    font-size: 1.5rem;
+    margin-bottom:10px
+
+}
+#skills .flexbox h1.skill-title{
+    text-align: center;
+    color: blue;
+    margin-top:1rem;
+    width: 80%;
+    margin-left: -10vw;
+    margin-right: 10vw;
+    font-size: 1.6rem;
+    position: relative;
+   
+
+}
+#skills .flexbox .flex-my-experience{
+    width: 80vw;
+    border: none;
+
+}
+#skills .flexbox .flex-my-experience .flex-exper-item{
+    width: 75vw;
+    margin-left: 2vw;
+
+}
+#skills .flexbox .flex-my-experience .flex-exper-item img{
+    width: 70vw;
+    
 
 }
 #skills .flexbox .flex-my-experience p{
@@ -1041,19 +1216,362 @@ color: white;
 }
 #skills .flexbox .flex-skills{
     width: 90%;
-    /*margin-right: 3px;*/
 
 
 }
 #skills .flexbox .flex-skills .flex-skill-item{
  width: 220px;
  margin-left: 5%;
- 
+}
+
+ }
+
+ @media only screen and (max-width: 414px){
+    #skills{
+        min-height: 100vh;
+        margin-bottom: 250px;
+        margin-left: 7%;
+    }
+    #skills .flexbox{
+        width: 85vw;
+    }
+    #skills .flexbox .flex-skills{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 95vw;
+    margin-left: -5vw;
+    align-items: center;
+    justify-content: center;
+    
+}
+#skills .flexbox .flex-skills .flex-skill-item{
+    width: 80vw;
+    margin-left: 5vw;
+    margin-right: 2vw;
+    justify-content: center;
+    align-items: center;
+}
+#skills .flexbox .flex-skills .flex-skill-item img{
+    width:30vw;
+    height: 120px;
+    margin-top:8px; 
+    margin-left: 16vw;
+}
+#skills .flexbox .flex-skills .flex-skill-item p{
+    font-size: 1.5rem;
+    margin-bottom:10px
+
+}
+#skills .flexbox .skill-title{
+    text-align: center;
+    color: blue;
+    margin-top:1rem;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 12vw;
+    font-size: 1.6rem;
+    position: relative;
+   
+
+}
+#skills .flexbox .flex-my-experience{
+    width: 80vw;
+    /* margin-left:6vw; */
+    border: none;
+
+}
+#skills .flexbox .flex-my-experience .flex-exper-item{
+    width: 75vw;
+    margin-left: 8vw;
+
+}
+#skills .flexbox .flex-my-experience .flex-exper-item img{
+    width: 70vw;
+    
+
+}
+#skills .flexbox .flex-my-experience p{
+    margin-left: 10px
+
+}
+#skills .flexbox .flex-my-experience .exper-title{
+    text-align: center;
+    font-size: 1.2rem;
+    color: blue;
+    position: relative;
+    margin-bottom: 30px;
+
+}
+#skills .flexbox .flex-skills{
+    width: 90%;
+
+
+}
+#skills .flexbox .flex-skills .flex-skill-item{
+ width: 220px;
+ margin-left: 5%;
+}
+ }
+/* @media only screen and (min-width: 320px) and (max-width:480px){
+    #skills{
+        min-height: 100vh;
+        margin-bottom: 250px;
+        margin-left: 7%;
+    }
+    #skills .flexbox .flex-skills{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 95vw;
+    margin-left: -3vw;
+    align-items: center;
+    justify-content: center;
+    
+}
+#skills .flexbox .flex-skills .flex-skill-item{
+    width: 80vw;
+    margin-left: 5vw;
+    margin-right: 2vw;
+    justify-content: center;
+    align-items: center;
+}
+#skills .flexbox .flex-skills .flex-skill-item img{
+    width:30vw;
+    height: 120px;
+    margin-top:8px; 
+    margin-left: 16vw;
+}
+#skills .flexbox .flex-skills .flex-skill-item p{
+    font-size: 1.5rem;
+    margin-bottom:10px
+
+}
+#skills .flexbox .skill-title{
+    text-align: center;
+    color: blue;
+    margin-top:1rem;
+    width: 80%;
+    margin-left: 10%;
+    font-size: 1.6rem;
+    position: relative;
+   
+
+}
+#skills .flexbox .flex-my-experience{
+    width: 80vw;
+    border: none;
+
+}
+#skills .flexbox .flex-my-experience .flex-exper-item{
+    width: 75vw;
+    margin-left: 2vw;
+
+}
+#skills .flexbox .flex-my-experience .flex-exper-item img{
+    width: 70vw;
+    
+
+}
+#skills .flexbox .flex-my-experience p{
+    margin-left: 10px
+
+}
+#skills .flexbox .flex-my-experience .exper-title{
+    text-align: center;
+    font-size: 1.2rem;
+    color: blue;
+    position: relative;
+    margin-bottom: 30px;
+
+}
+#skills .flexbox .flex-skills{
+    width: 90%;
+
+
+}
+#skills .flexbox .flex-skills .flex-skill-item{
+ width: 220px;
+ margin-left: 5%;
+}
+
+} */
+@media only screen and (max-width:450px){
+    #skills{
+        min-height: 100vh;
+        margin-bottom: 250px;
+        margin-left: 7%;
+    }
+    #skills .flexbox {
+        margin-left: 30px;
+    }
+    #skills .flexbox .flex-skills{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 95vw;
+    margin-left: -3vw;
+    align-items: center;
+    justify-content: center;
+    
+}
+#skills .flexbox .flex-skills .flex-skill-item{
+    width: 80vw;
+    margin-left: 5vw;
+    margin-right: 2vw;
+    justify-content: center;
+    align-items: center;
+}
+#skills .flexbox .flex-skills .flex-skill-item img{
+    width:30vw;
+    height: 120px;
+    margin-top:8px; 
+    margin-left: 11vw;
+}
+#skills .flexbox .flex-skills .flex-skill-item p{
+    font-size: 1.5rem;
+    margin-bottom:10px
+
+}
+#skills .flexbox .skill-title{
+    text-align: center;
+    color: blue;
+    margin-top:1rem;
+    width: 80%;
+    margin-left: 10%;
+    font-size: 1.6rem;
+    position: relative;
+   
+
+}
+#skills .flexbox .flex-my-experience{
+    width: 85vw;
+    border: none;
+    margin-left: -75px;
+
+}
+#skills .flexbox .flex-my-experience .flex-exper-item{
+    width: 75vw;
+    /* margin-left: 2vw; */
+
+}
+#skills .flexbox .flex-my-experience .flex-exper-item img{
+    width: 70vw;
+    
+
+}
+#skills .flexbox .flex-my-experience p{
+    margin-left: 10px
+
+}
+#skills .flexbox .flex-my-experience .exper-title{
+    text-align: center;
+    font-size: 1.2rem;
+    color: blue;
+    position: relative;
+    margin-bottom: 30px;
+
+}
+#skills .flexbox .flex-skills{
+    width: 90%;
+
+
+}
+#skills .flexbox .flex-skills .flex-skill-item{
+ width: 220px;
+ margin-left: 5%;
 }
 
 }
 
-@media only screen and (min-width: 1000px){
+@media only screen and (mxa-width:280px){
+    #skills{
+        min-height: 100vh;
+        margin-bottom: 250px;
+        margin-left: 7%;
+    }
+    #skills .flexbox {
+        margin-left: 30px;
+    }
+    #skills .flexbox .flex-skills{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 90vw;
+    margin-left: -3vw;
+    align-items: center;
+    justify-content: center;
+    
+}
+#skills .flexbox .flex-skills .flex-skill-item{
+    width: 60vw;
+    /* margin-left: 5vw; */
+    /* margin-right: 2vw; */
+    justify-content: center;
+    align-items: center;
+}
+#skills .flexbox .flex-skills .flex-skill-item img{
+    width:20vw;
+    height: 100px;
+    margin-top:8px; 
+    margin-left: 11vw;
+}
+#skills .flexbox .flex-skills .flex-skill-item p{
+    font-size: 1.1rem;
+    margin-bottom:10px
+
+}
+#skills .flexbox .skill-title{
+    text-align: center;
+    color: blue;
+    margin-top:1rem;
+    width: 80%;
+    margin-left: 10%;
+    font-size: 1.6rem;
+    position: relative;
+   
+
+}
+#skills .flexbox .flex-my-experience{
+    width: 85vw;
+    border: none;
+    margin-left: -75px;
+
+}
+#skills .flexbox .flex-my-experience .flex-exper-item{
+    width: 75vw;
+    /* margin-left: 2vw; */
+
+}
+#skills .flexbox .flex-my-experience .flex-exper-item img{
+    width: 70vw;
+    
+
+}
+#skills .flexbox .flex-my-experience p{
+    margin-left: 10px
+
+}
+#skills .flexbox .flex-my-experience .exper-title{
+    text-align: center;
+    font-size: 1.2rem;
+    color: blue;
+    position: relative;
+    margin-bottom: 30px;
+
+}
+#skills .flexbox .flex-skills{
+    width: 90%;
+
+
+}
+#skills .flexbox .flex-skills .flex-skill-item{
+ width: 220px;
+ margin-left: 5%;
+}
+}
+@media only screen and (min-width:769px) and (max-width: 1024px){
+    #skills{
+        min-height: 100vh;
+        margin-bottom: 750px;
+        
+    }
     #skills .flexbox span{
     text-align: center;
     margin-top: 10px;
@@ -1069,9 +1587,9 @@ color: white;
 
 }
  #skills .flexbox .flex-skills{
-     margin-left: -90px;
+    margin-left: 1.5vw;
     margin-top: 10px;
-    width: 95vw;
+    width: 90vw;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     position: relative;
@@ -1079,9 +1597,9 @@ color: white;
     
 }
 #skills .flexbox .flex-skills .flex-skill-item{
- width: 180px;
- margin-left: 4vw;
- height: 200px;
+ width: 20vw;
+ /* margin-left: 10vw; */
+ /* height: ; */
  position: relative;
 }
 #skills .flexbox .flex-skills .flex-skill-item img{
@@ -1090,65 +1608,30 @@ color: white;
  height: 130px;
 }
 #skills .flexbox .flex-skills .flex-skill-item p{
- font-size: 1.5rem;
+ font-size: 1.1rem;
  text-align: center;
 }
-#skills .flexbox .flex-my-experience .exper-title{
-    text-align: center;
-    font-size: 3rem;
-    margin-bottom: 40px;
-
-}
-/* #skills .flexbox .flex-my-experience p{
-    font-size: 1.5rem;
-
-} */
-
-}
-
-@media only screen and (min-width: 1245px){
-    #skills .flexbox span{
-    text-align: center;
-    margin-top: 10px;
-    width: 10%;
-    background-color: cyan;
-    margin-left: 8px;
-    border: 2px solid cyan
-}
-#skills .flexbox .skill-title{
-    text-align: center;
-    font-size: 4rem;
-    position: relative;
-
-}
- #skills .flexbox .flex-skills{
-     margin-left: -100px;
-    margin-top: 10px;
-    width: 90vw;
+#skills .flexbox .flex-my-experience{
+    width: 89vw;
+    margin-left: 1.8vw;
+    margin-right: 2vw;
     display: grid;
-    grid-template-columns: 17rem 17rem 17rem 17rem;
-    position: relative;
-    grid-column-gap: 10px;
-    
+    grid-template-columns: 1fr 1fr 1fr;
+
 }
-#skills .flexbox .flex-skills .flex-skill-item{
- width: 250px;
- margin-left: 10vw;
- height: 200px;
- position: relative;
+#skills .flexbox .flex-my-experience .flex-exper-iteme{
+width: 28vw;
 }
-#skills .flexbox .flex-skills .flex-skill-item img{
- width: 130px;
- margin-left: 3vw;
- height: 130px;
-}
-#skills .flexbox .flex-skills .flex-skill-item p{
- font-size: 1.5rem;
- text-align: center;
-}
-#skills .flexbox .flex-my-experience .exper-title{
+#skills .flexbox .flex-my-experience .flex-exper-item img{
+    width: 26vw;
+    }
+    #skills .flexbox .flex-my-experience .flex-exper-item p{
+        width: 26vw;
+        }
+
+#skills .flexbox .flex-my-experience h1.exper-title{
     text-align: center;
-    font-size: 3rem;
+    font-size: 3.5rem;
     margin-bottom: 40px;
 
 }
@@ -1157,4 +1640,75 @@ color: white;
 
 }
 
+}
+
+@media only screen and (min-width:1025px) and (max-width:1500px){
+    #skills .flexbox span{
+        text-align: center;
+        margin-top: 10px;
+        width: 10%;
+        background-color: cyan;
+        margin-left: 8px;
+        border: 2px solid cyan
+    }
+    #skills .flexbox .skill-title{
+        text-align: center;
+        font-size: 4rem;
+        position: relative;
+    
+    }
+     #skills .flexbox .flex-skills{
+        margin-left: 1.5vw;
+        margin-top: 10px;
+        /* background-color: #cccccc; */
+        width: 90vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        position: relative;
+        grid-column-gap: 10px;
+        
+    }
+    #skills .flexbox .flex-skills .flex-skill-item{
+     width: 20vw;
+     /* background-color: gray; */
+    }
+    
+    #skills .flexbox .flex-skills .flex-skill-item img{
+        width: 130px;
+        margin-left: 5vw;
+        height: 130px;
+       }
+       #skills .flexbox .flex-skills .flex-skill-item p{
+        font-size: 1.5rem;
+        text-align: center;
+        margin-bottom: 10px;
+       }
+    #skills .flexbox .flex-my-experience{
+        width: 90vw;
+        margin-left: 1.8vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    
+    }
+    #skills .flexbox .flex-my-experience .flex-exper-iteme{
+    width: 28vw;
+    }
+    #skills .flexbox .flex-my-experience .flex-exper-item img{
+        width: 26vw;
+        }
+        #skills .flexbox .flex-my-experience .flex-exper-item p{
+            width: 26vw;
+            font-size: 1.5rem;
+            }
+    
+    #skills .flexbox .flex-my-experience h1.exper-title{
+        text-align: center;
+        font-size: 3.5rem;
+        margin-bottom: 40px;
+    
+    }
+    #skills .flexbox .flex-my-experience p{
+        font-size: 1.5rem;
+    
+    }
 }
