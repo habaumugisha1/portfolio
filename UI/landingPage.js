@@ -36,6 +36,7 @@ window.addEventListener('scroll', event =>{
     if (section.offsetTop <= fromTop + 50 && section.offsetTop + section.offsetHeight > fromTop + 50){
         link.style.color = 'crimson';
         link.style.borderBottom = '2px solid crimson';
+        console.log(fromTop +30)
     } else {
         link.style.color = 'white';
         link.style.borderBottom = 'none';
