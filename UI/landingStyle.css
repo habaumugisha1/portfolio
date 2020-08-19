@@ -625,11 +625,18 @@ color: white;
         font-size:2.4rem;
     }
     #about .about a.btn{
+
+        width: 50vw;
+        margin-top: 70px;
+        margin-left: -80px;
+        font-size: 1.3rem;
+
         margin-top: -7vh;
         /* margin-bottom: -100px; */
         width:300px;
         font-size:1.4rem;
         margin-left: 5vw;
+
     }
 }
 
@@ -783,6 +790,37 @@ color: white;
     border: 2px solid cyan
 
 }
+
+@media (max-width:768px){
+    #skills .flexbox .flex-my-experience{
+        width: 80vw;
+    }
+    #skills .flexbox .flex-my-experience .flex-exper-item{
+       margin-left: 10vw;
+    }
+    #skills .flexbox .flex-my-experience .flex-exper-item img{
+        margin-top: 30px;
+        width: 400px;
+        height: 200px;
+     }
+     #skills .flexbox .flex-my-experience .flex-exper-item p{
+        font-size: 1.3rem;
+        margin-bottom: 30px;
+        width: 400px;
+     }
+}
+@media (max-width:425px){
+    #skills .flexbox .flex-skills{
+        margin-left: -40px;
+    }
+    #skills .flexbox .flex-my-experience{
+        width: 95vw;
+        margin-left: 4px;
+    }
+    #skills .flexbox .flex-my-experience .flex-exper-item img{
+        width: 280px;
+        height: 150px;
+        /* margin-top: 20px; */
 /* @media only screen and (max-width:360px){
     #skills .flexbox .flex-skills{
         margin-left: -200px;
@@ -792,6 +830,7 @@ color: white;
     #skills{
         min-height: 100vh;
         margin-bottom: 500px;
+
         
     }
     #skills .flexbox .flex-skills{
@@ -860,6 +899,40 @@ color: white;
         width: 70vw;
      }
 }
+
+
+@media only screen and (max-width: 320px){
+    #skills .flexbox .flex-my-experience .flex-exper-item{
+        width: 250px;
+    }
+    #skills .flexbox .flex-my-experience .flex-exper-item img{
+        width: 250px;
+    }
+    #skills .flexbox .flex-my-experience .flex-exper-item p{
+        width: 250px;
+    }
+}
+@media (max-width:375px){
+    #skills .flexbox .flex-skills{
+        width: 90%;
+        display: grid;
+        grid-template-columns: 1fr;
+        }
+        #skills .flexbox .flex-skills .flex-skill-item{
+            margin-left: 10px;
+            
+            }
+        #skills .flexbox .skill-title{
+            margin-top: -100px;
+        }
+    #skills .flexbox .flex-my-experience{
+        width: 100%
+    
+    }
+    #skills .flexbox .flex-my-experience .flex-exper-item{
+        margin-left: 5px
+    
+
 @media only screen and (max-width: 320px){
     #skills{
         margin-left: -10vw;
@@ -1625,12 +1698,623 @@ width: 28vw;
     margin-bottom: 40px;
 
 }
+#skills .flexbox .flex-my-experience{
+    width: 80vw;
+    margin-left:2vw;
+}
 #skills .flexbox .flex-my-experience p{
     font-size: 1.5rem;
 
 }
 
 }
+
+
+/* project section*/
+
+.flexbox-project{
+    display: grid;
+    grid-template-columns: 6rem;
+    grid-row-gap: 1.2rem;
+    grid-column-gap: 1.2rem;
+    margin-left: 5vw
+
+}
+.title h1{
+    text-align: center;
+    color: blue;
+    font-size: 1.7rem;
+    margin-top: 30px;
+    margin-bottom: 30px
+
+}
+/*.title span hr{
+    background-color: cyan;
+    border:1px solid cyan;
+    text-align: center;
+    margin-bottom: 10px;
+    align-items: center;
+    margin-top: 5px;
+    width: 4%
+    height:1px;
+}*/
+.flexbox-project .flexbox-project-item{
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0px  2px 2px 2px #cccccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 80vw;
+    height: 320px;
+    transition: .6s ease;
+
+}
+.flexbox-project .flexbox-project-item:hover{
+    transform: scale(1.1);
+
+}
+.flexbox-project .flexbox-project-item img{
+    width: 100%;
+    height: 200px
+
+}
+.flexbox-project .flexbox-project-item p{
+    font-size: 1.3rem;
+    margin-top: 10px;
+    margin-bottom: 10px
+
+}
+@media only screen and  (min-width: 769px) and (max-width:1023px){
+    #projects{
+        margin-top: 60px;
+    }
+    .flexbox-project{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 1.2rem;
+    grid-column-gap: 1.2rem;
+    width: 80vw;
+    margin-bottom: 50px;
+    margin-left: 15vw
+
+}
+.title h1{
+    font-size: 1.9rem;
+    margin-top: 60px;
+}
+.flexbox-project .flexbox-project-item {
+    width: 25vw;
+    height: 100%;
+    margin-left: -60px
+
+} 
+.flexbox-project .flexbox-project-item img{
+    width: 23vw
+
+} 
+   .flexbox-project .flexbox-project-item p{
+    font-size: 1.3rem;
+    margin-top: 10px;
+    margin-bottom: 10px
+
+} 
+}
+@media only screen and  (max-width: 1024px){
+    #projects{
+        margin-top: 60px;
+    }
+    .flexbox-project{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 1.2rem;
+    grid-column-gap: 1.2rem;
+    width: 95vw;
+    margin-bottom: 50px;
+    margin-left: 8vw
+
+}
+.title h1{
+    font-size: 1.9rem;
+    margin-top: 60px;
+}
+.flexbox-project .flexbox-project-item {
+    width: 30vw;
+    height: 100%;
+    margin-left: -60px
+
+} 
+.flexbox-project .flexbox-project-item img{
+    width: 25vw
+
+} 
+   .flexbox-project .flexbox-project-item p{
+    font-size: 1.3rem;
+    margin-top: 10px;
+    margin-bottom: 10px
+
+} 
+}
+@media (max-width: 600px){
+   .flexbox-project .flexbox-project-item p{
+    font-size: 0.9rem;
+    margin-top: 10px;
+    margin-bottom: 10px
+
+} 
+}
+@media only screen and  (min-width: 1025px) and (max-width:1500px){
+    #projects{
+        margin-top: 60px;
+    }
+    .flexbox-project{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 1.2rem;
+    grid-column-gap: 1.2rem;
+    width: 80vw;
+    margin-bottom: 50px;
+    margin-left: 15vw
+
+}
+.title h1{
+    font-size: 1.9rem;
+    margin-top: 60px;
+}
+.flexbox-project .flexbox-project-item {
+    width: 25vw;
+    height: 100%;
+    margin-left: -60px
+
+} 
+.flexbox-project .flexbox-project-item img{
+    width: 23vw
+
+} 
+   .flexbox-project .flexbox-project-item p{
+    font-size: 1.3rem;
+    margin-top: 10px;
+    margin-bottom: 10px
+
+} 
+}
+
+@media (max-width: 375px){
+    .flexbox-project .flexbox-project-item {
+    width: 90vw;
+    margin-left: 10px;
+    height: 100%
+
+}
+   .flexbox-project .flexbox-project-item p{
+    font-size: 1rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+
+} 
+}
+@media (max-width: 360px){
+    .flexbox-project .flexbox-project-item {
+    width: 90vw;
+    height: 100%
+
+}
+   .flexbox-project .flexbox-project-item p{
+    font-size: 1rem;
+    margin-top: 10px;
+    margin-bottom: 10px
+
+} 
+}
+@media (max-width: 320px){
+    .flexbox-project .flexbox-project-item {
+    width: 95vw;
+    margin-left: 10px;
+    height: 100%
+
+}
+   .flexbox-project .flexbox-project-item p{
+    font-size: 1rem;
+    margin-top: 10px;
+    margin-bottom: 10px
+
+} 
+}
+@media (max-width: 411px){
+    .flexbox-project .flexbox-project-item {
+    width: 82vw;
+    height: 100%
+
+}
+   .flexbox-project .flexbox-project-item p{
+    font-size: 1rem;
+    margin-top: 10px;
+    margin-bottom: 10px
+
+} 
+}
+@media (max-width: 414px){
+    .flexbox-project .flexbox-project-item {
+    width: 90vw;
+    height: 100%;
+    margin-left: -3px
+
+}
+   .flexbox-project .flexbox-project-item p{
+    font-size: 1rem;
+    margin-top: 10px;
+    margin-bottom: 10px
+
+} 
+}
+@media (max-width: 768px){
+    #projects{
+        margin-top: 60px;
+    }
+    .flexbox-project{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 1.2rem;
+    grid-column-gap: 1.2rem;
+    width: 80vw;
+    margin-bottom: 50px;
+    margin-left: 15vw
+
+}
+.title h1{
+    font-size: 1.9rem;
+    margin-top: 60px;
+}
+.flexbox-project .flexbox-project-item {
+    width: 80vw;
+    height: 100%;
+    margin-left: -60px
+
+} 
+.flexbox-project .flexbox-project-item img{
+    width: 78vw
+
+} 
+   .flexbox-project .flexbox-project-item p{
+    font-size: 1.3rem;
+    margin-top: 10px;
+    margin-bottom: 10px
+
+} 
+}
+
+@media (max-width: 375px){
+    .flexbox-project .flexbox-project-item {
+    width: 90vw;
+    margin-left: 10px;
+    height: 100%
+
+}
+   .flexbox-project .flexbox-project-item p{
+    font-size: 1rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+
+} 
+}
+@media (max-width: 360px){
+    .flexbox-project .flexbox-project-item {
+    width: 90vw;
+    height: 100%
+
+}
+   .flexbox-project .flexbox-project-item p{
+    font-size: 1rem;
+    margin-top: 10px;
+    margin-bottom: 10px
+
+} 
+    .flexbox-project .flexbox-project-item {
+    width: 80vw;
+    height: 100%;
+    margin-left: 3vw;
+
+}
+   .flexbox-project .flexbox-project-item p{
+    font-size: 1.5rem;
+    margin-top: 10px;
+    margin-bottom: 10px
+
+} 
+}
+
+@media (max-width: 258px){
+    .flexbox-project .flexbox-project-item{
+        margin-left: 10px;
+        height: 250px;
+    }
+
+    .flexbox-project .flexbox-project-item img{
+    width: 100%;
+    height: 140px
+
+}
+   .flexbox-project .flexbox-project-item p{
+    font-size: 0.8rem;
+    margin-top: 10px;
+    margin-bottom: 10px
+
+} 
+}
+/*end of project section*/
+
+
+/* contact section */
+#contact .contacts{
+    min-height: 90vh;
+    position: relative;
+    background-color: #494234;
+    color: white
+}
+#contact .contacts h1{
+    padding-top: 50px;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 1.7rem
+}
+
+#contact .contacts .contact-wrap{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem
+}
+#contact .contacts .address{
+    width: 80vw;
+    padding: 20px;
+    text-align: center;
+}
+#contact .contacts .address h3{
+    font-size: 1.5rem;
+    margin-top: 30px;
+    margin-bottom: 20px
+}
+#contact .contacts .address p{
+    font-size: 1.3rem;
+}
+
+#contact .contacts .contact-form{
+    padding: 30px;
+    transition: .7s ease right;
+    text-align: center;
+     
+}
+#contact .contacts .contact-form h3{
+    color: cyan;
+
+}
+
+
+#contact .contacts .contact-form form{
+    padding: 30px;
+    margin-top: 30px;
+    background-color: #0D0300;
+    border-radius: 10px;
+    /*height: fit-content*/
+    text-align: left;
+
+}
+#contact .contacts .contact-form form input{
+    width: 73vw;
+    height: 5vh;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 1px solid #cccccc
+
+}
+#contact .contacts .contact-form form textarea{
+    width: 73vw;
+}
+#contact .contacts .contact-form form button{
+    padding: 10px;
+    width: 100px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    transition: .6s ease
+    /*margin-bottom: 20px*/
+
+}
+#contact .contacts .contact-form form button:hover{
+    background-color: crimson;
+    border: 2px solid crimson;
+    transition: .6s ease
+}
+@media only screen and (min-width:1025px) and (max-width: 1500px){
+    #contact .contacts .contact-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem
+}
+#contact .contacts .address{
+    margin-top: 100px;
+    /*margin-left: -15vw*/
+    width: 30vw;
+    /*padding: 20px;
+    text-align: center;*/
+}
+#contact .contacts .address h3{
+    font-size: 2.3rem;
+
+}
+#contact .contacts .address p{
+    font-size: 2rem;
+}
+#contact .contacts .contact-form{
+    width: 55vw;
+    margin-right: 5vw;
+    margin-top: 10px
+     
+}
+
+#contact .contacts .contact-form form input{
+    width: 40vw;
+   margin-left: 3vw
+}
+#contact .contacts .contact-form form textarea{
+    width: 40vw;
+margin-left: 3vw
+}
+
+#contact .contacts .contact-form form button{
+    padding: 15px;
+    width: 20vw;
+    font-size: 1.5rem;
+    margin-left: 3vw
+    }
+    #contact .contacts .contact-form form label{
+    font-size: 1.2rem;
+    margin-left: 3vw
+
+}
+#contact .contacts .contact-form h3{
+    font-size: 1.6rem
+}
+}
+@media only screen and (min-width:769px) and (max-width: 1024px){
+    #contact .contacts .contact-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem
+}
+#contact .contacts .address{
+    margin-top: 100px;
+    font-size: 2rem;
+    width: 40vw;
+   
+    
+}
+#contact .contacts .address h3{
+    font-size: 1.9rem;
+
+}
+#contact .contacts .address p{
+    font-size: 1.7rem;
+}
+#contact .contacts .contact-form{
+    width: 55vw;
+    margin-right: 5vw
+     
+}
+#contact .contacts .contact-form form input{
+    width: 40vw;
+    margin-left: 2vw;
+}
+#contact .contacts .contact-form form textarea{
+    width: 40vw;
+    margin-left: 2vw;
+}
+
+#contact .contacts .contact-form form button{
+    padding: 15px;
+    width: 20vw;
+    font-size: 1.5rem;
+    margin-left: 2vw;
+    }
+    #contact .contacts .contact-form form label{
+    font-size: 1.2rem;
+    margin-left: 2vw;
+
+}
+#contact .contacts .contact-form h3{
+    font-size: 1.6rem
+}
+}
+@media only screen and (min-width:481px) and (max-width:768px){
+    #contact .contacts .address{
+        margin-top: 100px;
+        font-size: 2rem;
+        margin-left: 7vw;
+        /* width: 40vw;   */
+    }
+    #contact .contacts .address h3{
+    font-size: 1.8rem;
+    margin-left: 30px;
+    margin-top: 30px;
+    margin-bottom: 20px
+}
+   #contact .contacts .contact-form h3{
+    font-size: 1.8rem;
+    color: cyan;
+
+}
+    #contact .contacts .address p{
+    font-size: 1.6rem;
+}
+  #contact .contacts .contact-form form label{
+    font-size: 1.2rem;
+    margin-left: 5vw;
+
+}
+#contact .contacts .contact-form form input{
+    font-size: 1.2rem;
+    margin-left: 5vw;
+}
+#contact .contacts .contact-form form textarea{
+    /* font-size: 1.2rem; */
+    margin-left: 5vw;
+}
+    #contact .contacts .contact-form form button{
+    padding: 15px;
+    width: 30vw;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    transition: .6s ease;
+    margin-left: 5%;
+    /*margin-bottom: 20px*/
+
+}
+}
+@media only screen and (min-width: 320px) and (max-width:480px){
+    #contact .contacts .contact-form form{
+    background-color: #494234;
+    padding: 10px;
+    text-align: left;
+    margin-bottom:30px;
+
+}
+}
+
+.contact-social-media{
+    background-color: #0D0300;
+    color: #eee;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.contact-social-media img{
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-top: 20px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: .7s ease
+}
+
+.contact-social-media img:hover{
+    transform: scale(1.5);
+    transition: .7s ease
+}
+.contact-social-media p{
+    color: #eee;
+    padding-bottom: 30px
+    /*text-align: */
+}
+.contact-social-media p span{
+    color: crimson
+}
+
+/* end of contact section */
 
 @media only screen and (min-width:1025px) and (max-width:1500px){
     #skills .flexbox span{
