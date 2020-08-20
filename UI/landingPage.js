@@ -42,4 +42,13 @@ window.addEventListener('scroll', event =>{
         link.style.borderBottom = 'none';
     }
    })
-})
+});
+
+document.getElementById('login').addEventListener('click',  ()=>{
+    document.querySelector('.login-modal').style.display='flex';
+    });
+    
+    document.querySelector('.close').addEventListener('click', ()=> {
+        document.querySelector('.login-modal').style.display='none';
+    
+    });

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="blogs.css">
+    <title>My Web and blogs</title>
+</head>
+<body>
+    <!-- header section -->
+    <section id="header">
+    <div class="header container">
+        <div class="nav-bar">
+            <div class="brand"> <h1> <a href="../index.html"> <span>A</span>mi <span>D</span>es <span>J</span>eunes</a></h1> </div>
+            <div class="nav-list">
+                <div class="hamburger"> <div class="bar"></div></div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#blogs">Blog</a></li>
+                    <li><a href="#" id="article">New Article</a></li>
+                    
+                </ul>
+
+            </div>
+       </div>
+    </div>
+    </section>
+    <!-- end of header section -->
+
+    <!-- blog section -->
+    <section id="blogs">
+            <div class="title"><h1>Blogs</h1></div>
+            <!-- <button><a href="#" type="button">New Article</a></button><br><br> -->
+         <div class="flexbox-blog">
+            <a href="article.html">
+            <div class="flexbox-blog-item">
+                <img src="img/coder.png" alt="img">
+              <h3>Never give up on coding stands on your passion.</h3>
+              <h5>March 08 2020</h5>
+              <p>At one time or another, as a developer, we’ve all found ourselves hopelessly stuck on a coding issue we had to solve.</p> 
+            </div>
+            </a>
+            <a href="article.html">
+	            <div class="flexbox-blog-item">
+	                <img src="img/handle.png" alt="img">
+	                <h3>Getting a on a handlebars</h3>
+	              <h5>March 02 2020</h5>
+	                <p>Here at EyeCue Lab we render most of our data-laden HTML pages in Handlebar templates... </p>
+	            </div>
+             </a>
+             <a href="article.html">
+	            <div class="flexbox-blog-item">
+	                <img src="img/chrome.png" alt="img">
+	                <h3>5 Extensions for your Chrome Toolbelt</h3>
+	                <h5>February 08 2020</h5>
+	               <p>If you're not using Google Chrome as a front-end web developer, you're missing out. Not only is Chrome the...</p> 
+	            </div>
+	        </a>
+	        <a href="article.html">
+             <div class="flexbox-blog-item">
+                <img src="img/coder.png" alt="img">
+              <h3>Never give up on coding stands on your passion.</h3>
+              <h5>March 08 2020</h5>
+              <p>At one time or another, as a developer, we’ve all found ourselves hopelessly stuck on a coding issue we had to solve.</p> 
+            </div>
+        </a>
+        <a href="article.html">
+            <div class="flexbox-blog-item">
+                <img src="img/handle.png" alt="img">
+                <h3>Getting a on a handlebars</h3>
+              <h5>March 02 2020</h5>
+                <p>Here at EyeCue Lab we render most of our data-laden HTML pages in Handlebar templates... </p>
+            </div>
+        </a>
+        <a href="article.html">
+            <div class="flexbox-blog-item">
+                <img src="img/chrome.png" alt="img">
+                <h3>5 Extensions for your Chrome Toolbelt</h3>
+                <h5>February 08 2020</h5>
+               <p>If you're not using Google Chrome as a front-end web developer, you're missing out. Not only is Chrome the...</p> 
+            </div>
+        </a>
+             
+         </div>
+        <!--  <div class="pagination_section"> 
+            <a href="#"><< Previous</a> 
+         
+                <a href="#" title="Algorithm"><span>1</span></a> 
+                <a href="#" title="DataStructure"><span>2</span></a> 
+                <a href="#" title="Languages"><span>3</span></a> 
+                <a href="#" title="Interview" class="active"><span>4</span></a> 
+                
+            
+            <a href="#">Next >></a> 
+         </div> -->
+    </section>
+    <!-- end of blog section -->
+    <div class="article-modal">
+        <div class="article-modal-content">
+            <div class="close">+</div>
+            <h2>New Article</h2>
+            <form>
+            	<input type="text" name="name" placeholder="Name ..." required><br>
+                <input type="file" name="file" placeholder="image ..." required><br>
+                <textarea placeholder="description ..." required rows="5"></textarea>
+                <a href="#" type="button" class="button">SUBMIT</a>
+            </form>
+        </div>
+        
+    </div>
+    
+<!-- <script type="text/javascript">
+	const dm = document.getElementById('done');
+	dm.addEventListener('click', ()=> {
+		console.log('clicked!!!!')
+	})
+</script> -->
+<script type="text/javascript" src="./blogs.js"></script>
+    <script src="./landingPage.js"></script>
+</body>
+</html>
