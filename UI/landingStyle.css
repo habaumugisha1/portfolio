@@ -74,7 +74,7 @@ a {
     flex-direction: column;
     align-items: center;
     z-index: 1;
-    overflow-x: hidden;
+    
     transition: .5s ease right;
 
 }
@@ -178,7 +178,7 @@ color: white;
     }
     #home .text .side{
         margin-top: 200px;
-        width: 100%;
+        width: 90%;
         margin-right: 20px;
         font-size: 3.5rem;
         text-align: center;
@@ -211,6 +211,9 @@ color: white;
     }
 }
 @media (max-width:378px){
+    #home .hero .text .side{
+        width: 50%;
+    }
     #home .hero .text .side h1{
         
         font-size: 1.6rem;
@@ -219,9 +222,9 @@ color: white;
     }
     #home .hero .text .side a.cta{
        max-height: 2rem;
-       width: 10rem;
-       font-size: 1rem;
-        
+       width: 9rem;
+       font-size: 0.7rem;
+        justify-content: center;
     }
     .brand h1 a{
         font-size: 1rem;
@@ -334,7 +337,7 @@ color: white;
     justify-content: center;
     flex-direction: column;
     transition: .5s ease;
-
+    
 }
 #home .hero{
     background-image: url('img/ami-backgr2.jpg');
@@ -367,7 +370,7 @@ color: white;
 #home .text {
     width: 100%;
     z-index: 1;
-    margin-left: 50%;
+    margin-left: 48%;
     float: right;
 }
 #home .text h1{
@@ -428,7 +431,7 @@ color: white;
     border-radius: 10px;
     margin-top: 50px;
     margin-bottom: 50px;
-    margin-left: 7%;
+    margin-left: 5%;
     text-transform: uppercase;
     transition: .3s ease background-color;
 }
@@ -468,6 +471,7 @@ border: 3px solid white;
     max-width:1500px;
     margin:0 auto;
     padding: 100px 0;
+    
 }
 #about .about .about-title{
     margin-top: 40px;
@@ -560,6 +564,7 @@ color: white;
     #about .about{
         max-height: 60vh;
         min-height: 600px;
+        width: 90vw;
         /* margin-top: -100px; */
         /* margin-bottom: 60px; */
         
@@ -638,10 +643,17 @@ color: white;
         max-height: 85vh;
         margin-top: 30vh;
     }
+    #about .about .pragra{
+        width: 90vw;
+    }
+    #about .about .pragra h2{
+        width: 90vw;
+    }
     #about .about{
         margin-top: -40vh;
         height:40vh;
     }
+    
     #about .about a.btn{
         margin-bottom: 70px;
         margin-left: 30px;
@@ -673,6 +685,7 @@ color: white;
     left: 0;
     justify-content: center;
     align-items: center;
+    
     /* background-color: #FDF9F9 */
 }
 #skills .flexbox span{
@@ -791,22 +804,26 @@ color: white;
 @media only screen and (min-width:481px) and (max-width:768px){
     #skills{
         min-height: 100vh;
-        margin-bottom: 500px;
+        /* margin-bottom: 500px; */
         
     }
+    #skills .flexbox{
+        margin-left: 0px;
+        width: 90vw;
+    }
     #skills .flexbox .flex-skills{
-        width: 90%;
+        /* width: 90%; */
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         margin-left: -125px;
         margin-top: 10px;
-        width: 95vw;
+        width: 87vw;
         position: relative;
-        grid-column-gap: 10px;
+        /* grid-column-gap: 10px; */
         }
 
         #skills .flexbox .flex-skills .flex-skill-item{
-         width: 22vw;
+         width: 20vw;
          margin-left: 11vw;
          height: 170px;
         }
@@ -834,17 +851,18 @@ color: white;
          font-size: 1.4rem;
          text-align: center;
         }
+        #skills .flexbox .flex-my-experience{
+            width:87vw;
+            margin-left:0.1vw;
+            padding-bottom: 20px;
+        }
         #skills .flexbox .flex-my-experience .exper-title{
             text-align: center;
             font-size: 3rem;
             margin-bottom: 40px;
         
         }
-        #skills .flexbox .flex-my-experience{
-            width:92vw;
-            margin-left:0.1vw;
-            padding-bottom: 20px;
-        }
+        
     #skills .flexbox .flex-my-experience .flex-exper-item{
        margin-left: 7vw;
        margin-bottom:10px
@@ -868,7 +886,7 @@ color: white;
         min-height: 100vh;
         /* width: 77vw; */
         margin-right:17vw;
-        margin-bottom: 250px;
+        /* margin-bottom: 250px; */
         margin-left: -12vw;
     }
     #skills .flexbox .flex-skills{
@@ -953,10 +971,12 @@ color: white;
  @media only screen and (max-width: 360px){
     #skills{
         min-height: 100vh;
-        margin-bottom: 250px;
+        /* margin-bottom: 250px; */
     }
     #skills .flexbox{
         margin-left: -40px;
+        width: 90vw;
+        
     }
     #skills .flexbox .flex-skills{
     display: grid;
@@ -1004,19 +1024,20 @@ color: white;
 
 }
 #skills .flexbox .flex-my-experience .flex-exper-item{
-    width: 90vw;
-    margin-left: 80px;
+    width: 80vw;
+    margin-left: 40px;
     /* margin-left: 2vw; */
 
 }
 #skills .flexbox .flex-my-experience .flex-exper-item img{
-    width: 90vw;
-    margin-left: 18px;
+    width: 70vw;
+    /* margin-left: 18px; */
     
 
 }
 #skills .flexbox .flex-my-experience .flex-exper-item p{
-    margin-left: 18px
+    /* margin-left: 10px; */
+    width: 70vw;
 
 }
 #skills .flexbox .flex-my-experience .exper-title{
@@ -1041,8 +1062,8 @@ color: white;
  @media only screen and (max-width: 375px){
     #skills{
         min-height: 100vh;
-        margin-bottom: 250px;
         margin-left: -30px;
+        /* background-color: lawngreen; */
     }
     #skills .flexbox {
         width: 80vw;
@@ -1136,7 +1157,7 @@ color: white;
  @media only screen and (max-width: 411px){
     #skills{
         min-height: 100vh;
-        margin-bottom: 250px;
+        /* margin-bottom: 250px; */
         margin-left: 7%;
     }
     /* #skills .flexbox{
@@ -1229,7 +1250,7 @@ color: white;
  @media only screen and (max-width: 414px){
     #skills{
         min-height: 100vh;
-        margin-bottom: 250px;
+        /* margin-bottom: 250px; */
         margin-left: 7%;
     }
     #skills .flexbox{
@@ -1559,7 +1580,7 @@ color: white;
 @media only screen and (min-width:769px) and (max-width: 1024px){
     #skills{
         min-height: 100vh;
-        margin-bottom: 750px;
+        /* margin-bottom: 750px; */
         
     }
     #skills .flexbox span{
@@ -1702,3 +1723,459 @@ width: 28vw;
     
     }
 }
+
+/* end of skills section */
+.flexbox-project{
+    display: grid;
+    grid-template-columns: 6rem;
+    grid-row-gap: 1.2rem;
+    grid-column-gap: 1.2rem;
+    margin-left: 5vw;
+    
+}
+.title h1{
+    text-align: center;
+    color: blue;
+    font-size: 1.7rem;
+    margin-top: 30px;
+    margin-bottom: 30px
+
+}
+/*.title span hr{
+    background-color: cyan;
+    border:1px solid cyan;
+    text-align: center;
+    margin-bottom: 10px;
+    align-items: center;
+    margin-top: 5px;
+    width: 4%
+    height:1px;
+}*/
+.flexbox-project .flexbox-project-item{
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0px  2px 2px 2px #cccccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 80vw;
+    height: 320px;
+    transition: .6s ease;
+
+}
+.flexbox-project .flexbox-project-item:hover{
+    transform: scale(1.1);
+
+}
+.flexbox-project .flexbox-project-item img{
+    width: 100%;
+    height: 200px
+
+}
+.flexbox-project .flexbox-project-item p{
+    font-size: 1.3rem;
+    margin-top: 10px;
+    margin-bottom: 10px
+
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    .title h1{
+        margin-top: -200px;
+        /* background-color:cyan */
+    }
+    .flexbox-project{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row-gap: 1.2rem;
+        grid-column-gap: 1.2rem;
+        width: 95vw;
+        margin-bottom: 50px;
+        margin-left: 0px;
+        /* margin-top: -100px; */
+    }
+    .flexbox-project .flexbox-project-item {
+    width: 80vw;
+    margin-left: 10%;
+    height: 100%
+
+}
+   .flexbox-project .flexbox-project-item p{
+    font-size: 1.4rem;
+    margin-top: 10px;
+    margin-bottom: 10px
+
+} 
+
+}
+@media only screen and (min-width: 481px) and (max-width: 768px){
+    #projects{
+        margin-top: 60px;
+    }
+    .flexbox-project{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 1.2rem;
+    grid-column-gap: 1.2rem;
+    width: 95vw;
+    margin-bottom: 50px;
+    /* margin-left: 15vw */
+
+}
+.title h1{
+    font-size: 1.9rem;
+    margin-top: 60px;
+}
+.flexbox-project .flexbox-project-item {
+    width: 40vw;
+    height: 100%;
+    /* margin-left: 1.5vw */
+
+} 
+.flexbox-project .flexbox-project-item img{
+    width: 37vw
+
+} 
+   .flexbox-project .flexbox-project-item p{
+    font-size: 1.3rem;
+    margin-top: 10px;
+    margin-bottom: 10px
+
+} 
+
+ }
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    #projects{
+        margin-top: 60px;
+    }
+    .flexbox-project{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 95vw;
+    margin-bottom: 50px;
+    
+}
+.title h1{
+    font-size: 1.9rem;
+    margin-top: 60px;
+}
+.flexbox-project .flexbox-project-item {
+    width: 38vw;
+    height: 100%;
+    margin-left: 2vw
+
+} 
+.flexbox-project .flexbox-project-item img{
+    width: 90%
+
+} 
+   .flexbox-project .flexbox-project-item p{
+    font-size: 1.3rem;
+    margin-top: 10px;
+    margin-bottom: 10px
+
+} 
+}
+ @media only screen and  (min-width: 1025px) and (max-width:1500px){
+    #projects{
+        margin-top: 60px;
+    }
+    .flexbox-project{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 90vw;
+    margin-bottom: 50px;
+    margin-left: 6vw;
+}
+.title h1{
+    font-size: 1.9rem;
+    margin-top: 60px;
+}
+.flexbox-project .flexbox-project-item {
+    width: 42vw;
+    height: 100%;
+    /* margin-left: 3vw */
+
+} 
+.flexbox-project .flexbox-project-item img{
+    width: 35vw
+
+} 
+   .flexbox-project .flexbox-project-item p{
+    font-size: 1.3rem;
+    margin-top: 10px;
+    margin-bottom: 10px
+
+}
+ }
+
+ /* contact section */
+#contact .contacts{
+    min-height: 100vh;
+    position: relative;
+    background-color: #494234;
+    color: white;
+    
+}
+#contact .contacts h1{
+    padding-top: 50px;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 1.7rem
+}
+
+#contact .contacts .contact-wrap{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem
+}
+#contact .contacts .address{
+    width: 80vw;
+    padding: 20px;
+    text-align: center;
+}
+#contact .contacts .address h3{
+    font-size: 1.5rem;
+    margin-top: 30px;
+    margin-bottom: 20px
+}
+#contact .contacts .address p{
+    font-size: 1.3rem;
+}
+
+#contact .contacts .contact-form{
+    padding: 30px;
+    transition: .7s ease right;
+    text-align: center;
+     
+}
+#contact .contacts .contact-form h3{
+    color: cyan;
+
+}
+
+
+#contact .contacts .contact-form form{
+    padding: 30px;
+    margin-top: 30px;
+    background-color: #0D0300;
+    border-radius: 10px;
+    /*height: fit-content*/
+    text-align: left;
+
+}
+#contact .contacts .contact-form form input{
+    width: 73vw;
+    height: 5vh;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 1px solid #cccccc
+
+}
+#contact .contacts .contact-form form textarea{
+    width: 73vw;
+}
+#contact .contacts .contact-form form button{
+    padding: 10px;
+    width: 100px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    transition: .6s ease
+    /*margin-bottom: 20px*/
+
+}
+#contact .contacts .contact-form form button:hover{
+    background-color: crimson;
+    border: 2px solid crimson;
+    transition: .6s ease
+}
+
+.contact-social-media{
+    background-color: #0D0300;
+    color: #eee;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    
+}
+.contact-social-media img{
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-top: 20px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: .7s ease
+}
+
+.contact-social-media img:hover{
+    transform: scale(1.5);
+    transition: .7s ease
+}
+.contact-social-media p{
+    color: #eee;
+    padding-bottom: 30px
+    /*text-align: */
+}
+.contact-social-media p span{
+    color: crimson
+}
+@media only screen and (min-width:1025px) and (max-width: 1500px){
+    #contact .contacts .contact-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem
+}
+#contact .contacts .address{
+    margin-top: 100px;
+    /*margin-left: -15vw*/
+    width: 30vw;
+    /*padding: 20px;
+    text-align: center;*/
+}
+#contact .contacts .address h3{
+    font-size: 2.3rem;
+
+}
+#contact .contacts .address p{
+    font-size: 2rem;
+}
+#contact .contacts .contact-form{
+    width: 55vw;
+    margin-right: 5vw;
+    margin-top: 10px
+     
+}
+
+#contact .contacts .contact-form form input{
+    width: 40vw;
+   margin-left: 3vw
+}
+#contact .contacts .contact-form form textarea{
+    width: 40vw;
+margin-left: 3vw
+}
+
+#contact .contacts .contact-form form button{
+    padding: 15px;
+    width: 20vw;
+    font-size: 1.5rem;
+    margin-left: 3vw
+    }
+    #contact .contacts .contact-form form label{
+    font-size: 1.2rem;
+    margin-left: 3vw
+
+}
+#contact .contacts .contact-form h3{
+    font-size: 1.6rem
+}
+}
+@media only screen and (min-width:769px) and (max-width: 1024px){
+    #contact .contacts .contact-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem
+}
+#contact .contacts .address{
+    margin-top: 100px;
+    /*margin-left: -15vw*/
+    /* justify-content: center; */
+    width: 30vw;
+    /*padding: 20px;*/
+    /* text-align: center;  */
+}
+#contact .contacts .address h3{
+    font-size: 1.9rem;
+
+}
+#contact .contacts .address p{
+    font-size: 1.7rem;
+}
+#contact .contacts .contact-form{
+    width: 55vw;
+    margin-right: 5vw
+     
+}
+#contact .contacts .contact-form form input{
+    width: 40vw;
+}
+#contact .contacts .contact-form form textarea{
+    width: 40vw;
+}
+
+#contact .contacts .contact-form form button{
+    padding: 15px;
+    width: 20vw;
+    font-size: 1.5rem
+    }
+    #contact .contacts .contact-form form label{
+    font-size: 1.2rem;
+
+}
+#contact .contacts .contact-form h3{
+    font-size: 1.6rem
+}
+}
+@media only screen and (min-width:481px) and (max-width:768px){
+     .contacts{
+         width: 100vw;
+     }
+    #contact .contacts .contact-form{
+        width: 90vw;
+        margin-left: 2vw;
+    }
+    #contact .contacts .address{
+        width: 90vw;
+        margin-left: 2vw;
+        justify-content: center;
+        text-align: center;
+    }
+    #contact .contacts .address h3{
+    font-size: 1.8rem;
+    margin-left: 30px;
+    margin-top: 30px;
+    text-align: center;
+    margin-bottom: 20px
+}
+   #contact .contacts .contact-form h3{
+    font-size: 1.8rem;
+    color: cyan;
+
+}
+    #contact .contacts .address p{
+    font-size: 1.6rem;
+}
+  #contact .contacts .contact-form form label{
+    font-size: 1.2rem;
+
+}
+    #contact .contacts .contact-form form button{
+    padding: 15px;
+    width: 30vw;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    transition: .6s ease
+    /*margin-bottom: 20px*/
+
+}
+}
+
+@media only screen and (min-width: 320px) and (max-width:480px){
+    #contact .contacts .address{
+        justify-content: center;
+    }
+    #contact .contacts .contact-form form{
+    background-color: #494234;
+    padding: 10px;
+    text-align: left;
+    margin-bottom:30px;
+
+}
+}
+
+/* end of contact section */
