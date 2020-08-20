@@ -33,7 +33,7 @@ window.addEventListener('scroll', event =>{
    nav_link.forEach(link => {
     let section = document.querySelector(link.hash);
 
-    if (section.offsetTop <= fromTop + 50 && section.offsetTop + section.offsetHeight > fromTop + 50){
+    if (section.offsetTop <= fromTop + 70 && section.offsetTop + section.offsetHeight > fromTop + 70){
         link.style.color = 'crimson';
         link.style.borderBottom = '2px solid crimson';
         console.log(fromTop +30)

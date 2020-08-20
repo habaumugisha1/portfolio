@@ -74,7 +74,7 @@ a {
     flex-direction: column;
     align-items: center;
     z-index: 1;
-    overflow-x: hidden;
+    
     transition: .5s ease right;
 
 }
@@ -178,7 +178,7 @@ color: white;
     }
     #home .text .side{
         margin-top: 200px;
-        width: 100%;
+        width: 90%;
         margin-right: 20px;
         font-size: 3.5rem;
         text-align: center;
@@ -211,6 +211,9 @@ color: white;
     }
 }
 @media (max-width:378px){
+    #home .hero .text .side{
+        width: 50%;
+    }
     #home .hero .text .side h1{
         
         font-size: 1.6rem;
@@ -219,9 +222,9 @@ color: white;
     }
     #home .hero .text .side a.cta{
        max-height: 2rem;
-       width: 10rem;
-       font-size: 1rem;
-        
+       width: 9rem;
+       font-size: 0.7rem;
+        justify-content: center;
     }
     .brand h1 a{
         font-size: 1rem;
@@ -334,7 +337,7 @@ color: white;
     justify-content: center;
     flex-direction: column;
     transition: .5s ease;
-
+    
 }
 #home .hero{
     background-image: url('img/ami-backgr2.jpg');
@@ -367,7 +370,7 @@ color: white;
 #home .text {
     width: 100%;
     z-index: 1;
-    margin-left: 50%;
+    margin-left: 48%;
     float: right;
 }
 #home .text h1{
@@ -428,7 +431,7 @@ color: white;
     border-radius: 10px;
     margin-top: 50px;
     margin-bottom: 50px;
-    margin-left: 7%;
+    margin-left: 5%;
     text-transform: uppercase;
     transition: .3s ease background-color;
 }
@@ -468,6 +471,7 @@ border: 3px solid white;
     max-width:1500px;
     margin:0 auto;
     padding: 100px 0;
+    
 }
 #about .about .about-title{
     margin-top: 40px;
@@ -560,6 +564,7 @@ color: white;
     #about .about{
         max-height: 60vh;
         min-height: 600px;
+        width: 90vw;
         /* margin-top: -100px; */
         /* margin-bottom: 60px; */
         
@@ -638,10 +643,17 @@ color: white;
         max-height: 85vh;
         margin-top: 30vh;
     }
+    #about .about .pragra{
+        width: 90vw;
+    }
+    #about .about .pragra h2{
+        width: 90vw;
+    }
     #about .about{
         margin-top: -40vh;
         height:40vh;
     }
+    
     #about .about a.btn{
         margin-bottom: 70px;
         margin-left: 30px;
@@ -673,6 +685,7 @@ color: white;
     left: 0;
     justify-content: center;
     align-items: center;
+    
     /* background-color: #FDF9F9 */
 }
 #skills .flexbox span{
@@ -796,6 +809,7 @@ color: white;
     }
     #skills .flexbox{
         margin-left: 0px;
+        width: 90vw;
     }
     #skills .flexbox .flex-skills{
         /* width: 90%; */
@@ -961,6 +975,8 @@ color: white;
     }
     #skills .flexbox{
         margin-left: -40px;
+        width: 90vw;
+        
     }
     #skills .flexbox .flex-skills{
     display: grid;
@@ -1008,19 +1024,20 @@ color: white;
 
 }
 #skills .flexbox .flex-my-experience .flex-exper-item{
-    width: 90vw;
-    margin-left: 80px;
+    width: 80vw;
+    margin-left: 40px;
     /* margin-left: 2vw; */
 
 }
 #skills .flexbox .flex-my-experience .flex-exper-item img{
-    width: 90vw;
-    margin-left: 18px;
+    width: 70vw;
+    /* margin-left: 18px; */
     
 
 }
 #skills .flexbox .flex-my-experience .flex-exper-item p{
-    margin-left: 18px
+    /* margin-left: 10px; */
+    width: 70vw;
 
 }
 #skills .flexbox .flex-my-experience .exper-title{
@@ -1713,8 +1730,8 @@ width: 28vw;
     grid-template-columns: 6rem;
     grid-row-gap: 1.2rem;
     grid-column-gap: 1.2rem;
-    margin-left: 5vw
-
+    margin-left: 5vw;
+    
 }
 .title h1{
     text-align: center;
@@ -1896,7 +1913,8 @@ width: 28vw;
     min-height: 100vh;
     position: relative;
     background-color: #494234;
-    color: white
+    color: white;
+    
 }
 #contact .contacts h1{
     padding-top: 50px;
@@ -1979,6 +1997,7 @@ width: 28vw;
     text-align: center;
     align-items: center;
     justify-content: center;
+    
 }
 .contact-social-media img{
     margin-bottom: 20px;
@@ -2062,9 +2081,10 @@ margin-left: 3vw
 #contact .contacts .address{
     margin-top: 100px;
     /*margin-left: -15vw*/
+    /* justify-content: center; */
     width: 30vw;
-    /*padding: 20px;
-    text-align: center;*/
+    /*padding: 20px;*/
+    /* text-align: center;  */
 }
 #contact .contacts .address h3{
     font-size: 1.9rem;
@@ -2099,18 +2119,24 @@ margin-left: 3vw
 }
 }
 @media only screen and (min-width:481px) and (max-width:768px){
+     .contacts{
+         width: 100vw;
+     }
     #contact .contacts .contact-form{
         width: 90vw;
         margin-left: 2vw;
     }
     #contact .contacts .address{
-        margin-left: 20px;
-        
+        width: 90vw;
+        margin-left: 2vw;
+        justify-content: center;
+        text-align: center;
     }
     #contact .contacts .address h3{
     font-size: 1.8rem;
     margin-left: 30px;
     margin-top: 30px;
+    text-align: center;
     margin-bottom: 20px
 }
    #contact .contacts .contact-form h3{
@@ -2140,6 +2166,9 @@ margin-left: 3vw
 }
 
 @media only screen and (min-width: 320px) and (max-width:480px){
+    #contact .contacts .address{
+        justify-content: center;
+    }
     #contact .contacts .contact-form form{
     background-color: #494234;
     padding: 10px;
