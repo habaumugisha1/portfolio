@@ -785,9 +785,9 @@ color: white;
     transition: 0.7s ease
 }
 .article-modal-content{
-    width: 30vw;
-    height: 30vh;
-    background-color: rgba(0, 0, 0, 0.3);
+    width: 40vw;
+    height: 60vh;
+    background-color: rgba(0, 0, 0, 0.2);
     /* margin-top: -15vh; */
     border-radius: 10px;
     /* z-index: 1; */
@@ -814,7 +814,8 @@ margin-top: -10vh;
 }
 .article-modal-content form a {
     width: 50%;
-    background-color: lightblue;
+    background-color: rgb(60, 93, 236);
+    color: white;
     padding: 5px;
     display: block;
     margin: auto;
@@ -832,17 +833,24 @@ margin-top: -10vh;
 @media only screen and (min-width: 320px) and (max-width: 480px){
     .article-modal-content{
     width: 80%;
-    height: 30%;
+    height: 60%;
 }
 .article-modal-content h2{
     margin-top: 12%
 }
 .article-modal-content form input{
     width: 90%;
+    height: 5%;
+    display: block;
+    margin: auto;
+}
+.article-modal-content form textarea{
+    width: 90%;
     display: block;
     margin: auto;
 }
 .article-modal-content form a {
+    margin: 5%;
     width: 90%;
 }
 .article-modal-content form{
@@ -853,7 +861,7 @@ margin-top: -10vh;
 @media only screen and (min-width: 481px) and (max-width: 768px){
     .article-modal-content{
     width: 70%;
-    height: 30%;
+    height: 40%;
 }
 .article-modal-content h2{
     margin-top: 9%
@@ -864,7 +872,13 @@ margin-top: -10vh;
     display: block;
     margin: auto;
 }
+.article-modal-content form textarea{
+    width: 80%;
+    display: block;
+    margin: auto;
+}
 .article-modal-content form a {
+    margin-top: 5%;
     width: 80%;
     height: 18%
 }
@@ -875,7 +889,7 @@ margin-top: -10vh;
 @media only screen and (min-width: 769px) and (max-width: 1024px){
     .article-modal-content{
     width: 60%;
-    height: 25%;
+    height: 40%;
 }
 .article-modal-content h2{
     margin-top: 9%
@@ -898,10 +912,11 @@ margin-top: -10vh;
 @media only screen and (min-width: 1025px) and (max-width: 1500px){
     .article-modal-content{
     width: 60%;
-    height: 60%;
+    height: 70%;
+    /* padding-bottom: 5%; */
 }
 .article-modal-content h2{
-    margin-top: 9%
+    margin-top: 2%
 }
 .article-modal-content form input{
     width: 60%;

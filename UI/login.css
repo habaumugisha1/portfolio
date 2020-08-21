@@ -363,12 +363,14 @@ color: white;
 }
 .modal-content form a {
     width: 50%;
-    background-color: lightblue;
+    background-color: rgb(71, 98, 248);
+    color: white;
     padding: 5px;
     display: block;
     margin: auto;
     border-radius: 5px;
     text-align: center;
+    height: 10%;
 }
 .modal-content .close{
     position: absolute;
@@ -381,7 +383,7 @@ color: white;
 @media only screen and (min-width: 320px) and (max-width: 480px){
     .modal-content{
     width: 80%;
-    height: 30%;
+    height: 40%;
 }
 .modal-content h2{
     margin-top: 12%
