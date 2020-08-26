@@ -5,6 +5,7 @@ const header = document.querySelector('.header .container');
 const nav = document.querySelector('#header');
 const nav_link = document.querySelectorAll('.nav-bar .nav-list ul li a');
 
+
 hamburger.addEventListener('click', ()=>{
     hamburger.classList.toggle('active');
     mobile_menu.classList.toggle('active')
@@ -42,4 +43,13 @@ window.addEventListener('scroll', event =>{
         link.style.borderBottom = 'none';
     }
    })
-})
+});
+
+document.getElementById('login').addEventListener('click',  ()=>{
+    document.querySelector('.login-modal').style.display='flex';
+    });
+    
+    document.querySelector('.close').addEventListener('click', ()=> {
+        document.querySelector('.login-modal').style.display='none';
+    
+    });
