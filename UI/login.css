@@ -174,7 +174,6 @@ color: white;
         width: 100%;
         margin-bottom: -40px;
         margin-left: -150px;
-        /* margin-top: -100px; */
     }
     #home .text .side{
         margin-top: 200px;
@@ -192,7 +191,6 @@ color: white;
     #home .hero .text .side h1{
         
         font-size: 1.8rem;
-        /* margin-right: 29px; */
         
     }
     #home .hero .text .side a.cta{
@@ -217,7 +215,6 @@ color: white;
     #home .hero .text .side h1{
         
         font-size: 1.6rem;
-        /* margin-right: 20px; */
         
     }
     #home .hero .text .side a.cta{
@@ -239,7 +236,6 @@ color: white;
     #home .hero .text .side h1{
         
         font-size: 1.2rem;
-        /* margin-right: 20px; */
         
     }
     #home .hero .text .side a.cta{
@@ -328,177 +324,325 @@ color: white;
 
 /* end of header section */
 
+.container_l {
+    width: 90vw;
+    min-height: 90vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5rem;
+    padding: 0 2rem;
+    /* background-color: tomato; */
+    margin-top: 10vh;
+    margin-left: 5vw;
+}
+.image{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.image img{
+    width: 500px;
+}
+.login_container{
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
 
-.login-modal{
-    width: 100%;
-    height: 100%;
+.social{
+display: flex;
+margin-top: 20px;
+align-items: center;
+justify-content: center;
+text-align: center;
+}
+.social .image img{
+    width: 40px;
+    height: 40px;
+    margin: 20px;
+    border-radius: 50%;
+    cursor: pointer;
     background-color: white;
-    
-    /*opacity: 0.6;*/
+}
+form{
+    width: 360px;
+}
+form hr{
+    margin-top: 10px;
+}
+.avatar{
+    width: 100px;
+}
+
+form h2{
+    font-size: 2.9rem;
+    text-transform: uppercase;
+    margin: 15px 0;
+    color: #333;
+}
+
+.input_div{
+    position: relative;
+    display: grid;
+    grid-template-columns: 7% 93%;
+    margin: 25px 0;
+    padding: 5px 0;
+    border-bottom: 2px solid #d9d9d9;
+}
+ 
+.input_div::after, .input_div::before{
+    content: '';
     position: absolute;
-    top: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: #38d39f;
+}
+.input_div::after{
+    right: 50%;
+}
+.input_div::before{
+    left: 50%;
+}
+.input_div.focus::after, .input_div.focus::before {
+ width: 50%;
+}
+.input_div.one{
+    margin-top: 0;
+}
+
+.input_div.two{
+    margin-bottom: 4px;
+}
+.i{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* display: none; */
-    transition: 0.7s ease
 }
-.modal-content{
-    width: 40%;
-    height: 40%;
-    background-color: rgba(0, 0, 0, 0.4);
-    border-radius: 10px;
-    z-index: 1;
-    text-align: center;
-    padding: 20px;
+.i i{
+    color: #d9d9d9;
+    transition: .3s;
+}
+.input_div > div{
     position: relative;
+    height: 45px;
 }
-.modal-content form{
-    margin-top: 8%
+.input_div.focus .i i{
+    color: #38d39f;
 }
-.modal-content form input{
-    width: 50%;
-    display: block;
-    margin: auto;
-}
-.modal-content form a {
-    width: 50%;
-    background-color: rgb(71, 98, 248);
-    color: white;
-    padding: 5px;
-    display: block;
-    margin: auto;
-    border-radius: 5px;
-    text-align: center;
-    height: 10%;
-}
-.modal-content .close{
-    position: absolute;
-    top: 0px;
-    right: 2%;
-    font-size: 2.5rem;
-    transform: rotate(45deg);
-    cursor: pointer;
-}
-@media only screen and (min-width: 320px) and (max-width: 480px){
-    .modal-content{
-    width: 80%;
-    height: 40%;
-}
-.modal-content h2{
-    margin-top: 12%
-}
-.modal-content form input{
-    width: 90%;
-    display: block;
-    margin: auto;
-}
-.modal-content form a {
-    width: 90%;
-}
-.modal-content form{
-    margin-top: 10%
-}
+.input_div.focus div h5{
+    top: -5px;
+    font-size: 15px;
+    /* color: #38d39f; */
 }
 
-@media only screen and (min-width: 481px) and (max-width: 768px){
-    .modal-content{
-    width: 70%;
-    height: 30%;
+.input_div > div h5{
+    position: absolute;
+    left: 30px;
+    top: 30%;
+    transform: translate(-30%);
+    color: #999;
+    /* display: none; */
+    font-size: 18px;
+    transition: .3s;
 }
-.modal-content h2{
-    margin-top: 9%
+.input{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 0.5rem 0.7rem;
+    font-size: 1.2rem;
+    color: #555;
+
 }
-.modal-content form input{
-    width: 80%;
-    height: 20px;
+.btn{
     display: block;
-    margin: auto;
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    margin: 1rem 0;
+    border: none;
+    outline: none;
+    background-image: linear-gradient(to right, #32be8f, #38d39f, #32be8f);
+    cursor: pointer;
+    color: #fff;
+    text-transform: uppercase;
+    background-size: 200%;
+    transition: .5s;
+    margin-bottom: 30px;
 }
-.modal-content form a {
-    width: 80%;
-    height: 18%
+.btn:hover{
+    background-position: right;
 }
-.modal-content form{
-    margin-top: 5%
-}
-}
+
 @media only screen and (min-width: 769px) and (max-width: 1024px){
-    .modal-content{
-    width: 60%;
-    height: 25%;
-}
-.modal-content h2{
-    margin-top: 9%
-}
-.modal-content form input{
-    width: 60%;
-    height: 30px;
-    display: block;
-    margin: auto;
-}
-.modal-content form a {
-    width: 60%;
-    height: 30px;
-    margin-top: 20px
-}
-.modal-content form{
-    margin-top: 5%
-}
-}
-@media only screen and (min-width: 1025px) and (max-width: 1500px){
-    .modal-content{
-    width: 60%;
-    height: 60%;
-}
-.modal-content h2{
-    margin-top: 9%
-}
-.modal-content form input{
-    width: 60%;
-    height: 30px;
-    display: block;
-    margin: auto;
-}
-.modal-content form a {
-    width: 60%;
-    height: 30px;
-    margin-top: 20px;
-    font-size: 1.4rem
-}
-.modal-content form{
-    margin-top: 5%
-}
-}
-/* end of login modal */
-.contact-social-media{
-    background-color: #0D0300;
-    color: #eee;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    float: bottom;
+    .container_l {
+        width: 80vw;
+        min-height: 50vh;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2rem;
+        padding: 0 2rem;
+        margin-top: 10vh;
+       
+    }
+    .image{
+        width: 40vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .image img{
+        width: 35vw;
+
+    }
+    form{
+        width: 360px;
+    }
+    .login_container{
+        width: 40vw;
+        padding: 20px 0;
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+    form h2{
+        font-size: 2rem;
+        text-transform: uppercase;
+        margin: 15px 0;
+        color: #333;
+    }
     
 }
-.contact-social-media img{
-    margin-bottom: 20px;
-    margin-left: 10px;
-    margin-top: 20px;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    transition: .7s ease
-}
 
-.contact-social-media img:hover{
-    transform: scale(1.5);
-    transition: .7s ease
+@media only screen and (min-width: 480px) and (max-width: 768px){
+    .container_l {
+        width: 80vw;
+        min-height: 50vh;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;
+        padding: 0 2rem;
+        /* margin-top: 10vh; */
+       
+    }
+    .image{
+        margin-left: -8vw;
+        width: 40vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .image img{
+        width: 40vw;
+
+    }
+    form{
+        width: 300px;
+        border: 2px solid #ccc;
+        padding: 0 10px;
+        border-radius: 10px;
+    }
+    .login_container{
+        width: 30vw;
+        padding: 20px 0;
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+    form h2{
+        font-size: 2rem;
+        text-transform: uppercase;
+        margin: 15px 0;
+        color: #333;
+    }
+    .social{
+        
+        display: flex;
+        margin-top: 20px;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        text-align: center;
+        margin-bottom: 20px;
+        }
+        .social .image{
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        margin-right: -20px;
+        }
+        .social .image img{
+            width: 40px;
+            height: 40px;
+            margin: 20px;
+            border-radius: 50%;
+            cursor: pointer;
+            background-color: white;
+        }
 }
-.contact-social-media p{
-    color: #eee;
-    padding-bottom: 30px
-    /*text-align: */
-}
-.contact-social-media p span{
-    color: crimson
+@media only screen and (min-width: 320px) and (max-width: 480px){
+    .container_l {
+        width: 80vw;
+        min-height: 60vh;
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 0 2rem;
+    }
+    .image{
+        display: none;
+    }
+    
+    form{
+        width: 300px;
+        border: 2px solid #ccc;
+        padding: 0 10px;
+        border-radius: 10px;
+    }
+    .login_container{
+        width: 80vw;
+        padding: 20px 0;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin-left: -4vw;
+    }
+    form h2{
+        font-size: 2rem;
+        text-transform: uppercase;
+        margin: 15px 0;
+        color: #333;
+    }
+    .social{
+        
+        display: flex;
+        margin-top: 20px;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        text-align: center;
+        margin-bottom: 20px;
+        }
+        .social .image{
+            background-color: salmon;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        }
+        .social .image img{
+            width: 40px;
+            height: 40px;
+            margin: 20px;
+            border-radius: 50%;
+            cursor: pointer;
+            background-color: white;
+        }
 }

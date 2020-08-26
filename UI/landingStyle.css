@@ -11,9 +11,6 @@ a {
     text-decoration: none;
 }
 
-/* #header ul .active_link{
-    color:crimson;
-} */
 
 .container{
     min-height: 100vh;
@@ -564,10 +561,7 @@ color: white;
     #about .about{
         max-height: 60vh;
         min-height: 600px;
-        width: 90vw;
-        /* margin-top: -100px; */
-        /* margin-bottom: 60px; */
-        
+        width: 90vw;    
     }
 
     #about .about .about-title{
@@ -796,11 +790,7 @@ color: white;
     border: 2px solid cyan
 
 }
-/* @media only screen and (max-width:360px){
-    #skills .flexbox .flex-skills{
-        margin-left: -200px;
-        }
-} */
+
 @media only screen and (min-width:481px) and (max-width:768px){
     #skills{
         min-height: 100vh;
@@ -961,11 +951,6 @@ color: white;
 
 }
 
-/* #skills .flexbox .flex-skills .flex-skill-item{
- width: 220px;
- margin-left: 5vw;
-} */
-
 
 }
  @media only screen and (max-width: 360px){
@@ -1026,17 +1011,11 @@ color: white;
 #skills .flexbox .flex-my-experience .flex-exper-item{
     width: 80vw;
     margin-left: 40px;
-    /* margin-left: 2vw; */
-
 }
 #skills .flexbox .flex-my-experience .flex-exper-item img{
     width: 70vw;
-    /* margin-left: 18px; */
-    
-
 }
 #skills .flexbox .flex-my-experience .flex-exper-item p{
-    /* margin-left: 10px; */
     width: 70vw;
 
 }
@@ -1160,12 +1139,6 @@ color: white;
         /* margin-bottom: 250px; */
         margin-left: 7%;
     }
-    /* #skills .flexbox{
-        width: 90vw;
-        margin-right: 10vw;
-        margin-left: -10vw;
-        background-color: cyan;
-    } */
     #skills .flexbox .flex-skills{
     display: grid;
     grid-template-columns: 1fr;
@@ -1333,78 +1306,6 @@ color: white;
  margin-left: 5%;
 }
  }
-/* @media only screen and (min-width: 320px) and (max-width:480px){
-    #skills{
-        min-height: 100vh;
-        margin-bottom: 250px;
-        margin-left: 7%;
-    }
-    #skills .flexbox .flex-skills{
-    display: grid;
-    grid-template-columns: 1fr;
-    width: 95vw;
-    margin-left: -3vw;
-    align-items: center;
-    justify-content: center;
-    
-}
-#skills .flexbox .flex-skills .flex-skill-item{
-    width: 80vw;
-    margin-left: 5vw;
-    margin-right: 2vw;
-    justify-content: center;
-    align-items: center;
-}
-#skills .flexbox .flex-skills .flex-skill-item img{
-    width:30vw;
-    height: 120px;
-    margin-top:8px; 
-    margin-left: 16vw;
-}
-#skills .flexbox .flex-skills .flex-skill-item p{
-    font-size: 1.5rem;
-    margin-bottom:10px
-}
-#skills .flexbox .skill-title{
-    text-align: center;
-    color: blue;
-    margin-top:1rem;
-    width: 80%;
-    margin-left: 10%;
-    font-size: 1.6rem;
-    position: relative;
-   
-}
-#skills .flexbox .flex-my-experience{
-    width: 80vw;
-    border: none;
-}
-#skills .flexbox .flex-my-experience .flex-exper-item{
-    width: 75vw;
-    margin-left: 2vw;
-}
-#skills .flexbox .flex-my-experience .flex-exper-item img{
-    width: 70vw;
-    
-}
-#skills .flexbox .flex-my-experience p{
-    margin-left: 10px
-}
-#skills .flexbox .flex-my-experience .exper-title{
-    text-align: center;
-    font-size: 1.2rem;
-    color: blue;
-    position: relative;
-    margin-bottom: 30px;
-}
-#skills .flexbox .flex-skills{
-    width: 90%;
-}
-#skills .flexbox .flex-skills .flex-skill-item{
- width: 220px;
- margin-left: 5%;
-}
-} */
 @media only screen and (max-width:450px){
     #skills{
         min-height: 100vh;
@@ -1512,8 +1413,6 @@ color: white;
 }
 #skills .flexbox .flex-skills .flex-skill-item{
     width: 60vw;
-    /* margin-left: 5vw; */
-    /* margin-right: 2vw; */
     justify-content: center;
     align-items: center;
 }
@@ -1741,16 +1640,7 @@ width: 28vw;
     margin-bottom: 30px
 
 }
-/*.title span hr{
-    background-color: cyan;
-    border:1px solid cyan;
-    text-align: center;
-    margin-bottom: 10px;
-    align-items: center;
-    margin-top: 5px;
-    width: 4%
-    height:1px;
-}*/
+
 .flexbox-project .flexbox-project-item{
     padding: 10px;
     border: 1px solid #ccc;
@@ -2029,10 +1919,7 @@ width: 28vw;
 }
 #contact .contacts .address{
     margin-top: 100px;
-    /*margin-left: -15vw*/
     width: 30vw;
-    /*padding: 20px;
-    text-align: center;*/
 }
 #contact .contacts .address h3{
     font-size: 2.3rem;

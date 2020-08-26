@@ -5,6 +5,7 @@ const header = document.querySelector('.header .container');
 const nav = document.querySelector('#header');
 const nav_link = document.querySelectorAll('.nav-bar .nav-list ul li a');
 
+
 hamburger.addEventListener('click', ()=>{
     hamburger.classList.toggle('active');
     mobile_menu.classList.toggle('active')

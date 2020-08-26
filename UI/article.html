@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/e4761ce9e4.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="blogs.css">
     <title>My Web and blogs</title>
 </head>
@@ -16,8 +17,8 @@
                 <div class="hamburger"> <div class="bar"></div></div>
                 <ul>
                     <li><a href="../index.html">Home</a></li>
-                    <li><a href="blogs.html">Blog</a></li>
-                    <li><a href="#" id="article">New Article</a></li>
+                    <li><a href="blogs.html" class="active_link">Blog</a></li>
+                    <li><a href="./new-article.html" id="article">New Article</a></li>
                     
                 </ul>
 
@@ -88,10 +89,14 @@
 
             <div class="new-comment">
               <form>
-                <label>Name:</label><br>
-                <input type="text" name="name"><br><br>
-                <label>Comment:</label><br>
-                <textarea rows="10"></textarea><br>
+            <div >
+                <label><i class="fas fa-user"></i> Name:</label><br>
+                <input type="text" class="focused" name="name" required><br><br>
+            </div>
+            <div>
+                <label><i class="fas fa-comment"></i> Comment:</label><br>
+                <textarea rows="20" class="focused" required></textarea><br>
+            </div>
                 <button>COMMENT</button>
               </form>
             </div>
@@ -99,21 +104,10 @@
      </div>
         
     </section>
-    <!-- <div class="article-modal">
-        <div class="article-modal-content">
-            <div class="close">+</div>
-            <h2>New Article</h2>
-            <form>
-            	<input type="text" name="name" placeholder="Name ..." required><br>
-                <input type="file" name="file" placeholder="image ..." required><br>
-                <textarea placeholder="description ..." required rows="10"></textarea><br>
-                <a href="#" type="button" class="button">SUBMIT</a>
-            </form>
-        </div>
-        
-    </div> -->
+    
     <!-- end of blog section -->
 <script src="./blogs.js"></script>
+<script src="./commentBlog.js"></script>
     <script src="./landingPage.js"></script>
 </body>
 </html>
