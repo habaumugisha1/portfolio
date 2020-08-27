@@ -5,6 +5,8 @@ const nav_menu = document.querySelector(".user-profile-l");
 const mobile_menu = document.querySelectorAll(".user-profile-l ul li a");
 const check = document.getElementById("check")
 const inputs = document.querySelectorAll('.focused');
+const deleteIcon = document.querySelectorAll('#delete');
+const proDeleteIcon = document.querySelectorAll('#deletepro')
 
 
 linkCont.forEach(link=> {
@@ -54,3 +56,29 @@ function blurFunction(){
         parent.classList.remove('focus');
     }
 }
+
+deleteIcon.forEach(icon=>{
+    icon.addEventListener('click',()=> {
+        const confirmArt = confirm("Do you want to delete this skill?");
+        if( confirmArt == true ) {
+                alert("Your skill successsful deleted.");
+                return true;
+        } else {
+             alert("Skill not delete!")
+                 return false;
+                   }
+    })
+})
+
+proDeleteIcon.forEach(icon=>{
+    icon.addEventListener('click',()=> {
+        const confirmArt = confirm("Do you want to delete this project?");
+        if( confirmArt == true ) {
+                alert("Your project successsful deleted.");
+                return true;
+        } else {
+             alert("Project not delete!")
+                 return false;
+                   }
+    })
+})

@@ -259,7 +259,41 @@ transition: .5s ease right
     color:black;
 }
 
+.content .blo .description{
+   width: 70vw;
+   position: relative;
+   display: flex;
+   padding: 1rem;
+   /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-row-gap: 1rem; */
+}
+.content .blo .description .flexbox-skill-item{
+    width: 11vw;
+    height: 30vh;
+    margin: 1rem;
+    justify-content: center;
+    border: 1px solid #ccc;
+    /* position: absolute; */
+ }
+ .content .blo .description .flexbox-skill-item span i{
+    margin-top: .2rem;
+    padding: 1rem;
+    width: fit-content;
+    cursor: pointer;
+ }
+ .content .blo .description .flexbox-skill-item span i#delete{
+    color: rgb(247, 41, 41);
+ }
 
+ .content .blo .description .flexbox-skill-item span i#update{
+    color: rgb(75, 120, 245);
+ }
+ .content .blo .description .flexbox-skill-item img{
+    width: 9vw;
+    height: 18vh;
+    justify-content: center;
+    /* position: absolute; */
+ }
 
 
 .content .main-content .description span{
@@ -469,6 +503,46 @@ transition: .5s ease right
     margin-top: -170px
 }
 
+
+.content .projec {
+    width: 70vw;
+    display: grid;
+    margin-left: -10vw;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap:1rem
+}
+
+.content .projec .flexbox-pro-item{
+    width: 30vw;
+    margin-bottom: 10px;
+    box-shadow: 0px 1px 3px 1px #ccc;
+}
+
+.content .projec .flexbox-pro-item img{
+    width: 30vw;
+}
+.content .projec .flexbox-pro-item a h3{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+.content .projec .flexbox-pro-item p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.content .projec .flexbox-pro-item span{
+    padding-bottom: 1rem;
+    width: fit-content;
+}
+.content .projec .flexbox-pro-item span i#deletepro{
+    padding: 1rem;
+   color: rgb(250, 50, 50);
+   cursor: pointer;
+}
+.content .projec .flexbox-pro-item span i#updatepro{
+    color: rgb(60, 60, 248);
+    cursor: pointer;
+ }
 /* media query  */
 
 @media only screen and (min-width:320px) and (max-width: 480px)
@@ -610,6 +684,25 @@ transition: .5s ease right
         display: none;
     }
 
+    .content .projec {
+        width: 70vw;
+        display: grid;
+        margin-left: -25vw;
+        grid-template-columns: 1fr ;
+        grid-row-gap:1rem
+    }
+    
+    .content .projec .flexbox-pro-item{
+        width: 80vw;
+        margin-bottom: 10px;
+        box-shadow: 0px 1px 3px 1px #ccc;
+    }
+    
+    .content .projec .flexbox-pro-item img{
+        width: 70vw;
+        /* height: ; */
+    }
+
    .content .main-content {
         width: 90vw;
         margin-left: -30vw;
@@ -647,7 +740,7 @@ transition: .5s ease right
     }
     .content .blo .main-content .description .flexbox-blog-item {
      width: 80vw;
-     margin-left: -20vw;
+     margin-left: -10vw;
     }
     .content .blo .main-content .description .flexbox-blog-item img {
         width: 80vw;
@@ -713,6 +806,46 @@ transition: .5s ease right
         left:0;
         /*margin-left: -10vw*/
     }
+
+
+    .content .blo .description{
+        margin-left: -10vw;
+        width: 70vw;
+        position: relative;
+        display: grid;
+        padding: 1rem;
+        grid-template-columns: 1fr 1fr;
+         grid-row-gap: 1rem;
+     }
+     .content .blo .description .flexbox-skill-item{
+         width: 32vw;
+         height: 30vh;
+         margin: 1rem;
+         height: fit-content;
+         padding-bottom: 10px;
+         justify-content: center;
+         border: 1px solid #ccc;
+         /* position: absolute; */
+      }
+      .content .blo .description .flexbox-skill-item span i{
+         margin-top: .2rem;
+         padding: 1rem;
+         width: fit-content;
+         cursor: pointer;
+      }
+      .content .blo .description .flexbox-skill-item span i#delete{
+         color: rgb(250, 65, 9);
+      }
+     
+      .content .blo .description .flexbox-skill-item span i#update{
+         color: rgb(59, 104, 252);
+      }
+      .content .blo .description .flexbox-skill-item img{
+         width: 28vw;
+         height: 13vh;
+         justify-content: center;
+         /* position: absolute; */
+      }
 }
 
 @media only screen and (min-width:481px) and (max-width: 768px)
@@ -882,6 +1015,49 @@ transition: .5s ease right
         font-size: 1.1rem;
         float: left;
     }
+
+
+
+    .content .blo .description{
+        margin-left: -5vw;
+        width: 75vw;
+        position: relative;
+        display: grid;
+        padding: 1rem;
+        grid-template-columns: 1fr 1fr 1fr;
+         grid-row-gap: .5rem;
+     }
+     .content .blo .description .flexbox-skill-item{
+         width: 20vw;
+         height: 30vh;
+         margin: .5rem;
+         height: fit-content;
+         padding-bottom: 10px;
+         justify-content: center;
+         border: 1px solid #ccc;
+         /* position: absolute; */
+      }
+      .content .blo .description .flexbox-skill-item span i{
+         margin-top: .2rem;
+         padding: 1rem;
+         width: fit-content;
+         cursor: pointer;
+      }
+      .content .blo .description .flexbox-skill-item span i#delete{
+         color: rgb(240, 60, 36);
+      }
+     
+      .content .blo .description .flexbox-skill-item span i#update{
+         color: rgb(62, 144, 252);
+      }
+      .content .blo .description .flexbox-skill-item img{
+         width: 17vw;
+         height: 13vh;
+         justify-content: center;
+         /* position: absolute; */
+      }
+
+
     .content .reset {
         /* margin-top: -24vh; */
         width: 60vw;
@@ -1024,6 +1200,10 @@ width: 50vw;
         border-top: 3px solid red;
         height: 100%
     }
+    .content .main-content-account .logo{
+        width: 60vw;
+        margin-left: 5vw;
+    }
     .content .main-content-account .profile{
         margin-left: -7vw;
     }
@@ -1046,40 +1226,88 @@ width: 50vw;
     }
 
     .content .main-content .description{
-        width: 80vw;
-        margin-left: 10vw
+        width: 60vw;
+        margin-left: 8vw
     }
     .content .blo{
-        width: 80vw;
-        margin-left: -20vw;
+        width: 70vw;
+        margin-left: -15vw;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 1rem
     }
     .content .blo .main-content{
-        width: 33vw;
-        margin-left: 2vw
+        width: 32vw;
+        margin-left: 6vw
     }
     .content .blo .main-content .description{
-        width: 33vw
+        width: 32vw
     }
     .content .blo .main-content .description .flexbox-blog-item{
-        width: 33vw;
+        width: 32vw;
     }
     .content .blo .main-content .description .flexbox-blog-item img{
-        width: 33vw
+        width: 30vw;
+        height: 25vh;
     }
     .content .blo .main-content .description .flexbox-blog-item p{
-        width: 33vw;
-        font-size: 1.6rem
+        width: 30vw;
+        font-size: 1.2rem
     }
     .content .blo .main-content .description .flexbox-blog-item h5{
         color: #cccccc;
         font-size: 1.1rem
     }
-    .content .blo .main-content .description .flexbox-blog-item h3{
-        color:black;
+    .content .blo .main-content .description .flexbox-blog-item a h3{
+        width: 30vw;
+        /* color:black; */
     }
+
+
+    .content{
+        width: 80vw;
+    }
+    .content .blo .description{
+        margin-left: 5vw;
+        width: 70vw;
+        position: relative;
+        display: grid;
+        padding: 1rem;
+        grid-template-columns: 1fr 1fr 1fr;
+         grid-row-gap: .5rem;
+     }
+     .content .blo .description .flexbox-skill-item{
+         width: 16vw;
+         height: 30vh;
+         margin: .5rem;
+         height: fit-content;
+         padding-bottom: 10px;
+         justify-content: center;
+         border: 1px solid #ccc;
+         /* position: absolute; */
+      }
+      .content .blo .description .flexbox-skill-item span i{
+         margin-top: .2rem;
+         padding: 1rem;
+         width: fit-content;
+         cursor: pointer;
+      }
+      .content .blo .description .flexbox-skill-item span i#delete{
+         color: rgb(252, 100, 80);
+      }
+     
+      .content .blo .description .flexbox-skill-item span i#update{
+         color: rgb(61, 137, 236);
+      }
+      .content .blo .description .flexbox-skill-item img{
+         width: 15vw;
+         height: 13vh;
+         justify-content: center;
+         /* position: absolute; */
+      }
+
+
+
     .content .reset {
         width: 60vw;
         height: fit-content;
