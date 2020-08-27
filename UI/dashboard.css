@@ -1,0 +1,1123 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav-menu{
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    height: 80px;
+    /* border-bottom: 1px solid gray; */
+    position: fixed;
+    background-color: #29323c;
+    z-index: 100
+}
+
+.logo a h3{
+    color: white;
+    padding: 1rem;
+    float: left;
+    margin-left: 60px;
+    text-decoration: none
+}
+.logo a h3 span{
+    color:crimson
+}
+
+.nav-menu ul {
+display: flex;
+padding: 1rem;
+list-style: none;
+flex-direction: columns;
+flex-flow: wrap;
+justify-content: center;
+transition: .5s ease right
+}
+.nav-menu ul li{
+    padding: 0.5rem 1rem;
+    width: fit-content;
+ }
+ .nav-menu ul li a{
+     text-decoration: none;
+    /*height: 30px;*/
+    /*width: 150px;*/
+    display: block;
+    color: white;
+    font-size: 16px;
+}
+.nav-menu ul li:hover{
+     background-color: rgb(69, 69, 241); 
+    border-radius: 5px;
+    color: white;
+    padding: 0.5rem;
+    /*max-width: 150px;*/
+    text-align: center;
+    margin-left: 10px
+}
+.nav-menu ul li.active{
+    background-color: rgb(69, 69, 241);
+    border-radius: 5px;
+    color: white;
+    padding: 0.5rem;
+}
+.nav-menu .menu-bar {
+    display: none;
+}
+.nav-menu ul.move{
+        left:0px;
+        transition: .6s all left ease
+    }
+.nav-menu ul .active a{
+    color: white;
+}
+
+.nav-menu .account{
+    display: flex;
+    float: right;
+    margin-right: 80px;
+    margin-top: 20px;
+}
+.nav-menu .account img{
+    margin-top: -20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.nav-menu .account span{
+    margin-left: 10px;
+    color: white;
+}
+
+.nav-menu .account a{
+    margin-left: 12px;
+    text-decoration: none;
+    color: indianred;
+}
+.nav-menu .account a:hover{
+    color: whitesmoke;
+}
+.container{
+    width: 100vw;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    grid-gap: 1rem;
+    margin-top: 80px;
+    position: relative;
+}
+.container .user-profile-l{
+    position: fixed;
+    margin-top: 0px;
+    width: 20vw;
+    background-color: #29323c;
+    left: 0;
+    position: absolute;
+    min-height: 100%
+
+}
+.user-profile-l ul{
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    padding-top: 20px;
+}
+.user-profile-l ul li{
+    list-style: none;
+    display: block;
+    padding: 20px;
+    cursor: pointer;
+    border-bottom: 1px solid whitesmoke;
+    transition: .4s ease;
+}
+.user-profile-l ul li.active{
+    background-color: cadetblue;
+}
+.user-profile-l ul li.active a{
+   color: white;
+}
+.user-profile-l ul li a{
+    text-decoration: none;
+    padding: 20px;
+    color:white;
+    cursor: pointer;
+}
+.user-profile-l ul li:hover{
+    background-color: cadetblue;
+    color: white;
+}
+.user-profile-l ul li a:hover{
+    color: white;
+}
+
+ .content{
+     display: none;
+
+ }
+ .content.active{
+     right: 0;
+     width: 80vw;
+     display: grid;
+     grid-template-columns: 60%;
+     grid-row: auto;
+     padding-top:20px;
+     grid-column-gap: 10px;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     position: absolute;
+ }
+
+ .content .main-content{
+     padding: 3rem;
+     display: flex;
+     width: 100%;
+     margin-left: 0px;
+     box-shadow: 3px #888888;
+ 
+ }
+ 
+
+ .content .main-content .logo{
+     float: left;
+ }
+ .content .main-content .logo img{
+     width: 8rem;
+     height: 8rem;
+     border-radius: 1rem;
+ }
+ .content .main-content .description{
+     /*margin-left: 20px;*/
+     margin-top: -25px;
+     height: fit-content;
+     width: 100%
+ }
+ .content .main-content .description h3{
+  padding: 10px;
+  color: gray
+ }
+ .content .main-content .description h4{
+  padding: 10px;
+  color: #6495ED
+ }
+ .content .main-content .description p{
+  padding: 10px
+ }
+ .content .main-content .description button{
+    background-color: green;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+}
+
+
+
+
+.content .blo{
+    width: 70vw;
+    margin-left: -10vw;
+    /* margin-right: 10vw; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0.5rem
+}
+.content .blo .main-content{
+    width: 30vw;
+ 
+}
+.content .blo .main-content .description{
+    width: 30vw
+}
+.content .blo .main-content .description .flexbox-blog-item{
+    width: 30vw;
+}
+.content .blo .main-content .description .flexbox-blog-item a{
+  text-decoration:none
+}
+.content .blo .main-content .description .flexbox-blog-item a h3{
+    color:blue;
+  }
+.content .blo .main-content .description .flexbox-blog-item img{
+    width: 28vw;
+    height: 30vh;
+}
+.content .blo .main-content .description .flexbox-blog-item p{
+    width: 30vw;
+    font-size: 1.1rem
+}
+.content .blo .main-content .description .flexbox-blog-item h5{
+    color: #cccccc;
+    font-size: 1.1rem
+}
+.content .blo .main-content .description .flexbox-blog-item h3{
+    color:black;
+}
+
+
+
+
+.content .main-content .description span{
+    color: teal;
+    font-size: 18px;
+}
+.content .main-content .description button a{
+    color: white;
+    text-decoration: none;
+}
+.content .main-content .description .vote a{
+    color: white;
+    text-decoration: none;
+}
+.content .reset{
+    position: relative;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 40vw;
+    height: fit-content;
+    border-radius: 20px;
+    margin-top: 50px;
+    /*margin-left: 100px;*/
+}
+.content .reset form{
+    width: 40vw;
+    position: relative;
+    padding: 10px;
+    margin-top: 40px;
+}
+.content .reset form .input div label{
+    float: left;
+    margin-left:3vw;
+    margin-top: 10px;
+    transition: .4s ease;
+}
+.content .reset form input{
+    width: 35vw;
+    height: 1.5rem;
+    outline:none;
+    border: none;
+    border-radius: 5px;
+    padding-left: 10px;
+    font-size: 18px;
+}
+.content .reset form textarea{
+    width: 35vw;
+    outline:none;
+    border: none;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-top: 10px;
+    font-size: 18px;
+}
+.content .reset form button{
+   background:blue;
+   color: white;
+   border: none;
+   border-radius: 5px;
+   text-align: center;
+   font-size: 18px;
+   width: 20rem;
+   height: 1.8rem;
+   width: 35vw;
+}
+.content .reset form .input .focus label{
+    margin-top: -5px;
+    transition: .4s ease;
+    color: blue;
+}
+.content .reset form .input .focus input{
+    border-bottom: 1px solid blue;
+   }
+
+   .content .reset form .input .focus input[type=file]{
+    border-bottom: none;
+   }
+.content .reset form .signup{
+    font-size: 18px; 
+    /* margin-left: 80px; */
+    margin-top: 10px;
+    border-radius: 5px;
+    text-align: center;
+    border: 1px solid white;
+    
+}
+.content .reset form .signup a{
+   
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    
+}
+.content .reset form .signup a:hover{
+    /* color: green; */
+    text-decoration: none;
+    font-size: 18px;
+    
+} 
+
+
+
+
+
+
+.myacount{
+    display: none;
+}
+.content .profile{
+    margin-top: 130px;
+    width: 100%;
+    /*background-color: lightblue*/
+}
+.content .profile img{
+    border: 2px solid cyan;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    transform: scale(1.2);
+    z-index: -1
+}
+.content .profile h3{
+    margin-top:10px 
+    
+}
+.content .profile h3 span{
+    color: crimson
+}
+.content .profile h3 strong{
+    color: cyan
+}
+.content #updatebtn{
+    border-radius: 10px;
+    border: none;
+    margin-top: 20px;
+    width: 20%;
+    padding: 10px;
+    color: white;
+    background-color: green;
+    cursor:pointer
+}
+.content .update{
+    display: none;
+    width: 100%;
+    margin-top: 20px;
+    padding-top: 20px;
+     padding-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20%
+}
+.content .active{
+    display: block;
+    width: 60%;
+    margin-top: 20px;
+    padding-top: 20px;
+     padding-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.content .active h2 {
+    padding-bottom: 20px;
+    color: blue
+}
+.content .active form{
+    width: 100%;
+    padding: 20px;
+}
+.content .active form input {
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    width: 100%
+}
+.content .active form input[type=file] {
+    border: none;
+}
+.content .active form button {
+    margin-top: 20px;
+    border: none;
+    background-color: green;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    width: 30%
+}
+/*.play h2{
+    
+    background-color: green
+}*/
+
+
+/* accouunt */
+
+.main-content-account{
+    width: 800px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    margin-left: -10%;
+    margin-top: -170px
+}
+
+/* media query  */
+
+@media only screen and (min-width:320px) and (max-width: 480px)
+{
+    .nav-menu{
+        position: fixed;
+        z-index: 100;
+        position: relative;
+        width: 100%
+    }
+    .nav-menu .menu-bar{
+        transition: .4s ease;
+        display: flex;
+        position: absolute;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        font-weight: 1000;
+        top: 20px;
+        right: 20px;
+        font-size: 1.5rem;
+        border: 2px solid white;
+        border-radius: 50%;
+        /* padding: 5px; */
+        height: 30px;
+        width: 30px;
+        color: white;
+        cursor: pointer;
+    }
+    .nav-menu .menu-bar.move{
+     transform: rotate(45deg);
+     border-radius: 50%;
+     transition: .4s ease;
+    }
+    
+    .container{
+        margin-top: 0;
+    }
+    
+    .container .user-profile-l{
+        display: none;
+    }
+    
+    .container .user-profile-l.move{
+        display: block;
+        transition: .5s ease right;
+    }
+    .container .user-profile-l{
+        transition: .5s ease right;
+        position: fixed;
+        margin-top: 0px;
+        width: 70vw;
+        background-color: #29323c;
+        left: 0;
+        position: absolute;
+        height: calc(100vh - 80px);
+        z-index: 1;
+        
+    
+    }
+    .user-profile-l ul{
+        /* transition: .4s ease; */
+        left: 0;
+        width: 100%;
+        padding-top: 20px;
+    }
+    .user-profile-l ul li{
+        list-style: none;
+        display: block;
+        text-align: center;
+        width: 100%;
+        margin-left: 0px;
+        padding-left: 10px;
+        cursor: pointer;
+        border-bottom: 1px solid whitesmoke;
+        transition: .4s ease;
+    }
+    .user-profile-l ul li.active{
+        background-color: cadetblue;
+    }
+    .user-profile-l ul li.active a{
+       color: white;
+    }
+    .user-profile-l ul li a{
+        text-decoration: none;
+        padding: 20px;
+        color:white;
+        cursor: pointer;
+    }
+    .user-profile-l ul li:hover{
+        background-color: cadetblue;
+        color: white;
+    }
+    .user-profile-l ul li a:hover{
+        color: white;
+    }
+    
+
+    .nav-menu ul{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 70%;
+        height: 70vh;
+        top: 60px;
+        right: 100%;
+        position: absolute;
+        flex-direction: column;
+        background-color: #ccc;
+        transition: .5s ease right;
+    }
+
+    .nav-menu ul li a{
+       width: 100%;
+       padding: 10px;
+       text-align: center;
+    }
+    .nav-menu ul li.active{
+        width: 100%;
+        background-color: blue
+    }
+    .nav-menu .logo{
+        display: none;
+    }
+    .nav-menu .account {
+        display: block;
+        float: left;
+        margin-top: 30px;
+        margin-left: 20px
+    }
+    .nav-menu .account  img{
+        margin-top: -30px;
+    }
+    
+    .nav-menu .account  a{
+        margin-top: -20px;
+    }
+    .nav-menu .account  span{
+        display: none;
+    }
+
+   .content .main-content {
+        width: 90vw;
+        margin-left: -30vw;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 1rem;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .content .main-content-account {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        margin-left: -27vw;
+        width: 90vw;
+        height: 100vh
+    }
+    .content .main-content-account .profile #updatebtn{
+       margin-left: 0;
+    }
+    .content .blo{
+        width: 80vw;
+        margin-left: -20vw;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 1rem
+    }
+    .content .blo .main-content{
+        width: 80vw;
+        margin-left: 0
+    }
+    .content .blo .main-content .description .flexbox-blog-item {
+     width: 80vw;
+     margin-left: -20vw;
+    }
+    .content .blo .main-content .description .flexbox-blog-item img {
+        width: 80vw;
+        height: 30vh;
+       }
+    .content .blo .main-content .description .flexbox-blog-item p{
+        margin-left: 0;
+        padding-left: 0;
+        font-size: 1.3rem;
+        width: 80vw;
+        float: left;
+    }
+    .content .blo .main-content .description .flexbox-blog-item a h3{
+        margin-left: -1px;
+        padding-left: 0;
+        font-size: 1.1rem;
+        float: left;
+    }
+    .content .main-content-account #updatebtn{
+      margin-left: 20%;
+      width: 50%
+    }
+    .content .main-content-account .profile{
+       margin-left: -3vw;
+       width: 90vw
+    }
+     .content .main-content-account .update{
+       margin-left: -3vw;
+      width: 90vw
+    }
+
+    .content .main-content .description{
+        width: 80vw;
+    }
+    .content .reset {
+        /* margin-top: -24vh; */
+        width: 80vw;
+        height: fit-content;
+        justify-content: center;
+        align-items: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-left: -26vw
+    }
+    .content .reset form{
+        margin-top: -20px;
+        width: 70vw;
+        /*margin-left: -10vw*/
+    }
+    .content .reset form input{
+        width: 65vw;
+    }
+    .content .reset form textarea {
+        width: 65vw;
+        /*margin-left: -10vw*/
+    }
+    .content .reset form button{
+        width: 65vw;
+        margin-top: 10px;
+        height: 30px
+    }
+    .content .reset form label{
+        left:0;
+        /*margin-left: -10vw*/
+    }
+}
+
+@media only screen and (min-width:481px) and (max-width: 768px)
+{
+    .nav-menu{
+        position: fixed;
+        z-index: 100;
+        position: relative;
+        width: 100%
+    }
+    .nav-menu .menu-bar{
+        display: none;
+        position: absolute;
+        font-weight: 1000;
+        top: 20px;
+        right: 20px;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+   
+    .nav-menu .logo{
+        display: flex;
+    }
+    .nav-menu .account {
+        display: block;
+        float: right;
+        margin-top: -30px;
+        margin-right: 30px
+    }
+    .nav-menu .account  img{
+        margin-top: -30px;
+        font-size: 2rem
+    }
+    .container{
+        margin-top: 0;
+    }
+     .container .user-profile-l{
+        position: fixed;
+        margin-top: 0px;
+        width: 20vw;
+        background-color: #29323c;
+        left: 0;
+        position: absolute;
+        min-height: 100%
+    
+    }
+    .user-profile-l ul{
+        left: 0;
+        width: 100%;
+        padding-top: 20px;
+    }
+    .user-profile-l ul li{
+        list-style: none;
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin-left: 0px;
+        padding-left: 10px;
+        cursor: pointer;
+        border-bottom: 1px solid whitesmoke;
+        transition: .4s ease;
+    }
+    .user-profile-l ul li.active{
+        background-color: cadetblue;
+    }
+    .user-profile-l ul li.active a{
+       color: white;
+    }
+    .user-profile-l ul li a{
+        text-decoration: none;
+        padding: 20px;
+        color:white;
+        cursor: pointer;
+    }
+    .user-profile-l ul li:hover{
+        background-color: cadetblue;
+        color: white;
+    }
+    .user-profile-l ul li a:hover{
+        color: white;
+    }
+    
+
+   .content {
+   position: relative;
+   }
+   .content .main-content {
+        width: 70vw;
+        margin-left: -10vw;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 1rem;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .content .main-content .description {
+        width: 70vw;
+        justify-content: center;
+    }
+    .content .main-content .description p {
+        width: 65vw;
+        font-size: 1.1rem;
+    }
+    .content .main-content h2 {
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 20px;
+        margin-top: -10vh;
+        color: blue
+    }
+    .content .main-content-account {
+        width: 70vw;
+        margin-left: -10vw;
+        /*background-color: blue;*/
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0;
+        /* border-top: 3px solid red; */
+        height: 100vh
+    }
+    .content .main-content-account .profile{
+        margin-top: -50vh;
+        height: fit-content;
+    }
+    
+     .content .main-content-account .update{
+      margin-top: -70vh;
+      width: 60vw;
+      margin-left: 0
+    }
+
+    .content .main-content .description{
+        width: 70vw;
+        /* margin-left: 10vw */
+    }
+    .content .main-content .description .flexbox-blog-item img{
+        width: 70vw
+    }
+    .content .main-content .description .flexbox-blog-item p{
+        width: 70vw;
+        margin-left: 4vw;
+        font-size: 1.6rem
+    }
+    .content .main-content .description .flexbox-blog-item h5{
+        color: #cccccc;
+        font-size: 1.1rem
+    }
+    .content .main-content .description .flexbox-blog-item h3{
+        color:black;
+    }
+    .content .blo .main-content {
+        margin-left: 0;
+    }
+    .content .blo .main-content .description .flexbox-blog-item p{
+        margin-left: 0;
+        padding-left: 0;
+        font-size: 1rem;
+        float: left;
+    }
+    .content .blo .main-content .description .flexbox-blog-item a h3{
+        margin-left: -1px;
+        padding-left: 0;
+        font-size: 1.1rem;
+        float: left;
+    }
+    .content .reset {
+        /* margin-top: -24vh; */
+        width: 60vw;
+        height: fit-content;
+        justify-content: center;
+        align-items: center;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        margin-left: -7vw
+    }
+    .content .reset form{
+        margin-top: -20px;
+        width: 55vw;
+        /*margin-left: -10vw*/
+    }
+    .content .reset form input{
+        width: 50vw;
+    }
+    .content .reset form textarea {
+        width: 50vw;
+        /*margin-left: -10vw*/
+    }
+    .content .reset form button{
+        width: 50vw;
+        margin-top: 10px;
+        height: 30px
+    }
+    .content .reset form label{
+       float: left;
+       margin-left: 15px
+        /*margin-left: -10vw*/
+    }
+}
+
+
+@media only screen and (min-width:769px) and (max-width: 1024px)
+{
+    .nav-menu{
+    position: fixed;
+    width: 100vw;
+    height: 80px;
+    position: fixed;
+    z-index: 100
+}
+
+.logo a{
+    padding: 1rem;
+    float: left;
+    margin-left: 60px;
+    text-decoration: none
+}
+
+.nav-menu ul {
+display: flex;
+padding: 1rem;
+list-style: none;
+flex-direction: columns;
+flex-flow: wrap;
+justify-content: center;
+/*transition: .5s ease right*/
+width: 50vw;
+}
+.nav-menu ul li{
+    padding: 0.5rem 1rem;
+    width: fit-content;
+    margin-left: 0px
+ }
+ .nav-menu ul li a{
+     text-decoration: none;
+    display: block;
+    color: rgb(225, 59, 240);
+    font-size: 16px;
+}
+.nav-menu ul li:hover{
+     background-color: rgb(69, 69, 241); 
+    color: white;
+    text-align: center;
+    margin-left: 10px
+}
+.nav-menu ul li.active{
+    background-color: rgb(69, 69, 241);
+    color: white;
+    margin-left: 0px
+}
+    .nav-menu .account {
+        display: block;
+        /*margin-top: 30px;*/
+        margin-right: 30px
+    }
+    .nav-menu .account  img{
+        margin-top: -20px;
+        font-size: 2rem
+    }
+
+
+   .content {
+   position: relative;
+   }
+   .content .main-content {
+        width: 70vw;
+        margin-left: -10vw;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 1rem;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .content .main-content .logo {
+        margin-left: 10vw;
+        width: 65vw;
+    }
+    .content .main-content h2 {
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 20px;
+        margin-top: -10vh;
+        color: blue
+    }
+    .content .main-content .description{
+        width: 65vw;
+    }
+    .content .main-content .description p {
+        width: 65vw;
+        font-size: 1.1rem;
+    }
+    .content .main-content .description h3 {
+        width: 65vw;
+    }
+    .content .main-content .description h4 {
+        width: 65vw;
+    }
+    .content .main-content-account {
+        width: 65vw;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+        border-top: 3px solid red;
+        height: 100%
+    }
+    .content .main-content-account .profile{
+        margin-left: -7vw;
+    }
+    .content .main-content-account .profile h3{
+        font-size: 2rem
+    }
+    .content .main-content-account .profile img{
+        height: 150px;
+        width: 150px
+    }
+    .content .main-content-account #updatebtn{
+       margin-left: 20vw;
+       margin-top: 40px;
+       font-size: 1rem
+    }
+     .content .main-content-account .update{
+      /* margin-top: -40vh; */
+      width: 80%;
+      margin-left: 1vw
+    }
+
+    .content .main-content .description{
+        width: 80vw;
+        margin-left: 10vw
+    }
+    .content .blo{
+        width: 80vw;
+        margin-left: -20vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem
+    }
+    .content .blo .main-content{
+        width: 33vw;
+        margin-left: 2vw
+    }
+    .content .blo .main-content .description{
+        width: 33vw
+    }
+    .content .blo .main-content .description .flexbox-blog-item{
+        width: 33vw;
+    }
+    .content .blo .main-content .description .flexbox-blog-item img{
+        width: 33vw
+    }
+    .content .blo .main-content .description .flexbox-blog-item p{
+        width: 33vw;
+        font-size: 1.6rem
+    }
+    .content .blo .main-content .description .flexbox-blog-item h5{
+        color: #cccccc;
+        font-size: 1.1rem
+    }
+    .content .blo .main-content .description .flexbox-blog-item h3{
+        color:black;
+    }
+    .content .reset {
+        width: 60vw;
+        height: fit-content;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-left: -6vw;
+        padding-top: 20px
+    }
+    .content .reset form{
+        margin-top: -20px;
+        width: 70vw;
+    }
+    .content .reset form input{
+        width: 55vw;
+        height: 50px
+    }
+
+    .content .reset form #skill{
+        margin-bottom: 30px;
+        font-size: 1rem
+    }
+    .content .reset form textarea {
+        width: 55vw;
+    }
+    .content .reset form button{
+        width: 55vw;
+        margin-top: 10px;
+        height: 40px
+    }
+    .content .reset form label{
+        float: left;
+        margin-left: 30px
+    }
+   
+   .content .reset textarea:focus, input:focus{
+    outline: none;
+}
+}
