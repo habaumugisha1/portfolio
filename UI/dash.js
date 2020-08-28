@@ -93,6 +93,8 @@ proDeleteIcon.forEach(icon=>{
     })
 })
 
+
+// getting project data and render it in update form
 editProject.forEach(icon =>{
     icon.addEventListener('click', (e)=>{
         const docscontent = e.target.parentNode.parentNode;
@@ -111,20 +113,11 @@ editProject.forEach(icon =>{
    <input type="text" name="" value="${title}"><br>
    <textarea name="text" id="" rows="15" >${descr.textContent}</textarea>
    <button class="button">Update</button>`;
-   form.innerHTML = edtForm
-    
 
-    
-        console.log(imag.src)
-        // console.log(im)
-        console.log(h[0].textContent)
-        console.log(h[0].textContent)
-        console.log(descr.textContent)
-        console.log(form)
-        // console.log("updated")
+   form.innerHTML = edtForm;
         
             document.querySelector('.login-modal').style.display='flex';
-            // console.log(modal)
+            
             
         
             document.querySelector('.close').addEventListener('click', ()=> {
@@ -135,6 +128,7 @@ editProject.forEach(icon =>{
     })
 })
 
+// getting skills data and render it in update form
 
 updateSkiIcon.forEach(icon =>{
     icon.addEventListener('click', (e)=>{
@@ -143,9 +137,7 @@ updateSkiIcon.forEach(icon =>{
         const skillItems = getSkill.children
         const skillImage = skillItems[0].src
         const skillContent = skillItems[1].textContent
-        console.log(skillItems)
-        console.log(skillImage)
-        console.log(skillContent)
+        
 
 
         let skillForm = `
