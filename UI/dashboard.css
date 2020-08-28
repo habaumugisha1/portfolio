@@ -314,10 +314,11 @@ transition: .5s ease right
 
 .add-skill-modal{
     width: 100%;
-    height: 100%;
+    min-height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
     position: absolute;
     top: 0;
+    z-index: 1000;
     display: none;
     justify-content: center;
     align-items: center;
@@ -418,13 +419,206 @@ transition: .5s ease right
     
 }
 
+@media only screen and (min-width:320px) and (max-width:480px){
+    .add-skill-modal .reset{
+        position: relative;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        /* display: none; */
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(255, 253, 253);
+        width: 80vw;
+        height: fit-content;
+        border-radius: 20px;
+        margin-top: 50px;
+        /*margin-left: 100px;*/
+    }
+    .add-skill-modal .reset .skclose{
+        font-size: 2rem;
+        transform: rotate(45deg);
+        margin-right: 30px;
+        cursor: pointer;
+        font-weight: 100;
+        float: right;
+    }
+    
+    .add-skill-modal .reset h2{
+        text-align: center;
+    }
+    .add-skill-modal .reset form{
+        width: 95%;
+        position: relative;
+        padding: 10px;
+        margin-top: 40px;
+        float: center;
+        margin-left:1%;
+    }
+    .add-skill-modal .reset form .input div label{
+        float: left;
+        margin-left:3vw;
+        margin-top: 10px;
+        transition: .4s ease;
+    }
+    .add-skill-modal .reset form .input div input{
+        width: 90%;
+        height: 1.5rem;
+        outline:none;
+        border: none;
+        border-bottom: 1px solid #ccc;
+        border-radius: 5px;
+        padding-left: 10px;
+        font-size: 18px;
+    }
+    .add-skill-modal .reset form .input input[type=file]{
+        border-bottom: none;
+       }
+    .add-skill-modal .reset form textarea{
+        width: 35vw;
+        outline:none;
+        border: none;
+        border-radius: 5px;
+        padding-left: 10px;
+        padding-top: 10px;
+        font-size: 18px;
+    }
+    .add-skill-modal .reset form button{
+       background:blue;
+       color: white;
+       border: none;
+       border-radius: 5px;
+       text-align: center;
+       font-size: 18px;
+       width: 20rem;
+       height: 1.8rem;
+       width: 90%;
+    }
+    .add-skill-modal .reset form .input .focus label{
+        margin-top: -5px;
+        transition: .4s ease;
+        color: blue;
+    }
+    .add-skill-modal .reset form .input .focus input{
+        border-bottom: 1px solid blue;
+       }
+    
+       .add-skill-modal .reset form .input .focus input[type=file]{
+        border-bottom: none;
+       }
+       .add-skill-modal .reset form .signup{
+        font-size: 18px; 
+        /* margin-left: 80px; */
+        margin-top: 10px;
+        border-radius: 5px;
+        text-align: center;
+        border: 1px solid white;
+        
+    }
+}
 
+@media only screen and (min-width:481px) and (max-width:768px){
+    .add-skill-modal .reset{
+        position: relative;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        /* display: none; */
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(255, 253, 253);
+        width: 80vw;
+        height: fit-content;
+        border-radius: 20px;
+        margin-top: 50px;
+        /*margin-left: 100px;*/
+    }
+    .add-skill-modal .reset .skclose{
+        font-size: 2rem;
+        transform: rotate(45deg);
+        margin-right: 30px;
+        cursor: pointer;
+        font-weight: 100;
+        float: right;
+    }
+    
+    .add-skill-modal .reset h2{
+        text-align: center;
+    }
+    .add-skill-modal .reset form{
+        width: 95%;
+        position: relative;
+        padding: 10px;
+        margin-top: 40px;
+        float: center;
+        margin-left:1%;
+    }
+    .add-skill-modal .reset form .input div label{
+        float: left;
+        margin-left:3vw;
+        margin-top: 10px;
+        transition: .4s ease;
+    }
+    .add-skill-modal .reset form .input div input{
+        width: 100%;
+        height: 1.5rem;
+        outline:none;
+        border: none;
+        border-bottom: 1px solid #ccc;
+        border-radius: 5px;
+        padding-left: 10px;
+        font-size: 18px;
+    }
+    .add-skill-modal .reset form .input input[type=file]{
+        border-bottom: none;
+       }
+    .add-skill-modal .reset form textarea{
+        width: 35vw;
+        outline:none;
+        border: none;
+        border-radius: 5px;
+        padding-left: 10px;
+        padding-top: 10px;
+        font-size: 18px;
+    }
+    .add-skill-modal .reset form button{
+       background:blue;
+       color: white;
+       border: none;
+       border-radius: 5px;
+       text-align: center;
+       font-size: 18px;
+       width: 20rem;
+       height: 1.8rem;
+       width: 100%;
+    }
+    .add-skill-modal .reset form .input .focus label{
+        margin-top: -5px;
+        transition: .4s ease;
+        color: blue;
+    }
+    .add-skill-modal .reset form .input .focus input{
+        border-bottom: 1px solid blue;
+       }
+    
+       .add-skill-modal .reset form .input .focus input[type=file]{
+        border-bottom: none;
+       }
+       .add-skill-modal .reset form .signup{
+        font-size: 18px; 
+        /* margin-left: 80px; */
+        margin-top: 10px;
+        border-radius: 5px;
+        text-align: center;
+        border: 1px solid white;
+        
+    }
+}
 /* ----------add project ------------------- */
 
 .add-project-modal{
     width: 100%;
-    height: 100%;
+    min-height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
+    background-size: cover;
     position: absolute;
     top: 0;
     z-index: 1000;
@@ -554,7 +748,195 @@ transition: .5s ease right
 } 
 
 
+@media only screen and (min-width:320px) and (max-width:480px){
+    .add-project-modal .reset{
+        position: relative;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        /* display: none; */
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(255, 253, 253);
+        width: 90vw;
+        height: fit-content;
+        border-radius: 20px;
+        margin-top: 50px;
+        /*margin-left: 100px;*/
+    }
+    .add-project-modal .reset .kclose{
+        font-size: 2rem;
+        transform: rotate(45deg);
+        margin-right: 30px;
+        cursor: pointer;
+        font-weight: 100;
+        float: right;
+    }
+    
+    .add-project-modal .reset h2{
+        text-align: center;
+    }
+    .add-project-modal .reset form{
+        width: 80vw;
+        position: relative;
+        padding: 10px;
+        margin-top: 40px;
+        float: center;
+        margin-left:2%;
+    }
+    .add-project-modal .reset form .input div label{
+        float: left;
+        margin-left:3vw;
+        /* margin-top: 10px; */
+        transition: .4s ease;
+    }
+    .add-project-modal .reset form input{
+        width: 80vw;
+        height: 1.5rem;
+        outline:none;
+        /* border: 1px solid #ccc; */
+        /* border-bottom: 1px solid #ccc; */
+        border-radius: 5px;
+        padding-left: 10px;
+        font-size: 18px;
+    }
+    .add-project-modal .reset form .input input[type=file]{
+        border-bottom: none;
+       }
+    .add-project-modal .reset form textarea{
+        width: 80vw;
+        outline:none;
+        /* border: 1px solid #ccc; */
+        border-radius: 5px;
+        padding-left: 10px;
+        padding-top: 10px;
+        font-size: 18px;
+    }
+    .add-project-modal .reset form button{
+       background:blue;
+       color: white;
+       border: none;
+       border-radius: 5px;
+       text-align: center;
+       font-size: 18px;
+       width: 20rem;
+       height: 1.8rem;
+       width: 80vw;
+    }
+    .add-project-modal .reset form .input .focus label{
+        margin-top: -5px;
+        transition: .4s ease;
+        color: blue;
+    }
+    .add-project-modal .reset form .input .focus input{
+        border: 1px solid blue;
+       }
+    
+       .add-project-modal .reset form .focus textarea{
+        width: 80vw;
+        outline:none;
+        border: 1px solid blue;
+        border-radius: 5px;
+        padding-left: 10px;
+        padding-top: 10px;
+        font-size: 18px;
+    }
+     
+}
 
+@media only screen and (min-width:481px) and (max-width:768px){
+    .add-project-modal .reset{
+        position: relative;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        /* display: none; */
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(255, 253, 253);
+        width: 90vw;
+        height: fit-content;
+        border-radius: 20px;
+        margin-top: 50px;
+        /*margin-left: 100px;*/
+    }
+    .add-project-modal .reset .kclose{
+        font-size: 2rem;
+        transform: rotate(45deg);
+        margin-right: 30px;
+        cursor: pointer;
+        font-weight: 100;
+        float: right;
+    }
+    
+    .add-project-modal .reset h2{
+        text-align: center;
+    }
+    .add-project-modal .reset form{
+        width: 80vw;
+        position: relative;
+        padding: 10px;
+        margin-top: 40px;
+        float: center;
+        margin-left:2%;
+    }
+    .add-project-modal .reset form .input div label{
+        float: left;
+        margin-left:3vw;
+        /* margin-top: 10px; */
+        transition: .4s ease;
+    }
+    .add-project-modal .reset form input{
+        width: 80vw;
+        height: 1.5rem;
+        outline:none;
+        /* border: 1px solid #ccc; */
+        /* border-bottom: 1px solid #ccc; */
+        border-radius: 5px;
+        padding-left: 10px;
+        font-size: 18px;
+    }
+    .add-project-modal .reset form .input input[type=file]{
+        border-bottom: none;
+       }
+    .add-project-modal .reset form textarea{
+        width: 80vw;
+        outline:none;
+        /* border: 1px solid #ccc; */
+        border-radius: 5px;
+        padding-left: 10px;
+        padding-top: 10px;
+        font-size: 18px;
+    }
+    .add-project-modal .reset form button{
+       background:blue;
+       color: white;
+       border: none;
+       border-radius: 5px;
+       text-align: center;
+       font-size: 18px;
+       width: 20rem;
+       height: 1.8rem;
+       width: 80vw;
+    }
+    .add-project-modal .reset form .input .focus label{
+        margin-top: -5px;
+        transition: .4s ease;
+        color: blue;
+    }
+    .add-project-modal .reset form .input .focus input{
+        border: 1px solid blue;
+       }
+    
+       .add-project-modal .reset form .focus textarea{
+        width: 80vw;
+        outline:none;
+        border: 1px solid blue;
+        border-radius: 5px;
+        padding-left: 10px;
+        padding-top: 10px;
+        font-size: 18px;
+    }
+     
+}
 
 
 
@@ -796,6 +1178,9 @@ transition: .5s ease right
         border-bottom: 1px solid whitesmoke;
         transition: .4s ease;
     }
+    .user-profile-l ul li#logout{
+        color: white;
+    }
     .user-profile-l ul li.active{
         background-color: cadetblue;
     }
@@ -841,10 +1226,10 @@ transition: .5s ease right
         background-color: blue
     }
     .nav-menu .logo{
-        display: none;
+        display: block;
     }
     .nav-menu .account {
-        display: block;
+        display: none;
         float: left;
         margin-top: 30px;
         margin-left: 20px
@@ -1023,6 +1408,12 @@ transition: .5s ease right
          justify-content: center;
          /* position: absolute; */
       }
+
+      .content .add{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: -20vw;
+    }
 }
 
 @media only screen and (min-width:481px) and (max-width: 768px)
@@ -1046,30 +1437,77 @@ transition: .5s ease right
     .nav-menu .logo{
         display: flex;
     }
+    .logo a h3{
+        padding: 1rem;
+        text-align: center;
+        /* margin-left: 60px; */
+        text-decoration: none
+    }
     .nav-menu .account {
-        display: block;
+        display: none;
         float: right;
         margin-top: -30px;
         margin-right: 30px
     }
     .nav-menu .account  img{
+        display: none;
         margin-top: -30px;
         font-size: 2rem
+    }
+    .nav-menu .account  a{
+        display: none;
+        
+    }
+    .nav-menu .menu-bar{
+        transition: .4s ease;
+        display: flex;
+        position: absolute;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        font-weight: 1000;
+        top: 20px;
+        right: 20px;
+        font-size: 1.5rem;
+        border: 2px solid white;
+        border-radius: 50%;
+        /* padding: 5px; */
+        height: 30px;
+        width: 30px;
+        color: white;
+        cursor: pointer;
+    }
+    .nav-menu .menu-bar.move{
+     transform: rotate(45deg);
+     border-radius: 50%;
+     transition: .4s ease;
     }
     .container{
         margin-top: 0;
     }
-     .container .user-profile-l{
+    .container .user-profile-l{
+        display: none;
+    }
+    
+    .container .user-profile-l.move{
+        display: block;
+        transition: .5s ease right;
+    }
+    .container .user-profile-l{
+        transition: .5s ease right;
         position: fixed;
         margin-top: 0px;
-        width: 20vw;
+        width: 70vw;
         background-color: #29323c;
         left: 0;
         position: absolute;
-        min-height: 100%
+        height: calc(100vh - 80px);
+        z-index: 1;
+        
     
     }
     .user-profile-l ul{
+        /* transition: .4s ease; */
         left: 0;
         width: 100%;
         padding-top: 20px;
@@ -1077,13 +1515,16 @@ transition: .5s ease right
     .user-profile-l ul li{
         list-style: none;
         display: block;
-        text-align: left;
+        text-align: center;
         width: 100%;
         margin-left: 0px;
         padding-left: 10px;
         cursor: pointer;
         border-bottom: 1px solid whitesmoke;
         transition: .4s ease;
+    }
+    .user-profile-l ul li#logout{
+        color: white;
     }
     .user-profile-l ul li.active{
         background-color: cadetblue;
@@ -1105,13 +1546,29 @@ transition: .5s ease right
         color: white;
     }
     
-
+    @media only screen and (min-width:481px) and (max-width:768px){
+        .content .projec{
+            width: 85vw;
+            margin-left: -25vw;
+        }
+        .content .projec .flexbox-pro-item{
+            width: 40vw;
+        }
+        .content .projec .flexbox-pro-item img{
+            width: 40vw;
+        }
+        .content .projec .flexbox-pro-item p{
+            font-size: 1.2rem;
+            width: 38vw;
+            float: left;
+        }
+    }
    .content {
    position: relative;
    }
    .content .main-content {
-        width: 70vw;
-        margin-left: -10vw;
+        width: 85vw;
+        margin-left: -30vw;
         display: grid;
         grid-template-columns: 1fr;
         grid-gap: 1rem;
@@ -1121,11 +1578,11 @@ transition: .5s ease right
         text-align: center;
     }
     .content .main-content .description {
-        width: 70vw;
+        width: 80vw;
         justify-content: center;
     }
     .content .main-content .description p {
-        width: 65vw;
+        width: 75vw;
         font-size: 1.1rem;
     }
     .content .main-content h2 {
@@ -1136,26 +1593,25 @@ transition: .5s ease right
         color: blue
     }
     .content .main-content-account {
-        width: 70vw;
+        width: 80vw;
         margin-left: -10vw;
-        /*background-color: blue;*/
         display: grid;
         grid-template-columns: 1fr;
         justify-content: center;
         align-items: center;
         margin-top: 0;
-        /* border-top: 3px solid red; */
         height: 100vh
     }
     .content .main-content-account .profile{
-        margin-top: -50vh;
+        margin-top: -40vh;
+        margin-left: -15vw;
         height: fit-content;
     }
     
      .content .main-content-account .update{
       margin-top: -70vh;
       width: 60vw;
-      margin-left: 0
+      margin-left: -10vw
     }
 
     .content .main-content .description{
@@ -1177,13 +1633,25 @@ transition: .5s ease right
     .content .main-content .description .flexbox-blog-item h3{
         color:black;
     }
+
+    .content .blo {
+        width: 84vw;
+        margin-left: -20vw;
+    }
     .content .blo .main-content {
         margin-left: 0;
+    }
+    .content .blo .main-content .description .flexbox-blog-item{
+        width: 40vw;
+    }
+    .content .blo .main-content .description .flexbox-blog-item img{
+        width:38vw
     }
     .content .blo .main-content .description .flexbox-blog-item p{
         margin-left: 0;
         padding-left: 0;
-        font-size: 1rem;
+        font-size: 1.2rem;
+        width: 38vw;
         float: left;
     }
     .content .blo .main-content .description .flexbox-blog-item a h3{
@@ -1267,6 +1735,16 @@ transition: .5s ease right
        margin-left: 15px
         /*margin-left: -10vw*/
     }
+    .content .add{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: -20vw;
+    }
+    .content .add-project{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: -20vw;
+    }
 }
 
 
@@ -1280,10 +1758,10 @@ transition: .5s ease right
     z-index: 100
 }
 
-.logo a{
+.logo a h3{
     padding: 1rem;
-    float: left;
-    margin-left: 60px;
+    text-align: center;
+    /* margin-left: 60px; */
     text-decoration: none
 }
 
@@ -1320,7 +1798,7 @@ width: 50vw;
     margin-left: 0px
 }
     .nav-menu .account {
-        display: block;
+        display: none;
         /*margin-top: 30px;*/
         margin-right: 30px
     }
@@ -1583,20 +2061,21 @@ width: 50vw;
     cursor: pointer;
 }
 @media only screen and (min-width: 320px) and (max-width: 480px){
-    .modal-content{
-    width: 80%;
-    height: 30%;
+    .login-modal .modal-content{
+    width: 80vw;
+    height: fit-content;
+    padding-bottom: 20px;
 }
 .modal-content h2{
     margin-top: 12%
 }
 .modal-content form input{
-    width: 90%;
+    width: 80vw;
     display: block;
     margin: auto;
 }
 .modal-content form a {
-    width: 90%;
+    width: 80vw;
 }
 .modal-content form{
     margin-top: 10%
@@ -1604,21 +2083,22 @@ width: 50vw;
 }
 
 @media only screen and (min-width: 481px) and (max-width: 768px){
-    .modal-content{
+    .login-modal .modal-content{
     width: 70%;
-    height: 30%;
+    height: fit-content;
+    padding-bottom: 20px;
 }
 .modal-content h2{
     margin-top: 9%
 }
-.modal-content form input{
-    width: 80%;
+.login-modal .modal-content form input{
+    width: 60vw;
     height: 20px;
     display: block;
     margin: auto;
 }
-.modal-content form a {
-    width: 80%;
+.login-modal .modal-content form a {
+    width: 60vw;
     height: 18%
 }
 .modal-content form{
@@ -1678,10 +2158,10 @@ width: 50vw;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
-    /*opacity: 0.6;*/
+   background-size: cover;
     position: absolute;
     top: 0;
-    /* display: flex; */
+    z-index: 1000;
     justify-content: center;
     align-items: center;
     display: none;
@@ -1729,19 +2209,19 @@ width: 50vw;
     cursor: pointer;
 }
 @media only screen and (min-width: 320px) and (max-width: 480px){
-    .modal-content{
-    width: 80%;
+    .skill-modal .modal-content{
+    width: 90%;
     height: 30%;
 }
 .modal-content h2{
     margin-top: 12%
 }
-.modal-content form input{
+.skill-modal .modal-content form input{
     width: 90%;
     display: block;
     margin: auto;
 }
-.modal-content form a {
+.skill-modal .modal-content form .button {
     width: 90%;
 }
 .modal-content form{
@@ -1750,21 +2230,21 @@ width: 50vw;
 }
 
 @media only screen and (min-width: 481px) and (max-width: 768px){
-    .modal-content{
-    width: 70%;
+    .skill-modal .modal-content{
+    width: 80%;
     height: 30%;
 }
 .modal-content h2{
     margin-top: 9%
 }
-.modal-content form input{
-    width: 80%;
+.skill-modal .modal-content form input{
+    width: 90%;
     height: 20px;
     display: block;
     margin: auto;
 }
-.modal-content form a {
-    width: 80%;
+.skill-modal .modal-content form .button {
+    width: 90%;
     height: 18%
 }
 .modal-content form{

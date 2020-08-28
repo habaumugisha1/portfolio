@@ -6,7 +6,7 @@ const mobile_menu = document.querySelectorAll(".user-profile-l ul li a");
 const check = document.getElementById("check")
 const inputs = document.querySelectorAll('.focused');
 const deleteIcon = document.querySelectorAll('#delete');
-const updateProIcon = document.querySelectorAll('#update');
+const updateSkiIcon = document.querySelectorAll('#update');
 const proDeleteIcon = document.querySelectorAll('#deletepro');
 // const modal = document.querySelector('.modal-content');
 const editProject = document.querySelectorAll('#updatepro');
@@ -94,8 +94,34 @@ proDeleteIcon.forEach(icon=>{
 })
 
 editProject.forEach(icon =>{
-    icon.addEventListener('click', ()=>{
-        console.log("updated")
+    icon.addEventListener('click', (e)=>{
+        const docscontent = e.target.parentNode.parentNode;
+  const docsItem = docscontent.children
+   const imag = docsItem[0]
+   const head = docsItem[1]
+   const descr = docsItem[2]
+   const h = head.children
+   const title = h[0].innerHTML
+
+   const form = document.querySelector('.editProjectForm');
+
+
+
+   const edtForm = `<input type="file" id="projImage" name="" value="${imag.src}"><br>
+   <input type="text" name="" value="${title}"><br>
+   <textarea name="text" id="" rows="15" >${descr.textContent}</textarea>
+   <button class="button">Update</button>`;
+   form.innerHTML = edtForm
+    
+
+    
+        console.log(imag.src)
+        // console.log(im)
+        console.log(h[0].textContent)
+        console.log(h[0].textContent)
+        console.log(descr.textContent)
+        console.log(form)
+        // console.log("updated")
         
             document.querySelector('.login-modal').style.display='flex';
             // console.log(modal)
@@ -110,8 +136,27 @@ editProject.forEach(icon =>{
 })
 
 
-updateProIcon.forEach(icon =>{
-    icon.addEventListener('click', ()=>{
+updateSkiIcon.forEach(icon =>{
+    icon.addEventListener('click', (e)=>{
+
+        let getSkill = e.target.parentNode.parentNode;
+        const skillItems = getSkill.children
+        const skillImage = skillItems[0].src
+        const skillContent = skillItems[1].textContent
+        console.log(skillItems)
+        console.log(skillImage)
+        console.log(skillContent)
+
+
+        let skillForm = `
+        <input type="file" name="${skillImage}" value="${skillImage}"><br>
+        <input type="text" name="" value="${skillContent}"><br>
+        <button class="button">Update</button>
+        `
+        console.log(skillForm)
+
+        document.querySelector('#updateSkillsForm').innerHTML = skillForm
+
             document.querySelector('.skill-modal').style.display='flex';
             // console.log(modal)
             
@@ -121,8 +166,8 @@ updateProIcon.forEach(icon =>{
             
             });
         
-    })
-})
+    });
+});
 
 
 
