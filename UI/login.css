@@ -476,6 +476,8 @@ form h2{
     background-size: 200%;
     transition: .5s;
     margin-bottom: 30px;
+    text-align: center;
+    /* padding: 10px auto; */
 }
 .btn:hover{
     background-position: right;
