@@ -134,6 +134,9 @@ transition: .5s ease right
     border-bottom: 1px solid whitesmoke;
     transition: .4s ease;
 }
+.user-profile-l ul li#logout{
+    display: none;
+}
 .user-profile-l ul li.active{
     background-color: cadetblue;
 }
