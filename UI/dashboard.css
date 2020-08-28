@@ -308,40 +308,75 @@ transition: .5s ease right
     color: white;
     text-decoration: none;
 }
-.content .reset{
-    position: relative;
-    padding-bottom: 10px;
-    display: flex;
+
+
+/* ----------add skills ------------------- */
+
+.add-skill-modal{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    display: none;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.3);
-    width: 40vw;
+    align-items: center;
+    transition: 0.7s ease
+}
+.add-skill-modal .reset{
+    position: relative;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    /* display: none; */
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 253, 253);
+    width: 60vw;
     height: fit-content;
     border-radius: 20px;
     margin-top: 50px;
     /*margin-left: 100px;*/
 }
-.content .reset form{
-    width: 40vw;
+.add-skill-modal .reset .skclose{
+    font-size: 2rem;
+    transform: rotate(45deg);
+    margin-right: 30px;
+    cursor: pointer;
+    font-weight: 100;
+    float: right;
+}
+
+.add-skill-modal .reset h2{
+    text-align: center;
+}
+.add-skill-modal .reset form{
+    width: 50vw;
     position: relative;
     padding: 10px;
     margin-top: 40px;
+    float: center;
+    margin-left:20%;
 }
-.content .reset form .input div label{
+.add-skill-modal .reset form .input div label{
     float: left;
     margin-left:3vw;
     margin-top: 10px;
     transition: .4s ease;
 }
-.content .reset form input{
+.add-skill-modal .reset form input{
     width: 35vw;
     height: 1.5rem;
     outline:none;
     border: none;
+    border-bottom: 1px solid #ccc;
     border-radius: 5px;
     padding-left: 10px;
     font-size: 18px;
 }
-.content .reset form textarea{
+.add-skill-modal .reset form .input input[type=file]{
+    border-bottom: none;
+   }
+.add-skill-modal .reset form textarea{
     width: 35vw;
     outline:none;
     border: none;
@@ -350,7 +385,7 @@ transition: .5s ease right
     padding-top: 10px;
     font-size: 18px;
 }
-.content .reset form button{
+.add-skill-modal .reset form button{
    background:blue;
    color: white;
    border: none;
@@ -361,19 +396,19 @@ transition: .5s ease right
    height: 1.8rem;
    width: 35vw;
 }
-.content .reset form .input .focus label{
+.add-skill-modal .reset form .input .focus label{
     margin-top: -5px;
     transition: .4s ease;
     color: blue;
 }
-.content .reset form .input .focus input{
+.add-skill-modal .reset form .input .focus input{
     border-bottom: 1px solid blue;
    }
 
-   .content .reset form .input .focus input[type=file]{
+   .add-skill-modal .reset form .input .focus input[type=file]{
     border-bottom: none;
    }
-.content .reset form .signup{
+   .add-skill-modal .reset form .signup{
     font-size: 18px; 
     /* margin-left: 80px; */
     margin-top: 10px;
@@ -382,6 +417,128 @@ transition: .5s ease right
     border: 1px solid white;
     
 }
+
+
+/* ----------add project ------------------- */
+
+.add-project-modal{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    z-index: 1000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: 0.7s ease
+}
+.add-project-modal .reset{
+    position: relative;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    /* display: none; */
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 253, 253);
+    width: 60vw;
+    height: fit-content;
+    border-radius: 20px;
+    margin-top: 50px;
+    /*margin-left: 100px;*/
+}
+.add-project-modal .reset .kclose{
+    font-size: 2rem;
+    transform: rotate(45deg);
+    margin-right: 30px;
+    cursor: pointer;
+    font-weight: 100;
+    float: right;
+}
+
+.add-project-modal .reset h2{
+    text-align: center;
+}
+.add-project-modal .reset form{
+    width: 50vw;
+    position: relative;
+    padding: 10px;
+    margin-top: 40px;
+    float: center;
+    margin-left:20%;
+}
+.add-project-modal .reset form .input div label{
+    float: left;
+    margin-left:3vw;
+    /* margin-top: 10px; */
+    transition: .4s ease;
+}
+.add-project-modal .reset form input{
+    width: 35vw;
+    height: 1.5rem;
+    outline:none;
+    /* border: 1px solid #ccc; */
+    /* border-bottom: 1px solid #ccc; */
+    border-radius: 5px;
+    padding-left: 10px;
+    font-size: 18px;
+}
+.add-project-modal .reset form .input input[type=file]{
+    border-bottom: none;
+   }
+.add-project-modal .reset form textarea{
+    width: 35vw;
+    outline:none;
+    /* border: 1px solid #ccc; */
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-top: 10px;
+    font-size: 18px;
+}
+.add-project-modal .reset form button{
+   background:blue;
+   color: white;
+   border: none;
+   border-radius: 5px;
+   text-align: center;
+   font-size: 18px;
+   width: 20rem;
+   height: 1.8rem;
+   width: 35vw;
+}
+.add-project-modal .reset form .input .focus label{
+    margin-top: -5px;
+    transition: .4s ease;
+    color: blue;
+}
+.add-project-modal .reset form .input .focus input{
+    border: 1px solid blue;
+   }
+
+   .add-project-modal .reset form .focus textarea{
+    width: 35vw;
+    outline:none;
+    border: 1px solid blue;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-top: 10px;
+    font-size: 18px;
+}
+   .add-project-modal .reset form .input .focus input[type=file]{
+    border-bottom: none;
+   }
+   .add-project-modal .reset form .signup{
+    font-size: 18px; 
+    /* margin-left: 80px; */
+    margin-top: 10px;
+    border-radius: 5px;
+    text-align: center;
+    border: 1px solid white;
+    
+}
+
+
+
 .content .reset form .signup a{
    
     color: white;
@@ -503,6 +660,25 @@ transition: .5s ease right
     margin-top: -170px
 }
 
+.content .add{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.content .add span {
+    margin-top: 20px;
+    cursor: pointer;
+    padding: 20px;
+    color: rgb(251, 253, 253);
+    background-color: rgb(36, 157, 197);
+    border-radius: 10px;
+    /* margin-left: 20px; */
+}
+.content .add span i {
+
+    color: rgb(251, 253, 253);
+    cursor: pointer;
+    padding-right: 10px;
+}
 
 .content .projec {
     width: 70vw;
@@ -734,6 +910,7 @@ transition: .5s ease right
         grid-template-columns: 1fr;
         grid-gap: 1rem
     }
+    
     .content .blo .main-content{
         width: 80vw;
         margin-left: 0
@@ -1348,4 +1525,317 @@ width: 50vw;
    .content .reset textarea:focus, input:focus{
     outline: none;
 }
+}
+
+
+.login-modal{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    /*opacity: 0.6;*/
+    position: absolute;
+    top: 0;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    transition: 0.7s ease
+}
+.login-modal .modal-content{
+    width: 40%;
+    height: fit-content;
+    background-color: white;
+    border-radius: 10px;
+    z-index: 10;
+    text-align: center;
+    padding-bottom: 20px;
+    padding: 20px;
+    position: relative;
+}
+ .modal-content form{
+    margin-top: 8%
+}
+.login-modal .modal-content form input{
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+.login-modal .modal-content form textarea{
+    width: 100%;
+
+}
+.modal-content form button {
+    width: 100%;
+    background-color: lightblue;
+    padding: 5px;
+    display: block;
+    margin: auto;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+}
+.modal-content .close{
+    position: absolute;
+    top: 0px;
+    right: 2%;
+    font-size: 2.5rem;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+@media only screen and (min-width: 320px) and (max-width: 480px){
+    .modal-content{
+    width: 80%;
+    height: 30%;
+}
+.modal-content h2{
+    margin-top: 12%
+}
+.modal-content form input{
+    width: 90%;
+    display: block;
+    margin: auto;
+}
+.modal-content form a {
+    width: 90%;
+}
+.modal-content form{
+    margin-top: 10%
+}
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px){
+    .modal-content{
+    width: 70%;
+    height: 30%;
+}
+.modal-content h2{
+    margin-top: 9%
+}
+.modal-content form input{
+    width: 80%;
+    height: 20px;
+    display: block;
+    margin: auto;
+}
+.modal-content form a {
+    width: 80%;
+    height: 18%
+}
+.modal-content form{
+    margin-top: 5%
+}
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px){
+    .modal-content{
+    width: 60%;
+    height: 25%;
+}
+.modal-content h2{
+    margin-top: 9%
+}
+.modal-content form input{
+    width: 60%;
+    height: 30px;
+    display: block;
+    margin: auto;
+}
+.modal-content form a {
+    width: 60%;
+    height: 30px;
+    margin-top: 20px
+}
+.modal-content form{
+    margin-top: 5%
+}
+}
+@media only screen and (min-width: 1025px) and (max-width: 1500px){
+    .modal-content{
+    width: 60%;
+    height: 60%;
+}
+.modal-content h2{
+    margin-top: 9%
+}
+.modal-content form input{
+    width: 60%;
+    height: 30px;
+    display: block;
+    margin: auto;
+}
+.modal-content form a {
+    width: 60%;
+    height: 30px;
+    margin-top: 20px;
+    font-size: 1.4rem
+}
+.modal-content form{
+    margin-top: 5%
+}
+}
+
+
+.skill-modal{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    /*opacity: 0.6;*/
+    position: absolute;
+    top: 0;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    display: none;
+    transition: 0.7s ease
+}
+.skill-modal .modal-content{
+    width: 40%;
+    height: fit-content;
+    background-color: white;
+    border-radius: 10px;
+    z-index: 1;
+    text-align: center;
+    padding-bottom: 20px;
+    padding: 20px;
+    position: relative;
+}
+ .modal-content form{
+    margin-top: 8%
+}
+.skill-modal .modal-content form input{
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+.skill-modal .modal-content form textarea{
+    width: 100%;
+
+}
+.modal-content form button {
+    width: 100%;
+    background-color: lightblue;
+    padding: 5px;
+    display: block;
+    margin: auto;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+}
+.modal-content .sclose{
+    position: absolute;
+    top: 0px;
+    right: 2%;
+    font-size: 2.5rem;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+@media only screen and (min-width: 320px) and (max-width: 480px){
+    .modal-content{
+    width: 80%;
+    height: 30%;
+}
+.modal-content h2{
+    margin-top: 12%
+}
+.modal-content form input{
+    width: 90%;
+    display: block;
+    margin: auto;
+}
+.modal-content form a {
+    width: 90%;
+}
+.modal-content form{
+    margin-top: 10%
+}
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px){
+    .modal-content{
+    width: 70%;
+    height: 30%;
+}
+.modal-content h2{
+    margin-top: 9%
+}
+.modal-content form input{
+    width: 80%;
+    height: 20px;
+    display: block;
+    margin: auto;
+}
+.modal-content form a {
+    width: 80%;
+    height: 18%
+}
+.modal-content form{
+    margin-top: 5%
+}
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px){
+    .modal-content{
+    width: 60%;
+    height: 25%;
+}
+.modal-content h2{
+    margin-top: 9%
+}
+.modal-content form input{
+    width: 60%;
+    height: 30px;
+    display: block;
+    margin: auto;
+}
+.modal-content form a {
+    width: 60%;
+    height: 30px;
+    margin-top: 20px
+}
+.modal-content form{
+    margin-top: 5%
+}
+}
+@media only screen and (min-width: 1025px) and (max-width: 1500px){
+    .modal-content{
+    width: 60%;
+    height: 60%;
+}
+.modal-content h2{
+    margin-top: 9%
+}
+.modal-content form input{
+    width: 60%;
+    height: 30px;
+    display: block;
+    margin: auto;
+}
+.modal-content form a {
+    width: 60%;
+    height: 30px;
+    margin-top: 20px;
+    font-size: 1.4rem
+}
+.modal-content form{
+    margin-top: 5%
+}
+}
+
+.content .add-project{
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+.content .add-project span {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    padding: 20px;
+    color: rgb(251, 253, 253);
+    background-color: rgb(36, 157, 197);
+    border-radius: 10px;
+    /* margin-left: 20px; */
+}
+.content .add-project span i {
+
+    color: rgb(251, 253, 253);
+    cursor: pointer;
+    padding-right: 10px;
 }

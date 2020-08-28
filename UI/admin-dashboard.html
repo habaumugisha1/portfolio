@@ -27,8 +27,6 @@
                     <div class="user-profile-l">
                         <ul class="navs">
                             <li class="active" id="check"><a href="#" >Contacted</a></li>    
-                            <li><a href="#">Add Skills</a></li>
-                            <li><a href="#">Add Project</a></li>
                             <li><a href="#">Blogs</a></li>
                             <li><a href="#">My Account</a></li>
                             <li><a href="#">Skills</a></li>
@@ -102,55 +100,8 @@
 
                
 
+
        <div class="content" data-index="1">
-            <div class="reset">
-
-                <form action="">
-                    
-                    <div class="input">
-                        <div>
-                            <label for="logo">Skill Image:</label><br><br>
-                            <input type="file" class="focused" required><br><br>
-                        </div>
-                        <div>
-                            <label for="logo">Skill Title:</label><br><br>
-                            <input type="text" id="skill" class="focused" required><br><br>
-                        </div>
-                        <button onclick="reset()">CREATE</button>
-                    </div>
-                </form>
-
-            </div>
-       </div>
-
-       <div class="content" data-index="2">
-            <div class="reset">
-
-                <form action="">
-                    
-                    <div class="input">
-                        <div>
-                            <label for="logo">title:</label><br>
-                            <input type="text" class="focused" required><br><br>
-                        </div>
-                        <div>
-                            <label for="logo">Image:</label><br>
-                            <input type="file"  class="focused" required><br><br>
-                        </div>
-                        <div>
-                            <label for="logo"> Descriptions:</label><br>
-                            <textarea rows="10"  class="focused" required></textarea>  <br><br>
-                        </div>
-
-                        <button>UPLOAD</button>
-                    </div>
-                    
-                </form>
-
-            </div>
-       </div>
-
-       <div class="content" data-index="3">
         <div class="blo">
                 <div class="main-content">
                     <div class="description">
@@ -213,7 +164,7 @@
                 
            </div>
 
-               <div class="content" data-index="4">
+               <div class="content" data-index="2">
                 <div class="main-content-account">
                     <div class="profile">
                         <img src="./img/ami.png" alt="">
@@ -225,19 +176,22 @@
                     <div class="update">
                         <h2>Update Your Infomation</h2>
                         <form>
-                            <input type="text" name="name" placeholder="Names ..."><br><br>
+                            <input type="text" name="name" value="Ami des jeunes"><br><br>
                             <input type="file" name="image"><br><br>
-                            <input type="text" name="email" placeholder="Email ..."><br><br>
+                            <input type="text" name="email" value="habajeunes2@gmail.com"><br><br>
                             <button>Update</button>
                         </form>
                     </div>
                    </div>
                </div>
 
-               <div class="content" data-index="5">
+               <div class="content" data-index="3">
+                   <div class="add">
+                       
+                       <span><i class="fas fa-plus"></i> Add New</span>
+                   </div>
                     <div class="blo">
                                 <div class="description">
-                                    
                                     <div class="flexbox-skill-item">
                                         <img src="img/html.png" alt="img">
                                         <p>HTML</p> 
@@ -281,7 +235,10 @@
 
 
 
-                <div class="content" data-index="6">
+                <div class="content" data-index="4">
+                    <div class="add-project">
+                        <span><i class="fas fa-plus"></i> Add New</span>
+                    </div>
                     <div class="projec">
                                     
                             <div class="flexbox-pro-item">
@@ -312,6 +269,95 @@
                
     </div>
    </div>
+
+   <div class="login-modal">
+    <div class="modal-content">
+        <div class="close">+</div>
+        <h2>Update Project</h2>
+        <form>
+            <input type="file" name="" value='img/politico.PNG'><br>
+            <input type="text" name="" value='Politico Project'><br>
+            <textarea name="text" id="" rows="15" >It is a platform which both the politicians and citizens can use. Politico enables citizens to give their mandate to politicians running for different government offices while building trust in the process through transparency</textarea>
+            <button class="button">Update</button>
+        </form>
+    </div>
+    
+</div>
+
+
+<div class="skill-modal">
+    <div class="modal-content">
+        <div class="sclose">+</div>
+        <h2>Update Skill</h2>
+        <form>
+            <input type="file" name="" value='img/politico.PNG'><br>
+            <input type="text" name="" value='HTML'><br>
+            <button class="button">Update</button>
+        </form>
+    </div>
+    
+</div>
+
+
+
+<div class="add-skill-modal">
+    <div class="reset">
+        <!-- <div class="modal-content"> -->
+            <div class="skclose">+</div>
+            <h2>Add Skill</h2>
+
+                <form action="">
+                    
+                    <div class="input">
+                        <div>
+                            <label for="logo">Skill Image:</label><br><br>
+                            <input type="file" class="focused" required><br><br>
+                        </div>
+                        <div>
+                            <label for="logo">Skill Title:</label><br><br>
+                            <input type="text" id="skill" class="focused" required><br><br>
+                        </div>
+                        <button onclick="reset()">CREATE</button>
+                    </div>
+                </form>
+
+        <!-- </div> -->
+    </div>
+    
+</div>
+
+
+<div class="add-project-modal">
+    <div class="reset">
+        <!-- <div class="modal-content"> -->
+            <div class="kclose">+</div>
+            <h2>Add Project</h2>
+
+            <form action="">
+                    
+                <div class="input">
+                    <div>
+                        <label for="logo">title:</label><br>
+                        <input type="text" class="focused" required><br><br>
+                    </div>
+                    <div>
+                        <label for="logo">Image:</label><br>
+                        <input type="file"  class="focused" required><br><br>
+                    </div>
+                    <div>
+                        <label for="logo"> Descriptions:</label><br>
+                        <textarea rows="10"  class="focused" required></textarea>  <br><br>
+                    </div>
+
+                    <button>UPLOAD</button>
+                </div>
+                
+            </form>
+
+        <!-- </div> -->
+    </div>
+    
+</div>
    <script type="text/javascript" src="./dash.js"></script>
 </body>
 </html>

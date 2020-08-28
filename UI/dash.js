@@ -6,7 +6,17 @@ const mobile_menu = document.querySelectorAll(".user-profile-l ul li a");
 const check = document.getElementById("check")
 const inputs = document.querySelectorAll('.focused');
 const deleteIcon = document.querySelectorAll('#delete');
-const proDeleteIcon = document.querySelectorAll('#deletepro')
+const updateProIcon = document.querySelectorAll('#update');
+const proDeleteIcon = document.querySelectorAll('#deletepro');
+// const modal = document.querySelector('.modal-content');
+const editProject = document.querySelectorAll('#updatepro');
+
+const skclose = document.querySelector('.skclose');
+const kclose = document.querySelector('.kclose');
+const addSkills = document.querySelector('.add');
+const addProjects = document.querySelector('.add-project');
+const addSkillModal = document.querySelector('.add-skill-modal');
+const addProjectModal = document.querySelector('.add-project-modal');
 
 
 linkCont.forEach(link=> {
@@ -34,7 +44,7 @@ navBar.addEventListener("click", () =>{
 
 mobile_menu.forEach((link) => {
     link.addEventListener('click', ()=>{
-        console.log(link);
+        // console.log(link);
       navBar.classList.toggle("move");
       nav_menu.classList.toggle("move");  
     })
@@ -82,3 +92,60 @@ proDeleteIcon.forEach(icon=>{
                    }
     })
 })
+
+editProject.forEach(icon =>{
+    icon.addEventListener('click', ()=>{
+        console.log("updated")
+        
+            document.querySelector('.login-modal').style.display='flex';
+            // console.log(modal)
+            
+        
+            document.querySelector('.close').addEventListener('click', ()=> {
+                document.querySelector('.login-modal').style.display='none';
+            
+            });
+        
+    })
+})
+
+
+updateProIcon.forEach(icon =>{
+    icon.addEventListener('click', ()=>{
+            document.querySelector('.skill-modal').style.display='flex';
+            // console.log(modal)
+            
+        
+            document.querySelector('.sclose').addEventListener('click', ()=> {
+                document.querySelector('.skill-modal').style.display='none';
+            
+            });
+        
+    })
+})
+
+
+
+
+addSkills.addEventListener('click', ()=>{
+    document.querySelector('.add-skill-modal').style.display='flex';
+})
+
+    skclose.addEventListener('click', ()=> {
+        document.querySelector('.add-skill-modal').style.display='none';
+    
+    });
+
+// })
+
+//
+
+addProjects.addEventListener('click', ()=>{
+    document.querySelector('.add-project-modal').style.display='flex';
+    console.log("modal")
+})
+
+    kclose.addEventListener('click', ()=> {
+        document.querySelector('.add-project-modal').style.display='none';
+    
+    })
