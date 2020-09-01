@@ -17,14 +17,14 @@ function blurFunction(){
         parent.classList.remove('focus');
     }
 }
-btn.addEventListener('click', () => {
-    const confirmArt = confirm("Do you want to publish?");
-        if( confirmArt == true ) {
-                alert("Article published");
-                artform.reset()
-                return true;
-        } else {
-             alert("Article not published")
-                 return false;
-                   }
-});
+// btn.addEventListener('click', () => {
+//     const confirmArt = confirm("Do you want to publish?");
+//         if( confirmArt == true ) {
+//                 alert("Article published");
+//                 artform.reset()
+//                 return true;
+//         } else {
+//              alert("Article not published")
+//                  return false;
+//                    }
+// });

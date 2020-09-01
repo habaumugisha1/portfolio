@@ -360,27 +360,9 @@ color: white;
 }
 .flexbox-blog .flexbox-blog-item:hover{
     transition: .6s ease;
+    transform: scale(1.1);
 }
 
-.flexbox-blog .flexbox-blog-item:hover::after{
-    content: "";
-    color: crimson;
-    text-align: center;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    position: absolute;
-    border-radius: 10px;
-    transform: rotate(360deg);
-    transition: all .6s;
-    left: 0;
-    top: 0;
-    opacity: .1;
-    z-index: 1;
-    overflow:hidden;
-    margin-right: 1vw
-
-}
 
 .flexbox-blog .flexbox-blog-item img{
     width: 100%;
@@ -857,9 +839,10 @@ color: white;
     border: 2px solid green;
     transition: .4s ease;
 }
-.article-modal-content form a {
+.article-modal-content form button {
     width: 50%;
     background-color: rgb(60, 93, 236);
+    border: none;
     color: white;
     padding: 5px;
     display: block;
@@ -897,9 +880,10 @@ color: white;
     display: block;
     margin: auto;
 }
-.article-modal-content form a {
+.article-modal-content form button {
     margin: 5%;
     width: 90%;
+    border: none;
 }
 .article-modal-content form{
     margin-top: 10%
@@ -928,10 +912,11 @@ color: white;
     display: block;
     margin: auto;
 }
-.article-modal-content form a {
+.article-modal-content form button {
     margin-top: 5%;
     width: 80%;
-    height: 18%
+    height: 18%;
+    border: none;
 }
 .article-modal-content form{
     margin-top: 5%
@@ -955,10 +940,11 @@ color: white;
     width: 70%;
     
 }
-.article-modal-content form a {
+.article-modal-content form button {
     width: 70%;
     height: 30px;
-    margin-top: 20px
+    margin-top: 20px;
+    border: none;
 }
 .article-modal-content form{
     margin-top: 5%
@@ -979,11 +965,12 @@ color: white;
     display: block;
     margin: auto;
 }
-.article-modal-content form a {
+.article-modal-content form button {
     width: 60%;
     height: 30px;
     margin-top: 20px;
-    font-size: 1.4rem
+    font-size: 1.4rem;
+    border: none;
 }
 .article-modal-content form{
     margin-top: 5%
