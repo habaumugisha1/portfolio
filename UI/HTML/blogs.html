@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="blogs.css">
+    <link rel="stylesheet" href="../CSS/blogs.css">
     <title>My Web and blogs</title>
 </head>
 <body>
@@ -11,13 +11,13 @@
     <section id="header">
     <div class="header container">
         <div class="nav-bar">
-            <div class="brand"> <h1> <a href="../index.html"> <span>A</span>mi <span>D</span>es <span>J</span>eunes</a></h1> </div>
+            <div class="brand"> <h1> <a href="../../index.html"> <span>A</span>mi <span>D</span>es <span>J</span>eunes</a></h1> </div>
             <div class="nav-list">
                 <div class="hamburger"> <div class="bar"></div></div>
                 <ul>
-                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../../index.html">Home</a></li>
                     <li><a href="#blogs" class="active_link">Blog</a></li>
-                    <li><a href="./new-article.html">New Article</a></li>
+                    <li><a href="./new-article.html" id="new-article">New Article</a></li>
                     
                 </ul>
 
@@ -39,8 +39,8 @@
 <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-storage.js"></script>
     
-<script type="text/javascript" src="./blogs.js"></script>
-    <script src="./landingPage.js"></script>
-<script src="./fetchblogs.js"></script>
+<script type="text/javascript" src="../scripts/blogs.js"></script>
+<script src="../scripts/landingPage.js"></script>
+<script src="../scripts/firebase/fetchblogs.js"></script>
 </body>
 </html>

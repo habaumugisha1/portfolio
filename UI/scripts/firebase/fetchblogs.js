@@ -48,7 +48,7 @@
       div.appendChild(image)
       link.appendChild(header3)
       div.appendChild(link)
-      div.appendChild(header5)
+      // div.appendChild(header5)
       div.appendChild(p)
 
       blogsList.appendChild(div)

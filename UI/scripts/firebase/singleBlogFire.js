@@ -32,6 +32,34 @@ const getBlogId = ()=> {
    let oneBlog = await db.collection("blogs").doc(id).get().catch((err)=> console.log(err))
 
    //console.log(oneBlog.data())
+   firebase.auth().onAuthStateChanged(user=>{
+     if(user){
+       console.log(user.email)
+
+       if(user.email == "habajeunes2@gmail.com"){
+    document.querySelector('.edit').style.display= "flex"
+    document.querySelector('.delete').style.display= "flex"
+    document.querySelector(".nav-list ul li a#new-article").style.display="inline-block"
+    document.querySelector(".nav-list ul li a#admin-dash").style.display="inline-block"
+    
+      
+       }else{
+        document.querySelector('.edit').style.display= "none"
+        document.querySelector('.delete').style.display= "none"
+        document.querySelector(".nav-list ul li a#new-article").style.display="none"
+        document.querySelector(".nav-list ul li a#admin-dash").style.display="none"
+
+
+       }
+     }else{
+      document.querySelector('.edit').style.display= "none"
+      document.querySelector('.delete').style.display= "none"
+      document.querySelector(".nav-list ul li a#new-article").style.display="none"
+      document.querySelector(".nav-list ul li a#admin-dash").style.display="none"
+
+
+     }
+   })
 
    let h3 = document.createElement("h3")
       h3.textContent = oneBlog.data().title;
@@ -62,15 +90,9 @@ const getBlogId = ()=> {
 
    let hr = document.createElement("hr");
 
-
-   
-   
-   
-   
-   
    
    blog.appendChild(h3)
-   blog.appendChild(h5)
+  //  blog.appendChild(h5)
    blog.appendChild(editBtn)
    blog.appendChild(deleteBtn)
    blog.appendChild(image)

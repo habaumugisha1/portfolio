@@ -20,13 +20,43 @@
   firebase.initializeApp(firebaseConfig);
 
   
-  const db = firebase.firestore();
+  // const firebase.firestore() = firebase.firestore();
   
   // --------------------------------------sotoring article in firebase---------------------------------------------
 
   const articleForm = document.querySelector('#articleForm');
   const submitBtn = document.querySelector('#btnart');
 
+
+// giving access on different link
+  firebase.auth().onAuthStateChanged(user=>{
+    if(user){
+      console.log(user.email)
+
+      if(user.email == "habajeunes2@gmail.com"){
+   //document.querySelector('.edit').style.display= "flex"
+  // document.querySelector('.delete').style.display= "flex"
+   document.querySelector(".nav-list ul li a#new-article").style.display="inline-block"
+   document.querySelector(".nav-list ul li a#admin-dash").style.display="inline-block"
+   
+     
+      }else{
+       //document.querySelector('.edit').style.display= "none"
+       //document.querySelector('.delete').style.display= "none"
+       document.querySelector(".nav-list ul li a#new-article").style.display="none"
+       document.querySelector(".nav-list ul li a#admin-dash").style.display="none"
+
+
+      }
+    }else{
+     //document.querySelector('.edit').style.display= "none"
+     //document.querySelector('.delete').style.display= "none"
+     document.querySelector(".nav-list ul li a#new-article").style.display="none"
+     document.querySelector(".nav-list ul li a#admin-dash").style.display="none"
+
+
+    }
+  })
 
   articleForm.addEventListener('submit', (e) => {
       e.preventDefault();
@@ -61,7 +91,7 @@
                     image: imageName.location.path,
                     created_at
                 };
-           await db.collection('blogs').add(article);
+           await firebase.firestore().collection('blogs').add(article);
                  console.log(article)
                  console.log(downloadURL)
                alert(" Article successfully Uploaded");

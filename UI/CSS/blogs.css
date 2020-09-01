@@ -167,6 +167,13 @@ color: white;
     #header .nav-list ul li a{
         font-size: 1.2rem;
     }
+    #header .nav-list ul li a#new-article{
+        display: none;
+    } 
+    #header .nav-list ul li a#admin-dash{
+        display: none;
+    }
+     
    .text{
     width: 100%;
     display: flex;
@@ -552,31 +559,38 @@ color: white;
 }
 /* single blog */
 #blogs .flexbox-blog-article .flexbox-blog-article-item .edit{
+    display: none;
     width: 15vw;
     text-align: center;
+    justify-content: center;
     background-color: lightgreen;
     border: none;
     color: white;
-    margin-left: 11vw;
+    margin-left: 20vw;
     margin-bottom: 20px;
     padding: 10px;
     border-radius: 7px;
     font-size: 1rem;
     cursor: pointer;
+    margin-top: 5vh;
 }
 #blogs .flexbox-blog-article .flexbox-blog-article-item .delete{
-    /*height: 20px;*/
+   display: none;
     width: 17vw;
     text-align: center;
+    align-items: center;
+    justify-content: center;
     background-color: red;
     border: none;
     color: white;
-    margin-left: 3vw;
+    margin-right: 20vw;
+    margin-top:-60px;
     margin-bottom: 20px;
     padding: 10px;
     border-radius: 7px;
     font-size: 1rem;
     cursor: pointer;
+    float: right;
 }
 .flexbox-blog-article{
     display: grid;
@@ -591,8 +605,8 @@ color: white;
     border-radius: 5px;
     margin-bottom: 10px;
     position: relative;
-    width: 65vw;
-    margin-left: 13vw;
+    width: 90vw;
+    margin-left: -2vw;
     transition: .6s ease;
     justify-content:center;
     text-align: center;
@@ -600,13 +614,14 @@ color: white;
 }
 
 .flexbox-blog-article .flexbox-blog-article-item h3{
-    font-size: 1.6rem;
+    font-size: 1.7rem;
+    margin-bottom: 30px;
     text-align: center;
     text-transform: uppercase
 }
 .flexbox-blog-article .flexbox-blog-article-item img{
-    width: 60vw;
-    height: 65vh;
+    width: 90vw;
+    height: 100vh;
     margin-bottom: 5vh;
     border-radius: 10px 10px
 
@@ -664,7 +679,7 @@ color: white;
     text-align: left;
 }
 .flexbox-blog-article .flexbox-blog-article-item .new-comment{
-    width: 50vw;
+    width: 70vw;
     background-color: #eee;
     justify-content: center;
     align-items: center;

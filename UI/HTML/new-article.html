@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/e4761ce9e4.js" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="./blogs.css">
+    <link rel="stylesheet" href="../CSS/blogs.css">
     <title>My Web and blogs</title>
 </head>
 <body>
@@ -13,13 +13,14 @@
     <section id="header">
     <div class="header container">
         <div class="nav-bar">
-            <div class="brand"> <h1> <a href="../index.html"> <span>A</span>mi <span>D</span>es <span>J</span>eunes</a></h1> </div>
+            <div class="brand"> <h1> <a href="../../index.html"> <span>A</span>mi <span>D</span>es <span>J</span>eunes</a></h1> </div>
             <div class="nav-list">
                 <div class="hamburger"> <div class="bar"></div></div>
                 <ul>
-                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../../index.html">Home</a></li>
                     <li><a href="./blogs.html">Blog</a></li>
-                    <li><a href="#" class="active_link">New Article</a></li>
+                    <li><a href="#" id="new-article" class="active_link">New Article</a></li>
+                    <li><a href="./admin-dashboard.html" id="admin-dash">Dashboard</a></li>
                     
                 </ul>
 
@@ -33,7 +34,7 @@
     
     <div class="article-modal">
         <div class="image">
-            <img src="./img/undraw_sharing_articles_t5aa.png" alt="image">
+            <img src="../img/undraw_sharing_articles_t5aa.png" alt="image">
         </div>
         <div class="article-modal-content">
             <!-- <div class="close">+</div> -->
@@ -60,10 +61,12 @@
 <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-storage.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
 
-<script type="text/javascript" src="./blogs.js"></script>
-    <script src="./landingPage.js"></script>
-     <script src="./newArticle.js"></script>
-     <script src="./firebase.js"></script>
+<script type="text/javascript" src="../scripts/blogs.js"></script>
+    <script src="../scripts/landingPage.js"></script>
+     <script src="../scripts/newArticle.js"></script>
+     <script src="../scripts/firebase/firebase.js"></script>
+     <!-- <script src="../scripts/firebase/singleBlogFire.js"></script> -->
 </body>
 </html>
