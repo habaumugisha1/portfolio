@@ -326,20 +326,20 @@
             <div class="kclose">+</div>
             <h2>Add Project</h2>
 
-            <form action="">
+            <form action="" method="POST" id="project-form">
                     
                 <div class="input">
                     <div>
                         <label for="logo">title:</label><br>
-                        <input type="text" class="focused" required><br><br>
+                        <input type="text" id="project-title" class="focused" required><br><br>
                     </div>
                     <div>
                         <label for="logo">Image:</label><br>
-                        <input type="file"  class="focused" required><br><br>
+                        <input type="file"  class="focused" id="project-image" required><br><br>
                     </div>
                     <div>
                         <label for="logo"> Descriptions:</label><br>
-                        <textarea rows="10"  class="focused" required></textarea>  <br><br>
+                        <textarea rows="10"  class="focused" id="project-descript" required></textarea>  <br><br>
                     </div>
 
                     <button>UPLOAD</button>
@@ -355,6 +355,7 @@
     <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-storage.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
+    <script src="../scripts/firebase/firebaseConfig.js"></script>
   
    
     <script type="text/javascript" src="../scripts/dash.js"></script>

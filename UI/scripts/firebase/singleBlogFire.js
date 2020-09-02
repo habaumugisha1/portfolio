@@ -1,28 +1,13 @@
-// Your web app's Firebase configuration
-var firebaseConfig = {
-    apiKey: "AIzaSyCM6QhkIm9l6jGNQ3a0Oqws4R2pGb3a-nY",
-    authDomain: "ami-portfolio-682e7.firebaseapp.com",
-    databaseURL: "https://ami-portfolio-682e7.firebaseio.com",
-    projectId: "ami-portfolio-682e7",
-    storageBucket: "ami-portfolio-682e7.appspot.com",
-    messagingSenderId: "5487041337",
-    appId: "1:5487041337:web:d4f0dc5c68ae2324d0e6e8",
-    measurementId: "G-GX7YDY8ZX4"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-
   
-  const db = firebase.firestore();
 
 /// -----------------------------------------------getting a single blog-------------------------------------------------
+  const db = firebase.firestore();
   const blog = document.querySelector('.post');
 
 const getBlogId = ()=> {
     let link = window.location.href;
     let linkArray = link.split('/');
     let blogId = linkArray.slice(-1).pop()
-    //console.log(blogId)
     return blogId
   }
 
@@ -31,7 +16,6 @@ const getBlogId = ()=> {
 
    let oneBlog = await db.collection("blogs").doc(id).get().catch((err)=> console.log(err))
 
-   //console.log(oneBlog.data())
    firebase.auth().onAuthStateChanged(user=>{
      if(user){
        console.log(user.email)
@@ -100,11 +84,6 @@ const getBlogId = ()=> {
    blog.appendChild(br)
    blog.appendChild(hr)
    
-  //  let dat = new Date(1598787670.784000000).toLocaleDateString().split("-")
-  //  console.log(dat)
-  //  console.log(blog)
-  //  console.log(h3.textContent)
-   
   }
   
   renderBlog()
@@ -116,8 +95,6 @@ const getBlogId = ()=> {
 
   commentForm.addEventListener('submit', (e)=>{
     e.preventDefault();
-    // geting input value
-    //  console.log(user)
     let name = document.querySelector('#name').value;
     let comment = document.querySelector('#commet').value;
     let date = new Date()
@@ -136,7 +113,6 @@ const getBlogId = ()=> {
           if(user){    
               if(name!= '' || comment !=''){
                 db.collection('comments').add(commt).then(() => {
-                // console.log(commt)
                   alert("This blog successfully commented")
                   commentForm.reset()
                 })
@@ -165,7 +141,6 @@ const getBlogId = ()=> {
        comDiv.setAttribute("class", "comment")
 
   const h5 = document.createElement('h5')
-    // h5.textContent = `${count} comments`
 
   const comImgDiv = document.createElement("div")
         comImgDiv.setAttribute("class", "image")
@@ -181,7 +156,6 @@ const getBlogId = ()=> {
   const pComt = document.createElement("p")
   pComt.textContent= doc.data().comment
 
-  //blog.appendChild(h5)
   blog.appendChild(comDiv)
   comDiv.appendChild(comImgDiv)
   comImgDiv.appendChild(img)
@@ -192,10 +166,8 @@ const getBlogId = ()=> {
 
   db.collection("comments").where("blogid","==",id).get().then(snapshot => {
     const count =  snapshot.size
-  
-    //console.log(count)
+
     snapshot.docs.forEach(doc => {
      renderComment(doc)
-      //console.log("comments  " + doc.data().name)
     });
   })

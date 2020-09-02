@@ -1,39 +1,58 @@
-// Your web app's Firebase configuration
-var firebaseConfig = {
-    apiKey: "AIzaSyCM6QhkIm9l6jGNQ3a0Oqws4R2pGb3a-nY",
-    authDomain: "ami-portfolio-682e7.firebaseapp.com",
-    databaseURL: "https://ami-portfolio-682e7.firebaseio.com",
-    projectId: "ami-portfolio-682e7",
-    storageBucket: "ami-portfolio-682e7.appspot.com",
-    messagingSenderId: "5487041337",
-    appId: "1:5487041337:web:d4f0dc5c68ae2324d0e6e8",
-    measurementId: "G-GX7YDY8ZX4"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
 
-  
   const db = firebase.firestore();
-
+//------------------------log user out
   const lgout = document.querySelector("#logout")
   lgout.addEventListener("click",() =>{
       firebase.auth().signOut().then(() => {
           alert("Successfully Loged Out")
           window.location.replace("./login.html")
       }
-        //   console.log("logeddddd")
           
       )
   })
 
-  console.log("admin!!!!!-----------------------------")
-const skillForm = document.querySelector("#add-skills-form");
-skillForm.addEventListener('submit', (e)=>{
+ 
+const projectForm = document.querySelector("#project-form");
+projectForm.addEventListener('submit', (e)=>{
     e.preventDefault();
-    if(document.getElementById("skill-form").files[0] !="" || document.getElementById('skill').value !=""){
+    const text = document.getElementById('project-title').value
+    const projectImage = document.getElementById('project-image').files[0]
+    const projectDescrip = document.getElementById('project-descript').value
+    
+    if(text !="" || projectImage !="" || projectDescrip !=""){
+        const storageRef = firebase.storage().ref();
+        const imageName = storageRef.child(projectImage.name)
+        const prImg = imageName.put(projectImage)
 
-        console.log('i\'m skill form!')
-        console.log(document.getElementById('skill').value)
+        prImg.on('state_changed', (snapshot) => {
+         const progress = (snapshot.bytesTransfarred/snapshot.totalBytes)*100;
+         console.log(progress + "  uploading")
+        },(error) => {
+          console.log(error.message)
+          alert(error.message)
+        }, ()=>{
+           prImg.snapshot.ref.getDownloadURL().then( async downloadURL => {
+               let project = {
+                   title: text,
+                   project_imageUrl:downloadURL,
+                   image_name:imageName.location.path,
+                   description:projectDescrip
+               };
+               await db.collection('projects').add(project);
+               console.log("Project created successful " + project.data())
+
+               // reseting form
+                text =""
+                projectImage = ""
+                projectDescrip =""
+              
+               alert("Project successful created!!! ")
+
+           })
+        })
+
+        console.log('i\'m project form!')
+        
     }else{
         alert("All field must be filled")
     }

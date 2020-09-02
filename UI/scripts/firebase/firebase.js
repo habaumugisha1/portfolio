@@ -1,26 +1,3 @@
-
-
-//<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-//<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-analytics.js"></script>
-
-
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyCM6QhkIm9l6jGNQ3a0Oqws4R2pGb3a-nY",
-    authDomain: "ami-portfolio-682e7.firebaseapp.com",
-    databaseURL: "https://ami-portfolio-682e7.firebaseio.com",
-    projectId: "ami-portfolio-682e7",
-    storageBucket: "ami-portfolio-682e7.appspot.com",
-    messagingSenderId: "5487041337",
-    appId: "1:5487041337:web:d4f0dc5c68ae2324d0e6e8",
-    measurementId: "G-GX7YDY8ZX4"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-
-  
-  // const firebase.firestore() = firebase.firestore();
   
   // --------------------------------------sotoring article in firebase---------------------------------------------
 
@@ -34,23 +11,18 @@
       console.log(user.email)
 
       if(user.email == "habajeunes2@gmail.com"){
-   //document.querySelector('.edit').style.display= "flex"
-  // document.querySelector('.delete').style.display= "flex"
+  
    document.querySelector(".nav-list ul li a#new-article").style.display="inline-block"
    document.querySelector(".nav-list ul li a#admin-dash").style.display="inline-block"
    
      
       }else{
-       //document.querySelector('.edit').style.display= "none"
-       //document.querySelector('.delete').style.display= "none"
        document.querySelector(".nav-list ul li a#new-article").style.display="none"
        document.querySelector(".nav-list ul li a#admin-dash").style.display="none"
 
 
       }
     }else{
-     //document.querySelector('.edit').style.display= "none"
-     //document.querySelector('.delete').style.display= "none"
      document.querySelector(".nav-list ul li a#new-article").style.display="none"
      document.querySelector(".nav-list ul li a#admin-dash").style.display="none"
 
