@@ -19,6 +19,10 @@ const addSkillModal = document.querySelector('.add-skill-modal');
 const addProjectModal = document.querySelector('.add-project-modal');
 
 
+
+
+
+
 linkCont.forEach(link=> {
     link.addEventListener('click', ()=>{
         document.querySelector(".navs li.active").classList.remove("active");

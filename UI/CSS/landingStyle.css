@@ -75,6 +75,9 @@ a {
     transition: .5s ease right;
 
 }
+#header .nav-list ul li a#admin-dash{
+    display: none;
+}
 #header .nav-list ul.active{
 right: 0;
 }
@@ -336,8 +339,9 @@ color: white;
     transition: .5s ease;
     
 }
+/* ami-backgr2.jpg */
 #home .hero{
-    background-image: url('img/ami-backgr2.jpg');
+    background-image: url('../img/ami-backgr2.jpg');
     background-repeat: no-repeat;
     background-position: top center;
     background-color: black;

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="UI/landingStyle.css">
+    <link rel="stylesheet" href="UI/CSS/landingStyle.css">
     <title>My Web</title>
 </head>
 <body>
@@ -20,8 +20,9 @@
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contacts</a></li>
-                    <li><a href="UI/blogs.html">Blog</a></li>
-                    <li><a href="./UI/login.html">Login</a></li>
+                    <li><a href="./UI/HTML/blogs.html">Blog</a></li>
+                    <li><a href="./UI/HTML/login.html">Login</a></li>
+                    <li><a href="./UI/HTML/admin-dashboard.html" id="admin-dash">Dashboard</a></li>
                 </ul>
 
             </div>
@@ -204,8 +205,11 @@
 </div>
 <!-- end of contact section -->
 
-     
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js"></script>
     
-    <script src="UI/landingPage.js"></script>
+    <script src="UI/scripts/landingPage.js"></script>
+    <script src="./UI/scripts/firebase/firebase.js"></script>
 </body>
 </html>
