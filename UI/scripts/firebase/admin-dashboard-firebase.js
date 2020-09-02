@@ -1,6 +1,6 @@
 
   const db = firebase.firestore();
-//------------------------log user out
+//------------------------log user out---------------
   const lgout = document.querySelector("#logout")
   lgout.addEventListener("click",() =>{
       firebase.auth().signOut().then(() => {
@@ -11,7 +11,7 @@
       )
   })
 
- 
+ ////-----------------------create a project-----------
 const projectForm = document.querySelector("#project-form");
 projectForm.addEventListener('submit', (e)=>{
     e.preventDefault();
@@ -39,12 +39,14 @@ projectForm.addEventListener('submit', (e)=>{
                    description:projectDescrip
                };
                await db.collection('projects').add(project);
-               console.log("Project created successful " + project.data())
+               //console.log("Project created successful " + project.data())
 
                // reseting form
                 text =""
                 projectImage = ""
                 projectDescrip =""
+
+                document.querySelector('.add-project-modal').style.display='none';
               
                alert("Project successful created!!! ")
 
