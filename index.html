@@ -71,7 +71,7 @@
                  <span></span>
                <div class="flex-skills">
                    
-                   <div class="flex-skill-item">
+                   <!-- <div class="flex-skill-item">
                        <img src="UI/img/html.png">
                        <p> HTML</p>
                    </div>
@@ -106,7 +106,7 @@
                    <div class="flex-skill-item">
                        <img src="UI/img/adobe-photoshop.png">
                        <p> Adobe Photoshop</p>
-                   </div>
+                   </div> -->
 
                    
                </div>
@@ -135,7 +135,7 @@
         <div class="title"><h1>My Work</h1></div>
      <div class="flexbox-project">
         
-        <div class="flexbox-project-item">
+        <!-- <div class="flexbox-project-item">
             <img src="UI/img/politico.png" alt="img">
             <a href="https://habaumugisha1.github.io/Politico/UI/pages/index.html"><h2>Politico Project</h2></a>
           <p>It is a platform which both the politicians and citizens can use. Politico enables citizens to give their mandate to politicians running for different government offices while building trust in the process through transparency</p> 
@@ -149,7 +149,7 @@
             <img src="UI/img/ur.png" alt="img">
             <a href="fypmonitoring.herokuapp.com"><h2>Final Year Project Monitoring.</h2> </a>
            <p>Hub of Univerisity and 1 year of experience as flilancer in coding for back-end and front-end and 4 years in team working</p>
-        </div>
+        </div> -->
          
      </div>
 
@@ -170,14 +170,14 @@
             </div>
             <div class="contact-form">
                 <h3>Have a question or want to work togather? </h3>
-                <form>
+                <form method="POST" id="contact-form">
                       <label for="fname">Name:</label><br>
                       <input type="text" id="fname" name="fname" value="" required><br><br>
                       <label for="lname">Email:</label><br>
                       <input type="email" id="email" name="email" value="" required><br><br>
                       <label for="lname">Description:</label><br>
                       <textarea id="description" name="description" value="" rows="10" cols="50" required></textarea><br><br>
-                      <button>SUBMIT</button>
+                      <button type="submit">SUBMIT</button>
                 </form>
             </div>
         </div>
@@ -208,8 +208,11 @@
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
     
     <script src="UI/scripts/landingPage.js"></script>
+    <script src="./UI/scripts/firebase/firebaseConfig.js"></script>
     <script src="./UI/scripts/firebase/firebase.js"></script>
+    <script src="./UI/scripts/firebase/contact.js"></script>
 </body>
 </html>

@@ -62,6 +62,10 @@ const getBlogId = ()=> {
        deleteBtn.textContent = "Delete"
        deleteBtn.setAttribute("value", "Delete");
        deleteBtn.getAttribute("value");
+       deleteBtn.addEventListener('click', () =>{
+         db.collection('blogs').doc(id).delete()
+         alert("you can delete this blog")
+       })
 
    let image = document.createElement("img");
        image.src = oneBlog.data().imageref;
@@ -170,4 +174,6 @@ const getBlogId = ()=> {
     snapshot.docs.forEach(doc => {
      renderComment(doc)
     });
-  })
+  });
+
+  // -------------------- delete a blog ---------------------------------
