@@ -62,3 +62,29 @@ fbAuthBtn.addEventListener('click', () =>{
       }).catch(err => alert(err.message))
 
   })
+
+
+  /// --- create user and it info -------
+
+
+  const userForm = document.querySelector('#action');
+  userForm.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      let usremail = document.querySelector('#user-email').value;
+      let userpaswd = document.querySelector('#psw').value;
+      let userName = document.querySelector('#names').value;
+      let userRole = document.querySelector('#role').value;
+
+firebase.auth().createUserWithEmailAndPassword(usremail, userpaswd).then( cred =>{
+    
+    let user = {
+        userName,
+        userRole
+    }
+     db.collection('userss').doc(cred.user.uid).set({user}).then( () => {
+
+         console.log("register successfully" + cred.user)
+     }).catch( err => alert(err.message))
+}).catch( err => alert(err.message))
+
+  })

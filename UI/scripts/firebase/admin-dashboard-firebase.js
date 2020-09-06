@@ -27,6 +27,43 @@ db.collection('contact').get().then( snapshot => {
 })
 
 
+// ----------------------------retrieving blogs ------------
+
+// const db = firebase.firestore();
+// ---------------------------------------getting blogs from firebase-----------------------------------------------
+
+    const blogsList = document.querySelector('.blog');
+    
+    const renderBlog = (doc) => {
+        let blogId = doc.id
+        const blogItem = `
+                        <div class="main-content-blog" id="${blogId}">
+                        <div class="description-blog">
+                            
+                            <div class="flexbox-blog-item">
+                                <img src="${doc.data().imageref}" alt="${doc.data().image}">
+                                <a href="./article.html#/${blogId}">
+                                <h3>${doc.data().title}</h3>
+                                </a>
+                                
+                                <p>${ doc.data().description.substring(0,150) + "..."}</p> 
+                            </div>
+
+                        </div>
+                    </div>
+                        `;
+    
+
+      blogsList.innerHTML += blogItem
+    }
+
+    db.collection("blogs").get().then((snapshot) => {
+        snapshot.docs.forEach(doc => {
+        renderBlog(doc);
+        })
+    })
+
+
 //------------------------log user out---------------
   const lgout = document.querySelector("#logout")
   lgout.addEventListener("click",() =>{
@@ -38,6 +75,34 @@ db.collection('contact').get().then( snapshot => {
       )
   })
 
+
+//------------- my account =---------------------
+firebase.auth().onAuthStateChanged(user =>{
+    if(user){
+        readAccount(user)
+        
+    }
+})
+
+
+const readAccount = (user) => {
+    if(user){
+        db.collection('userss').doc(user.uid).get().then(doc => {
+            let profileContainer = document.querySelector('.profile')
+            let accout = `<img src="../img/ami.png" alt="">
+                        <h3>${doc.data().user.userName}</h3>
+                        <h3>You are <strong>${doc.data().user.userRole}</strong></h3>
+                        <h3>Your Email: <span>${user.email}</span></h3>
+                        <button id="updatebtn" onclick="updateInfo()">Update Info</button>
+            `;
+            // console.log(doc.data().user.userName)
+            profileContainer.innerHTML = accout
+        })
+    }
+}
+const updateInfo = () => {
+    document.querySelector(".update").classList.add("active");
+}
  ////-----------------------create a project-----------
 const projectForm = document.querySelector("#project-form");
 
@@ -56,7 +121,7 @@ projectForm.addEventListener('submit', (e)=>{
          const progress = (snapshot.bytesTransfarred/snapshot.totalBytes)*100;
          console.log(progress + "  uploading")
         },(error) => {
-          console.log(error.message)
+          //console.log(error.message)
           alert(error.message)
         }, ()=>{
            prImg.snapshot.ref.getDownloadURL().then( async downloadURL => {
@@ -129,19 +194,113 @@ skillsForm.addEventListener('submit', (e)=>{
     
     // ----------------------------------reading project from firebase-------------------------
       const projectContainer = document.querySelector(".projec");
-      db.collection('projects').get().then(snapshot =>{
-          snapshot.docs.forEach( doc => {
-              let  project=  `
-                                <div class="flexbox-pro-item" id="${doc.id}">
-                                    <img src="${doc.data().project_imageUrl}" alt="${doc.data().image_name}">
-                                    <a href=""><h3>${doc.data().title}</h3></a>
-                                    <p>${doc.data().description}</p> 
-                                    <span><i class="fas fa-trash-alt" id="deletepro" onclick="deleteProject()"></i></span>
-                                    <span><i class="fas fa-pen-alt" onclick="updateProject()" id="updatepro"></i></span>
-                                </div>
-                             `;
-                             
-          projectContainer.innerHTML += project;
+      const renderProject = (doc) =>{
+
+          let  project=  `
+                            <div class="flexbox-pro-item" id="${doc.id}">
+                                <img src="${doc.data().project_imageUrl}" alt="${doc.data().image_name}">
+                                <a href=""><h3>${doc.data().title}</h3></a>
+                                <p>${doc.data().description}</p> 
+                                <span><i class="fas fa-trash-alt" id="deletepro" onclick="deleteProject()"></i></span>
+                                <span><i class="fas fa-pen-alt" onclick="updateProject()" id="updatepro"></i></span>
+                            </div>
+                         `;
+                         
+      projectContainer.innerHTML += project;
+      }
+
+    // ------------------------Edit project -----------------
+    const updateProject = async ()=>{
+                document.querySelector('.login-modal').style.display='flex';
+
+            let projectId = event.target.parentNode.parentNode.id
+            
+                    
+                    
+            updatePr(projectId)
+                        
+                    
+            document.querySelector('.close').addEventListener('click', ()=> {
+                document.querySelector('.login-modal').style.display='none';
+            
+            });
+
+        }
+
+
+    const updatePr = async projectId => {
+   
+            const form = document.querySelector('.editProjectForm');
+            let oneProject = await db.collection('projects').doc(projectId).get();
+        
+
+            const edtForm = `<input type="file" id="projImage" name="" value=""><br>
+            <input type="text" id="project-title" name="" value="${oneProject.data().title}"><br>
+            <textarea name="text" id="project-description" rows="10">${oneProject.data().description}</textarea>
+            <button type ="submit" class="button">Update</button>`;
+
+            form.innerHTML = edtForm;
+
+       const myprForm=document.querySelector('.editProjectForm');
+
+        myprForm.addEventListener('submit', async () => {
+                event.preventDefault();
+                const projectImg = document.querySelector('#projImage').files[0];
+                const projectTitle = document.querySelector('#project-title').value;
+                const projectContent = document.querySelector('#project-description').value;
+                if(projectImg == ""){
+                    const project = {
+                        title:projectTitle,
+                        description:projectContent,
+                    };
+                    await db.collection('projects').doc(projectId).update(project)
+                    alert("Project successful Updated!")
+                    document.querySelector('.login-modal').style.display="none";
+
+                } else if(projectImg !=""){
+
+                    // saving image in firebase storage
+                    const storageRef = firebase.storage().ref();
+                    const imageName = storageRef.child(projectImg.name);
+                    const proImg = imageName.put(projectImg);
+            
+                    proImg.on('state_changed', snapshot => {
+                        const progress = (snapshot.bytesTransfarred/snapshot.totalbytes)*100
+                        console.log( progress + "is loading ...  " + projectId )
+                    }, error => alert(error.message), async () => {
+                        proImg.snapshot.ref.getDownloadURL().then( async downloadURL => {
+                        const project = {
+                            title:projectTitle,
+                            description:projectContent,
+                            project_imageUrl: downloadURL,
+                            image_name: imageName.location.path
+                        };
+                        await db.collection('projects').doc(projectId).update(project)
+                        alert("Project successful Updated!")
+                        document.querySelector('.login-modal').style.display="none"
+                        }).catch( err => alert(err.message))
+                    })
+                    
+                }
+            }
+    )}
+
+
+
+
+
+
+
+      db.collection('projects').onSnapshot(snapshot =>{
+          let changes = snapshot.docChanges()
+         changes.forEach( change => {
+
+            if(change.type == "added"){
+             renderProject(change.doc)
+            } else if(change.type == "removed"){
+                let div= projectContainer.querySelector(`[id=${change.doc.id}]`)
+                projectContainer.removeChild(div)
+            }
 
                             
           })
@@ -179,8 +338,6 @@ const renderSkill = (doc) =>{
             dIcon.setAttribute("id", "delete-skill")
             dIcon.addEventListener('click', ()=>{
                 let skillId = dIcon.parentNode.parentNode.id 
-                console.log(" delete clicked!!  ")
-                console.log(skillId)
                 db.collection('skills').doc(skillId).delete()
                 alert("Skill successfully deleted!!")
             })
@@ -191,7 +348,12 @@ const renderSkill = (doc) =>{
         let upIcon =document.createElement("i")
             upIcon.setAttribute("class","fas fa-pen-alt")
             upIcon.setAttribute("id", "update-skill")
-            
+            upIcon.addEventListener('click', (e)=>{
+               let skillId= e.target.parentNode.parentNode.id
+               document.querySelector('.skill-modal').style.display= "block";
+                updateSkill(skillId)
+
+            })
 
         skillContainer.appendChild(skillItm)
         skillItm.appendChild(skillImge)
@@ -203,28 +365,84 @@ const renderSkill = (doc) =>{
 
     }
 
-db.collection('skills').get().then(snapshot => {
-   snapshot.docs.forEach(doc => {
-      renderSkill(doc)
-    
-   });
+//-------------------------------- callback for updating skills-----------------------------
 
-}).catch(error => console.log(error.message))
+    const updateSkill = async skillId =>{
+        const getSkill = await db.collection('skills').doc(skillId).get();
 
-// db.collection('skills').onSnapshot(snapshot => {
-//     let changes = snapshot.docChanges()
-//     changes.forEach(change => {
+        let skillsForm = `
+        <input type="file" name="" id="skill-image" value=""><br>
+        <input type="text" name="" id="skill-name" value="${getSkill.data().skill}"><br>
+        <button type="submit" class="button">Update</button>
+        `
+        document.querySelector('#updateSkillsForm').innerHTML = skillsForm;
+
+        // --------------updating data from form to firebase -----------------
+        const skillForm =  document.querySelector('#updateSkillsForm');
+        skillForm.addEventListener('submit', async ()=>{
+            const skillImg = document.querySelector('#skill-image').files[0];
+            const skillName = document.querySelector('#skill-name').value;
+            if(skillImg != "" && skillName != ""){
+
+                // -------------saving image in storage ------
+                const storageRef = firebase.storage().ref();
+                const imageName = storageRef.child(skillImg.name)
+                const skillImage = imageName.put(skillImg);
+
+                skillImage.on("state_changed", snapshot => {
+                    const progress = (snapshot.bytesTransfarred/snapshot.totalbytes)*100;
+                    console.log(Math.trunc(progress) + " Uploading....")
+
+                }, 
+                error => alert(error.message),
+                 async () => {
+                    skillImage.snapshot.ref.getDownloadURL().then( async downloadURL => {
+                    const skill = {
+                        skill:skillName,
+                        skillURL: downloadURL,
+                        skillImage: imageName.location.path
+                    };
+                    await db.collection('skills').doc(skillId).update(skill)
+                    alert("skill successful Updated!")
+                    document.querySelector('.skill-modal').style.display="none"
+                    }).catch( err => alert(err.message))
+              })
+            } 
+            if(skillImg == "undefined"){
+                const skill = {
+                    skill:skillName
+                };
+              await db.collection('skills').doc(skillId).update(skill)
+
+                    alert("skill successful Updated!")
+                    document.querySelector('.skill-modal').style.display="none"
+            }
+        })
+        // ---------closing a modal--------------
+        document.querySelector('.sclose').addEventListener('click', ()=>{
+            document.querySelector('.skill-modal').style.display ="none"
+
+        })
+
+
+        //alert(skillId)
+    }
+
+db.collection('skills').onSnapshot(snapshot => {
+    let changes = snapshot.docChanges()
+    changes.forEach(change => {
      
-//      if(change.type == "added"){
+     if(change.type == "added"){
 
-//          renderSkill(changes.doc)
-//      } else if (change.type == "removed"){
-//       skillContainer.removeChild(skillItm)
-//      }
+         renderSkill(change.doc)
+     } else if (change.type == "removed"){
+         let div = skillContainer.querySelector(`[id =${change.doc.id}]`)
+      skillContainer.removeChild(div)
+     }
      
-//     });
+    });
  
-//  })
+ })
 
 
 

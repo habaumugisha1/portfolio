@@ -21,6 +21,7 @@
         header3.textContent += doc.data().title;
 
         const link = document.createElement('a')
+        // window.location.href =
         link.setAttribute("href", `./article.html#/${id}`)
         // link.textContent = header3
 
