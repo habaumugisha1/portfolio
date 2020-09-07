@@ -339,8 +339,8 @@ transition: .5s ease right
     width: 60vw;
     height: fit-content;
     border-radius: 20px;
-    margin-top: 50px;
-    /*margin-left: 100px;*/
+    margin-top: 15vh;
+    margin-left: 20%;
 }
 .add-skill-modal .reset .skclose{
     font-size: 2rem;
@@ -435,8 +435,8 @@ transition: .5s ease right
         width: 80vw;
         height: fit-content;
         border-radius: 20px;
-        margin-top: 50px;
-        /*margin-left: 100px;*/
+        margin-top: 15vh;
+        margin-left: 10%;
     }
     .add-skill-modal .reset .skclose{
         font-size: 2rem;
@@ -535,8 +535,8 @@ transition: .5s ease right
         width: 80vw;
         height: fit-content;
         border-radius: 20px;
-        margin-top: 50px;
-        /*margin-left: 100px;*/
+        margin-top: 15vh;
+        margin-left: 10%;
     }
     .add-skill-modal .reset .skclose{
         font-size: 2rem;
@@ -623,6 +623,22 @@ transition: .5s ease right
         display: block;
     }
 }
+@media only screen and (min-width:481px) and (max-width:768px){
+    .add-skill-modal .reset{
+        position: relative;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        /* display: none; */
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(255, 253, 253);
+        width: 80vw;
+        height: fit-content;
+        border-radius: 20px;
+        margin-top: 15vh;
+        margin-left: 10%;
+    }
+}
 /* ----------add project ------------------- */
 
 .add-project-modal{
@@ -636,7 +652,8 @@ transition: .5s ease right
     display: none;
     justify-content: center;
     align-items: center;
-    transition: 0.7s ease
+    transition: 0.7s ease;
+    padding-bottom: 30px;
 }
 .add-project-modal .reset{
     position: relative;
@@ -648,9 +665,9 @@ transition: .5s ease right
     background-color: rgb(255, 253, 253);
     width: 60vw;
     height: fit-content;
-    border-radius: 20px;
-    margin-top: 50px;
-    /*margin-left: 100px;*/
+    border-radius: 10px;
+    margin-top: 15vh;
+    margin-left: 20%;
 }
 .add-project-modal .reset .kclose{
     font-size: 2rem;
@@ -1382,7 +1399,7 @@ transition: .5s ease right
 
 
     .content .blo-skill .description-skill{
-        margin-left: -10vw;
+        margin-left: -30vw;
         width: 70vw;
         position: relative;
         display: grid;
@@ -1577,7 +1594,7 @@ transition: .5s ease right
    .content {
    position: relative;
    }
-   .content .main-contentC {
+   .content .contact .main-contentC {
         width: 85vw;
         margin-left: -30vw;
         display: grid;
@@ -1588,11 +1605,11 @@ transition: .5s ease right
         align-items: center;
         text-align: center;
     }
-    .content .main-contentC .descriptionC {
+    .content .contact .main-contentC .descriptionC {
         width: 80vw;
         justify-content: center;
     }
-    .content .main-contentC .descriptionC p {
+    .content .contact .main-contentC .descriptionC p {
         width: 75vw;
         font-size: 1.1rem;
     }
@@ -1675,7 +1692,7 @@ transition: .5s ease right
 
 
     .content .blo-skill .description-skill{
-        margin-left: -5vw;
+        margin-left: -20vw;
         width: 75vw;
         position: relative;
         display: grid;
@@ -1935,7 +1952,7 @@ width: 50vw;
         width: 80vw;
     }
     .content .blo-skill .description-skill{
-        margin-left: 5vw;
+        margin-left: -7vw;
         width: 70vw;
         position: relative;
         display: grid;
@@ -2189,6 +2206,9 @@ width: 50vw;
     padding-bottom: 20px;
     padding: 20px;
     position: relative;
+    margin-top: 15vh;
+    margin-left: 30%;
+
 }
  .modal-content form{
     margin-top: 8%
@@ -2222,9 +2242,10 @@ width: 50vw;
 }
 @media only screen and (min-width: 320px) and (max-width: 480px){
     .skill-modal .modal-content{
-    width: 90%;
+    width: 80%;
     height: fit-content;
     padding-bottom: 20px;
+    margin-left: 10vw;
 }
 .modal-content h2{
     margin-top: 12%
@@ -2247,6 +2268,7 @@ width: 50vw;
     width: 80%;
     height: fit-content;
     padding-bottom: 20px;
+    margin-left: 10vw;
 }
 .modal-content h2{
     margin-top: 9%

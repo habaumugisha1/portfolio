@@ -22,6 +22,19 @@ const addProjectModal = document.querySelector('.add-project-modal');
 
 
 
+navBar.addEventListener("click", () =>{
+    navBar.classList.toggle("move");
+    nav_menu.classList.toggle("move");
+})
+
+
+mobile_menu.forEach((link) => {
+    link.addEventListener('click', ()=>{
+        // console.log(link);
+      navBar.classList.toggle("move");
+      nav_menu.classList.toggle("move");  
+    })
+})
 
 linkCont.forEach(link=> {
     link.addEventListener('click', ()=>{
@@ -40,19 +53,6 @@ document.getElementById("updatebtn").addEventListener('click', () => {
     document.querySelector(".update").classList.add("active");
 })
 
-navBar.addEventListener("click", () =>{
-    navBar.classList.toggle("move");
-    nav_menu.classList.toggle("move");
-
-})
-
-mobile_menu.forEach((link) => {
-    link.addEventListener('click', ()=>{
-        // console.log(link);
-      navBar.classList.toggle("move");
-      nav_menu.classList.toggle("move");  
-    })
-})
 
 
 inputs.forEach(input => {

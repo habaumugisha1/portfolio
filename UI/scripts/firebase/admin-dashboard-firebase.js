@@ -103,94 +103,117 @@ const readAccount = (user) => {
 const updateInfo = () => {
     document.querySelector(".update").classList.add("active");
 }
+
+
+// ----------------------update user information-----------------------
+
  ////-----------------------create a project-----------
-const projectForm = document.querySelector("#project-form");
 
-projectForm.addEventListener('submit', (e)=>{
-    e.preventDefault();
-    const text = document.getElementById('project-title').value
-    const projectImage = document.getElementById('project-image').files[0]
-    const projectDescrip = document.getElementById('project-descript').value
-    
-    if(text !="" || projectImage !="" || projectDescrip !=""){
-        const storageRef = firebase.storage().ref();
-        const imageName = storageRef.child(projectImage.name)
-        const prImg = imageName.put(projectImage)
+ document.querySelector('.add-project').addEventListener('click', ()=>{
+     document.querySelector('.add-project-modal').style.display = 'block';
 
-        prImg.on('state_changed', (snapshot) => {
-         const progress = (snapshot.bytesTransfarred/snapshot.totalBytes)*100;
-         console.log(progress + "  uploading")
-        },(error) => {
-          //console.log(error.message)
-          alert(error.message)
-        }, ()=>{
-           prImg.snapshot.ref.getDownloadURL().then( async downloadURL => {
-               let project = {
-                   title: text,
-                   project_imageUrl:downloadURL,
-                   image_name:imageName.location.path,
-                   description:projectDescrip
-               };
-               await db.collection('projects').add(project);
-               //console.log("Project created successful " + project.data())
-
-               // reseting form
-               
-               document.querySelector('.add-project-modal').style.display='none';
-               
-               alert("Project successful created!!! ")
-               projectForm.reset()
-
-           })
-        })
-
-        console.log('i\'m project form!')
-        
-    }else{
-        alert("All field must be filled")
-    }
-})
+     // ----closing adding project modal ----
+     document.querySelector('.kclose').addEventListener('click', () => {
+         document.querySelector('.add-project-modal').style.display="none"
+     })
+    // getting data from form
+     const projectForm = document.querySelector("#project-form");
+     
+     projectForm.addEventListener('submit', (e)=>{
+         e.preventDefault();
+         const text = document.getElementById('project-title').value
+         const projectImage = document.getElementById('project-image').files[0]
+         const projectDescrip = document.getElementById('project-descript').value
+         
+         if(text !="" || projectImage !="" || projectDescrip !=""){
+             const storageRef = firebase.storage().ref();
+             const imageName = storageRef.child(projectImage.name)
+             const prImg = imageName.put(projectImage)
+     
+             prImg.on('state_changed', (snapshot) => {
+              const progress = (snapshot.bytesTransfarred/snapshot.totalBytes)*100;
+              console.log(progress + "  uploading")
+             },(error) => {
+               //console.log(error.message)
+               alert(error.message)
+             }, ()=>{
+                prImg.snapshot.ref.getDownloadURL().then( async downloadURL => {
+                    let project = {
+                        title: text,
+                        project_imageUrl:downloadURL,
+                        image_name:imageName.location.path,
+                        description:projectDescrip
+                    };
+                    await db.collection('projects').add(project);
+                    //console.log("Project created successful " + project.data())
+     
+                    // reseting form
+                    
+                    document.querySelector('.add-project-modal').style.display='none';
+                    
+                    alert("Project successful created!!! ")
+                    projectForm.reset()
+     
+                })
+             })
+     
+             console.log('i\'m project form!')
+             
+         }else{
+             alert("All field must be filled")
+         }
+     })
+ })
 
 
 // ----------------------------------------create skills--------
-const skillsForm = document.getElementById("add-skills-form");
 
-skillsForm.addEventListener('submit', (e)=>{
-    const skillImg = document.getElementById("image-skills-field").files[0];
-    const skillNames = document.getElementById("skill-add").value;
-    e.preventDefault()
-    if( skillImg !="" || skillNames != ""){
-
-        /// saving image on firebase storage
-        const storageRef = firebase.storage().ref()
-        const imageName = storageRef.child(skillImg.name);
-        const skillImage = imageName.put(skillImg)
-
-        skillImage.on("state_changed", (snapshot) => {
-       const progress = (snapshot.bytesTransfarred/snapshot.totalBytes)*100;
-       console.log(progress + "image is uploading ...")
-        }, (error) => {
-            alert(error.message)
-        }, ()=>{
-        skillImage.snapshot.ref.getDownloadURL().then( async downloadURL =>{
-            const skill ={
-                skill:skillNames,
-                skillUrl:downloadURL,
-                skillImage:imageName.location.path
-            }
-            await db.collection('skills').add(skill);
-            console.log(downloadURL)
-            console.log(skill)
-            alert(" skill successfully Uploaded");
-            skillsForm.reset()
-            document.querySelector('.add-skill-modal').style.display='none';
-            })
-        })
-      
-    } else{
-            alert("Please fill all fields")
-        }
+document.querySelector('.add').addEventListener('click', () => {
+    document.querySelector('.add-skill-modal').style.display ="block";
+    // closing a modal
+    document.querySelector('.skclose').addEventListener('click', ()=> {
+        document.querySelector('.add-skill-modal').style.display ="none";
     })
+
+    const skillsForm = document.getElementById("add-skills-form");
+    
+    skillsForm.addEventListener('submit', (e)=>{
+        const skillImg = document.getElementById("image-skills-field").files[0];
+        const skillNames = document.getElementById("skill-add").value;
+        e.preventDefault()
+        if( skillImg !="" || skillNames != ""){
+    
+            /// saving image on firebase storage
+            const storageRef = firebase.storage().ref()
+            const imageName = storageRef.child(skillImg.name);
+            const skillImage = imageName.put(skillImg)
+    
+            skillImage.on("state_changed", (snapshot) => {
+           const progress = (snapshot.bytesTransfarred/snapshot.totalBytes)*100;
+           console.log(progress + "image is uploading ...")
+            }, (error) => {
+                alert(error.message)
+            }, ()=>{
+            skillImage.snapshot.ref.getDownloadURL().then( async downloadURL =>{
+                const skill ={
+                    skill:skillNames,
+                    skillUrl:downloadURL,
+                    skillImage:imageName.location.path
+                }
+                await db.collection('skills').add(skill);
+                console.log(downloadURL)
+                console.log(skill)
+                alert(" skill successfully Uploaded");
+                skillsForm.reset()
+                document.querySelector('.add-skill-modal').style.display='none';
+                })
+            })
+          
+        } else{
+                alert("Please fill all fields")
+            }
+        })
+})
     
     // ----------------------------------reading project from firebase-------------------------
       const projectContainer = document.querySelector(".projec");
