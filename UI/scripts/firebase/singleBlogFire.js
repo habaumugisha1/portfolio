@@ -116,32 +116,29 @@ const getBlogId = ()=> {
 
   // ---------------------------------update blog ------------------------------------
   const  renderUpdateProject = (oneBlog)=>{
-    const frm = document.querySelector('.modal-content')
+    const frm = document.querySelector('.editProjectForm')
+    const textFrm = document.querySelector('.editProjectFor')
     
     const formProjec = `
-    <form method="POST" onsubmit="editProject()" class="editProjectForm">
+        <div><img src="${oneBlog.data().imageref}" alt=""></div>
         <input type="file" id="projImage" name="" value="${ oneBlog.data().image}"><br><br>
-        <input type="text" name="" id="project-title" value="${oneBlog.data().title}"><br><br>
-        <textarea name="text" id="project-content" rows="20" >${oneBlog.data().description}</textarea><br><br>
-        <button type="submit" class="button">Update</button>
-        </form>
+        <button type="submit" class="button">Save</button>
     `;
     frm.innerHTML = formProjec
 
-    
-    
+    const textFormProjec = `
+        <input type="text" name="" id="project-title" value="${oneBlog.data().title}"><br><br>
+        <textarea name="text" id="project-content" rows="20" >${oneBlog.data().description}</textarea><br><br>
+        <button type="submit" class="button">Save changes</button>
+    `
+    textFrm.innerHTML = textFormProjec
   }
 
   // ----------------edit blog----------------
   function editProject(){
   event.preventDefault()
     const projectImage = document.querySelector('#projImage').files[0];
-    const projectTitle = document.querySelector('#project-title').value;
-    const projectDescription = document.querySelector('#project-content').value;
-
-    //console.log(projectImage)
-
-    if(projectImage != "" && projectTitle !="" && projectDescription != ""){
+    
       // ------ save new image ------
       const storageRef = firebase.storage().ref()
       const imageName = storageRef.child(projectImage.name)
@@ -156,27 +153,30 @@ const getBlogId = ()=> {
       }, () => {
         blogImage.snapshot.ref.getDownloadURL().then( async downloadURL => {
            const blog = {
-            title:projectTitle,
-            description:projectDescription,
             imageref: downloadURL,
             image: imageName.location.path
            };
            await db.collection('blogs').doc(id).update(blog)
            alert("Blog successful Updated!")
-           document.querySelector('.update-project-modal').style.display="none"
         }).catch( err => alert(err.message))
       })
-    } else {
-      const blog = {
-        title:projectTitle,
-        description:projectDescription
-       }
 
-        db.collection('blogs').doc(id).update(blog).then(()=> {
-          alert("Blog successful Updated!")
-          document.querySelector('.update-project-modal').style.display="none"
-        })
-    }
+  }
+
+  function editTextProject() {
+
+    event.preventDefault();
+    const projectTitle = document.querySelector('#project-title').value;
+    const projectDescription = document.querySelector('#project-content').value;
+    const blog = {
+      title:projectTitle,
+      description:projectDescription
+     }
+
+      db.collection('blogs').doc(id).update(blog).then(()=> {
+        alert("Blog successful Updated!")
+        // document.querySelector('.update-project-modal').style.display="none"
+      })
   }
 
   //----------------------------------------create comment-----------
@@ -198,10 +198,8 @@ const getBlogId = ()=> {
       blogid
     };
 
-    firebase.auth().onAuthStateChanged(user=>{
-                 console.log(user)
-              
-          if(user){    
+    // firebase.auth().onAuthStateChanged(user=>{
+                  
               if(name!= '' || comment !=''){
                 db.collection('comments').add(commt).then(() => {
                   alert("This blog successfully commented")
@@ -210,11 +208,7 @@ const getBlogId = ()=> {
               }else {
                 alert("all field must be filled")
               };
-            }else{
-              window.location.replace("./login.html");
-              alert("You are not loged in, Please log in with facebook or google account!")
-            }
-  })
+          
   })
 
   //------------------------------------- getting a blog comments---------------------

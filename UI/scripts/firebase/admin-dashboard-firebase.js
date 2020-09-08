@@ -7,13 +7,20 @@ const contact = document.querySelector(".contact")
 
 db.collection('contact').get().then( snapshot => {
   snapshot.docs.forEach(doc => {
+      // converting time string into real time date
+    let dat = doc.data().date.toDate()
+    let dateObject = new Date(dat)
+    let month = dateObject.toLocaleString('en-GB',{month: 'short'});
+    let year = dateObject.getFullYear()
+    let day = dateObject.toLocaleDateString('en-GB', {day: '2-digit'})
+    let dateResult = `${day}-${month}-${year}`
       let cont = `
                 <div class="main-contentC">
                     <div class="logo">
                     <img src="../img//avatar.jpg" alt="img">
                     </div>
                     <div class="descriptionC">
-                        <h3>${doc.data().date} by ${doc.data().name}</h3>
+                        <h3>${dateResult} by ${doc.data().name}</h3>
                         <h4>Email: ${doc.data().email}</h4>
                         <p>${doc.data().description}</p>
                     </div>
@@ -27,9 +34,6 @@ db.collection('contact').get().then( snapshot => {
 })
 
 
-// ----------------------------retrieving blogs ------------
-
-// const db = firebase.firestore();
 // ---------------------------------------getting blogs from firebase-----------------------------------------------
 
     const blogsList = document.querySelector('.blog');
@@ -254,13 +258,14 @@ document.querySelector('.add').addEventListener('click', () => {
     const updatePr = async projectId => {
    
             const form = document.querySelector('.editProjectForm');
+            const textForm = document.querySelector('.editProjectFormText');
             let oneProject = await db.collection('projects').doc(projectId).get();
         
 
-            const edtForm = `<input type="file" id="projImage" name="" value=""><br>
-            <input type="text" id="project-title" name="" value="${oneProject.data().title}"><br>
-            <textarea name="text" id="project-description" rows="10">${oneProject.data().description}</textarea>
-            <button type ="submit" class="button">Update</button>`;
+            const edtForm = `
+            <div class="image-pro"><img src="${oneProject.data().project_imageUrl}" alt=""></div>
+            <input type="file" id="projImage" name="" value=""><br>
+            <button type ="submit" class="button">Save</button>`;
 
             form.innerHTML = edtForm;
 
@@ -269,19 +274,8 @@ document.querySelector('.add').addEventListener('click', () => {
         myprForm.addEventListener('submit', async () => {
                 event.preventDefault();
                 const projectImg = document.querySelector('#projImage').files[0];
-                const projectTitle = document.querySelector('#project-title').value;
-                const projectContent = document.querySelector('#project-description').value;
-                if(projectImg == ""){
-                    const project = {
-                        title:projectTitle,
-                        description:projectContent,
-                    };
-                    await db.collection('projects').doc(projectId).update(project)
-                    alert("Project successful Updated!")
-                    document.querySelector('.login-modal').style.display="none";
-
-                } else if(projectImg !=""){
-
+                
+                
                     // saving image in firebase storage
                     const storageRef = firebase.storage().ref();
                     const imageName = storageRef.child(projectImg.name);
@@ -303,17 +297,34 @@ document.querySelector('.add').addEventListener('click', () => {
                         document.querySelector('.login-modal').style.display="none"
                         }).catch( err => alert(err.message))
                     })
-                    
-                }
             }
-    )}
+    );
+
+        const txtForm = `
+            <input type="text" id="project-title" name="" value="${oneProject.data().title}"><br>
+            <textarea name="text" id="project-description" rows="10">${oneProject.data().description}</textarea>
+            <button type ="submit" class="button">Save changes</button>
+             `;
+            textForm.innerHTML =txtForm;
+
+            textForm.addEventListener('submit', async ()=>{
+                event.preventDefault();
+                const projectTitle = document.querySelector('#project-title').value;
+                const projectContent = document.querySelector('#project-description').value;
+
+                const project = {
+                    title:projectTitle,
+                    description:projectContent,
+                };
+                await db.collection('projects').doc(projectId).update(project)
+                alert("Project successful Updated!")
+            })
+
+}
 
 
 
-
-
-
-
+//---------------------------- getting projects--------------------
       db.collection('projects').onSnapshot(snapshot =>{
           let changes = snapshot.docChanges()
          changes.forEach( change => {
@@ -393,19 +404,17 @@ const renderSkill = (doc) =>{
     const updateSkill = async skillId =>{
         const getSkill = await db.collection('skills').doc(skillId).get();
 
-        let skillsForm = `
-        <input type="file" name="" id="skill-image" value=""><br>
-        <input type="text" name="" id="skill-name" value="${getSkill.data().skill}"><br>
-        <button type="submit" class="button">Update</button>
-        `
-        document.querySelector('#updateSkillsForm').innerHTML = skillsForm;
+
+        let skillsForm = `<di><img src="${getSkill.data().skillUrl}" alt=""></div>
+        <input type="file" name="" id="skill-image" value="${getSkill.data().skillUrl}"><br>
+        <button type="submit" class="button">Save</button>
+        `;
+        document.querySelector('#updateSkillsFormImage').innerHTML = skillsForm;
 
         // --------------updating data from form to firebase -----------------
-        const skillForm =  document.querySelector('#updateSkillsForm');
-        skillForm.addEventListener('submit', async ()=>{
+        const skillForm =  document.querySelector('#updateSkillsFormImage');
+        skillForm.addEventListener('submit', ()=>{
             const skillImg = document.querySelector('#skill-image').files[0];
-            const skillName = document.querySelector('#skill-name').value;
-            if(skillImg != "" && skillName != ""){
 
                 // -------------saving image in storage ------
                 const storageRef = firebase.storage().ref();
@@ -421,26 +430,39 @@ const renderSkill = (doc) =>{
                  async () => {
                     skillImage.snapshot.ref.getDownloadURL().then( async downloadURL => {
                     const skill = {
-                        skill:skillName,
-                        skillURL: downloadURL,
+                        skillUrl: downloadURL,
                         skillImage: imageName.location.path
                     };
                     await db.collection('skills').doc(skillId).update(skill)
                     alert("skill successful Updated!")
-                    document.querySelector('.skill-modal').style.display="none"
                     }).catch( err => alert(err.message))
               })
-            } 
-            if(skillImg == "undefined"){
-                const skill = {
-                    skill:skillName
-                };
-              await db.collection('skills').doc(skillId).update(skill)
-
-                    alert("skill successful Updated!")
-                    document.querySelector('.skill-modal').style.display="none"
-            }
         })
+
+        let skillsFormName = `
+    <input type="text" name="" id="skill-name" value="${getSkill.data().skill}"><br>
+    <button type="submit" class="button">Save changes</button>
+    `;
+
+    const skillFormName = document.querySelector('#updateSkillsForm');
+      skillFormName.innerHTML = skillsFormName;
+
+        skillFormName.addEventListener('submit', ()=> {
+            event.preventDefault()
+             const skillName = document.querySelector('#skill-name').value;
+             if(skillName.length < 3){
+                 alert("Skills should be greater than or equal to 3");
+                 return false;
+             } else{
+            const skill = {
+                        skill:skillName
+                    };
+                  db.collection('skills').doc(skillId).update(skill).then( ()=>{
+    
+                      alert("skill successful Updated!")
+                  }).catch( err => console.log(err.message))
+                }
+        });
         // ---------closing a modal--------------
         document.querySelector('.sclose').addEventListener('click', ()=>{
             document.querySelector('.skill-modal').style.display ="none"

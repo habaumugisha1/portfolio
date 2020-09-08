@@ -2062,6 +2062,10 @@ width: 50vw;
  .modal-content form{
     margin-top: 8%
 }
+.login-modal .modal-content form .image-pro img {
+    width: 60%;
+    height: 50%
+}
 .login-modal .modal-content form input{
     width: 100%;
     display: block;
@@ -2103,6 +2107,10 @@ width: 50vw;
     display: block;
     margin: auto;
 }
+.login-modal .modal-content form .image-pro img {
+    width: 60%;
+    height: 50%
+}
 .modal-content form a {
     width: 80vw;
 }
@@ -2126,6 +2134,10 @@ width: 50vw;
     display: block;
     margin: auto;
 }
+.login-modal .modal-content form .image-pro img {
+    width: 60%;
+    height: 50%
+}
 .login-modal .modal-content form a {
     width: 60vw;
     height: 18%
@@ -2147,6 +2159,10 @@ width: 50vw;
     height: 30px;
     display: block;
     margin: auto;
+}
+.login-modal .modal-content form .image-pro img {
+    width: 60%;
+    height: 50%
 }
 .modal-content form a {
     width: 60%;
