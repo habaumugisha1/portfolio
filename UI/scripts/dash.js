@@ -6,7 +6,7 @@ const mobile_menu = document.querySelectorAll(".user-profile-l ul li a");
 const check = document.getElementById("check")
 const inputs = document.querySelectorAll('.focused');
 const deleteIcon = document.querySelectorAll('#delete');
-const updateSkiIcon = document.querySelectorAll('#update');
+const updateSkiIcon = document.querySelectorAll('#update-skill');
 const proDeleteIcon = document.querySelectorAll('#deletepro');
 // const modal = document.querySelector('.modal-content');
 const editProject = document.querySelectorAll('#updatepro');
@@ -22,6 +22,19 @@ const addProjectModal = document.querySelector('.add-project-modal');
 
 
 
+navBar.addEventListener("click", () =>{
+    navBar.classList.toggle("move");
+    nav_menu.classList.toggle("move");
+})
+
+
+mobile_menu.forEach((link) => {
+    link.addEventListener('click', ()=>{
+        // console.log(link);
+      navBar.classList.toggle("move");
+      nav_menu.classList.toggle("move");  
+    })
+})
 
 linkCont.forEach(link=> {
     link.addEventListener('click', ()=>{
@@ -40,19 +53,6 @@ document.getElementById("updatebtn").addEventListener('click', () => {
     document.querySelector(".update").classList.add("active");
 })
 
-navBar.addEventListener("click", () =>{
-    navBar.classList.toggle("move");
-    nav_menu.classList.toggle("move");
-
-})
-
-mobile_menu.forEach((link) => {
-    link.addEventListener('click', ()=>{
-        // console.log(link);
-      navBar.classList.toggle("move");
-      nav_menu.classList.toggle("move");  
-    })
-})
 
 
 inputs.forEach(input => {
@@ -71,18 +71,18 @@ function blurFunction(){
     }
 }
 
-deleteIcon.forEach(icon=>{
-    icon.addEventListener('click',()=> {
-        const confirmArt = confirm("Do you want to delete this skill?");
-        if( confirmArt == true ) {
-                alert("Your skill successsful deleted.");
-                return true;
-        } else {
-             alert("Skill not delete!")
-                 return false;
-                   }
-    })
-})
+// deleteIcon.forEach(icon=>{
+//     icon.addEventListener('click',()=> {
+//         const confirmArt = confirm("Do you want to delete this skill?");
+//         if( confirmArt == true ) {
+//                 alert("Your skill successsful deleted.");
+//                 return true;
+//         } else {
+//              alert("Skill not delete!")
+//                  return false;
+//                    }
+//     })
+// })
 
 proDeleteIcon.forEach(icon=>{
     icon.addEventListener('click',()=> {
@@ -144,16 +144,16 @@ updateSkiIcon.forEach(icon =>{
         
 
 
-        let skillForm = `
+        let skillsForm = `
         <input type="file" name="${skillImage}" value="${skillImage}"><br>
         <input type="text" name="" value="${skillContent}"><br>
         <button class="button">Update</button>
         `
-        console.log(skillForm)
+        console.log(skillsForm)
 
-        document.querySelector('#updateSkillsForm').innerHTML = skillForm
+        document.querySelector('.skill-modal').style.display='flex';
+        document.querySelector('#updateSkillsForm').innerHTML = skillsForm
 
-            document.querySelector('.skill-modal').style.display='flex';
             // console.log(modal)
             
         

@@ -1,18 +1,4 @@
-// Your web app's Firebase configuration
-var firebaseConfig = {
-    apiKey: "AIzaSyCM6QhkIm9l6jGNQ3a0Oqws4R2pGb3a-nY",
-    authDomain: "ami-portfolio-682e7.firebaseapp.com",
-    databaseURL: "https://ami-portfolio-682e7.firebaseio.com",
-    projectId: "ami-portfolio-682e7",
-    storageBucket: "ami-portfolio-682e7.appspot.com",
-    messagingSenderId: "5487041337",
-    appId: "1:5487041337:web:d4f0dc5c68ae2324d0e6e8",
-    measurementId: "G-GX7YDY8ZX4"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
 
-  
   const db = firebase.firestore();
 
 
@@ -74,5 +60,31 @@ fbAuthBtn.addEventListener('click', () =>{
 
           console.log("auth ...")
       }).catch(err => alert(err.message))
+
+  })
+
+
+  /// --- create user and it info -------
+
+
+  const userForm = document.querySelector('#action');
+  userForm.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      let usremail = document.querySelector('#user-email').value;
+      let userpaswd = document.querySelector('#psw').value;
+      let userName = document.querySelector('#names').value;
+      let userRole = document.querySelector('#role').value;
+
+firebase.auth().createUserWithEmailAndPassword(usremail, userpaswd).then( cred =>{
+    
+    let user = {
+        userName,
+        userRole
+    }
+     db.collection('userss').doc(cred.user.uid).set({user}).then( () => {
+
+         console.log("register successfully" + cred.user)
+     }).catch( err => alert(err.message))
+}).catch( err => alert(err.message))
 
   })
