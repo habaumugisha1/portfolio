@@ -703,8 +703,8 @@ color: white;
     border-bottom: 1px solid black;
     padding-left: 2vw;
 }
-.flexbox-blog-article .flexbox-blog-article-item .new-comment form textarea{
-    width: 40vw;
+.flexbox-blog-article .flexbox-blog-article-item .new-comment form textarea {
+    width: 30vw;
     border-radius: 5px;
     outline: none;
     border: none;

@@ -30,7 +30,7 @@
         header5.textContent += doc.data().created_at;
 
         const p = document.createElement('p');
-        p.textContent += doc.data().description.substring(0,299) + "...";
+        p.innerHTML += doc.data().description.substring(0,299) + "...";
       
 
       div.appendChild(image)

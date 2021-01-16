@@ -86,7 +86,7 @@ const getBlogId = ()=> {
        deleteBtn.getAttribute("value");
        deleteBtn.addEventListener('click', () =>{
          db.collection('blogs').doc(id).delete()
-         alert("you can delete this blog")
+         alert("Blog deleted successful")
        })
 
    let image = document.createElement("img");
@@ -94,7 +94,7 @@ const getBlogId = ()=> {
        image.alt = oneBlog.data().image;
 
    let p = document.createElement("p");
-       p.textContent = oneBlog.data().description;
+       p.innerHTML = oneBlog.data().description;
 
    let br =  document.createElement("br");
 

@@ -50,7 +50,7 @@
                 </div>
                 <div>
                     <h4><i class="fal fa-text-size"></i> Description:</h4>
-                  <textarea required rows="12" id="content" class="focused"></textarea>
+                  <textarea required rows="12" id="content" class="focused" name="content"></textarea>
                 </div>
                 <button type="submit" class="button" id="btnart">SUBMIT</button>
             </form>
@@ -70,5 +70,9 @@
 <script src="../scripts/newArticle.js"></script>
 <script src="../scripts/firebase/firebase.js"></script>
      <!-- <script src="../scripts/firebase/singleBlogFire.js"></script> -->
+<script src="../scripts/ckeditor/ckeditor.js" ></script>
+<script>
+    CKEDITOR.replace('content')
+</script>
 </body>
 </html>
